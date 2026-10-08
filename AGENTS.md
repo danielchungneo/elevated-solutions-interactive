@@ -1,6 +1,7 @@
 # Cocktail coaster site — build brief
 
-Mobile-first recipe site. Each laser-engraved NFC coaster opens one cocktail's page when tapped with a phone.
+Mobile-first NFC product platform. The home page is a company section directory; cocktails are the first live section.
+Each laser-engraved NFC coaster opens one cocktail's page when tapped with a phone.
 More page types will be added later, so build reusable components on shared design tokens.
 
 ## Stack (recommended)
@@ -14,11 +15,12 @@ More page types will be added later, so build reusable components on shared desi
 
 | Route | Page | Design reference |
 |---|---|---|
-| `/` | Home: cocktail library, search + spirit filter | `design/reference/Home.dc.html` |
-| `/c/[slug]` | Recipe page (NFC target) | `design/reference/Main.dc.html` |
-| `/c/[slug]/cook` | Cook mode | `design/reference/CookMode.dc.html` |
+| `/` | Company directory (sections; Coming soon placeholders) | — |
+| `/cocktails` | Cocktail library, search + spirit filter | `design/reference/Home.dc.html` |
+| `/cocktails/[slug]` | Recipe page (NFC target) | `design/reference/Main.dc.html` |
+| `/cocktails/[slug]/cook` | Cook mode | `design/reference/CookMode.dc.html` |
 
-Keep NFC URLs short (`https://<domain>/c/margarita`) so they fit small NTAG chips. Never change a slug once a coaster ships; add redirects instead.
+Keep NFC URLs stable (`https://<domain>/cocktails/margarita`). Never change a slug once a coaster ships; add redirects instead.
 
 ## Design references
 

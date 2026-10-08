@@ -128,7 +128,7 @@ export default function CookMode({
     <div className="cook">
       <header className="cook__header">
         <a
-          href={`/c/${slug}`}
+          href={`/cocktails/${slug}`}
           aria-label="Exit cook mode"
           className="cook__icon-btn"
         >

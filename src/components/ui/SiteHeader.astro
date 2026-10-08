@@ -2,7 +2,8 @@
 import { site } from "../../lib/site";
 
 interface Props {
-  variant?: "recipe" | "home";
+  /** home = company directory; library = cocktail list; recipe = cocktail detail */
+  variant?: "home" | "library" | "recipe";
 }
 
 const { variant = "recipe" } = Astro.props;
@@ -18,9 +19,14 @@ const { variant = "recipe" } = Astro.props;
   }
   {
     variant === "home" ? (
-      <a class="site-header__link" href={site.shopUrl}>Shop coasters</a>
-    ) : (
+      <a class="site-header__link" href={site.shopUrl} target="_blank" rel="noopener noreferrer">Shop</a>
+    ) : variant === "library" ? (
       <a class="site-header__link" href="/">
+        Home
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+    ) : (
+      <a class="site-header__link" href="/cocktails">
         All cocktails
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
       </a>

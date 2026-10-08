@@ -7,7 +7,11 @@ export const GET: APIRoute = async ({ site }) => {
 
   const urls = [
     "",
-    ...cocktails.flatMap((c) => [`/c/${c.id}`, `/c/${c.id}/cook`]),
+    "/cocktails",
+    ...cocktails.flatMap((c) => [
+      `/cocktails/${c.id}`,
+      `/cocktails/${c.id}/cook`,
+    ]),
   ];
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>

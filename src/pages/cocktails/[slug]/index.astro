@@ -26,7 +26,7 @@ const slug = entry.id;
 const related = await getRelated(data.relatedSlugs);
 const { proTips, mistakes } = splitTips(data.tips);
 const glassShort = data.glassware.name.replace(/ glass$/i, "");
-const path = `/c/${slug}`;
+const path = `/cocktails/${slug}`;
 const pageUrl = new URL(path, Astro.site ?? Astro.url).href;
 const jsonLd = recipeJsonLd(data, pageUrl);
 ---
@@ -85,7 +85,7 @@ const jsonLd = recipeJsonLd(data, pageUrl);
       <section aria-labelledby="method-h" class="method">
         <div class="method__head">
           <h2 id="method-h">Method</h2>
-          <a class="method__cook-link" href={`/c/${slug}/cook`}>
+          <a class="method__cook-link" href={`/cocktails/${slug}/cook`}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><path d="M7 9h10M7 13h6"></path></svg>
             Cook mode
           </a>
@@ -168,7 +168,7 @@ const jsonLd = recipeJsonLd(data, pageUrl);
       <section aria-labelledby="more-h" class="more">
         <div class="more__head">
           <h2 id="more-h" class="h2">More cocktails</h2>
-          <a href="/">See all</a>
+          <a href="/cocktails">See all</a>
         </div>
         <ul class="more__grid">
           {
@@ -177,14 +177,14 @@ const jsonLd = recipeJsonLd(data, pageUrl);
                 <DrinkTile
                   name={r.data.name}
                   tags={[...r.data.tags]}
-                  href={`/c/${r.id}`}
+                  href={`/cocktails/${r.id}`}
                   heroImage={r.data.heroImage}
                 />
               </li>
             ))
           }
           <li>
-            <a class="more__all" href="/">
+            <a class="more__all" href="/cocktails">
               <div class="more__all-card">
                 <span>All cocktails</span>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
@@ -196,7 +196,7 @@ const jsonLd = recipeJsonLd(data, pageUrl);
       </section>
 
       <div class="sticky-bar">
-        <a href={`/c/${slug}/cook`}>
+        <a href={`/cocktails/${slug}/cook`}>
           Start cook mode
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>

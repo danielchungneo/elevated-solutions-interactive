@@ -2,32 +2,206 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/ui/SiteHeader.astro";
 import SiteFooter from "../components/ui/SiteFooter.astro";
-import CocktailLibrary from "../components/cocktail/CocktailLibrary";
-import { getAllCocktails, spiritFromTags } from "../lib/cocktails";
+import { sections } from "../lib/sections";
 import { site } from "../lib/site";
-
-const cocktails = await getAllCocktails();
-const drinks = cocktails.map((c) => ({
-  slug: c.id,
-  name: c.data.name,
-  tags: c.data.tags,
-  heroImage: c.data.heroImage,
-  spirit: spiritFromTags(c.data.tags),
-}));
-
-const spirits = [
-  ...new Set(drinks.map((d) => d.spirit)),
-].sort((a, b) => a.localeCompare(b));
 ---
 
 <BaseLayout
-  title={`${site.brand} · Cocktail Library`}
+  title={site.brand}
   description={site.description}
   canonicalPath="/"
 >
   <div class="page-shell">
     <SiteHeader variant="home" />
-    <CocktailLibrary client:load drinks={drinks} spirits={spirits} />
-    <SiteFooter showNav={false} />
+
+    <section class="dir-hero" aria-labelledby="home-h">
+      <div class="diamond-rule diamond-rule--brass" aria-hidden="true" style="width: 120px; color: var(--paper-50)">
+        <span></span><span></span><span></span>
+      </div>
+      <h1 id="home-h">{site.brand}</h1>
+      <p class="dir-hero__tagline">{site.tagline}</p>
+      <p class="dir-hero__lead">
+        Tap a product to open its guide. Choose a section below.
+      </p>
+    </section>
+
+    <main class="dir-main">
+      <p class="dir-count label">
+        {sections.length} sections
+      </p>
+      <ul class="dir-list">
+        {
+          sections.map((section) => (
+            <li>
+              {section.status === "live" && section.href ? (
+                <a class="dir-row" href={section.href}>
+                  <div class="dir-row__art" aria-hidden="true">
+                    <div class="dir-row__frame" />
+                    <span class="dir-row__mono">{section.initial}</span>
+                  </div>
+                  <div class="dir-row__meta">
+                    <span class="dir-row__name">{section.name}</span>
+                    <span class="dir-row__blurb">{section.blurb}</span>
+                  </div>
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 6l6 6-6 6" />
+                  </svg>
+                </a>
+              ) : (
+                <div class="dir-row dir-row--soon" aria-disabled="true">
+                  <div class="dir-row__art" aria-hidden="true">
+                    <div class="dir-row__frame" />
+                    <span class="dir-row__mono">{section.initial}</span>
+                  </div>
+                  <div class="dir-row__meta">
+                    <span class="dir-row__name">{section.name}</span>
+                    <span class="dir-row__blurb">{section.blurb}</span>
+                  </div>
+                  <span class="dir-row__badge">Coming soon</span>
+                </div>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+
+    <SiteFooter variant="company" />
   </div>
 </BaseLayout>
+
+<style>
+  .dir-hero {
+    background: var(--slate-800);
+    color: var(--paper-50);
+    padding: 28px var(--gutter) 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .dir-hero h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.75rem;
+    line-height: 1.02;
+    text-transform: uppercase;
+  }
+
+  .dir-hero__tagline {
+    margin: 0;
+    font: var(--text-tagline);
+    color: #e4ded1;
+  }
+
+  .dir-hero__lead {
+    margin: 0;
+    font-size: 1.0625rem;
+    color: var(--on-dark-muted);
+  }
+
+  .dir-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dir-count {
+    margin: 0;
+    padding: 16px var(--gutter) 0;
+  }
+
+  .dir-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px var(--gutter) 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dir-list > li {
+    border-bottom: 1px solid var(--paper-300);
+  }
+
+  .dir-row {
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr) auto;
+    column-gap: 14px;
+    align-items: center;
+    color: var(--slate-900);
+    text-decoration: none;
+  }
+
+  .dir-row:hover {
+    color: var(--slate-900);
+  }
+
+  .dir-row--soon {
+    opacity: 0.72;
+  }
+
+  .dir-row__art {
+    width: 88px;
+    height: 88px;
+    background: var(--slate-800);
+    border-radius: var(--radius);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .dir-row__frame {
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--slate-500);
+  }
+
+  .dir-row__mono {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #e4ded1;
+  }
+
+  .dir-row__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .dir-row__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+
+  .dir-row__blurb {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .dir-row__badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    white-space: nowrap;
+  }
+</style>

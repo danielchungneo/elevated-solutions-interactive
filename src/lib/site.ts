@@ -2,7 +2,9 @@
 export const site = {
   brand: "Elevated Solutions",
   year: new Date().getFullYear(),
-  shopUrl: "#",
+  shopUrl:
+    "https://www.etsy.com/shop/ElevatedSlnEngraving?ref=profile_header&section_id=54283719",
   description:
-    "Tap a slate coaster, open the full recipe. Classic cocktails with clear steps for home bartenders.",
+    "NFC-linked products from Elevated Solutions. Tap a coaster, card, or set to open guides, recipes, and more.",
+  tagline: "Physical products. Digital depth.",
 } as const;

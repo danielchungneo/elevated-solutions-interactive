@@ -196,7 +196,7 @@ export default function CocktailLibrary({ drinks, spirits }: Props) {
               style={{ borderBottom: "1px solid var(--paper-300)" }}
             >
               <a
-                href={`/c/${d.slug}`}
+                href={`/cocktails/${d.slug}`}
                 style={{
                   padding: "12px 0",
                   display: "grid",

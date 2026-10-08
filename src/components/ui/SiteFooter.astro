@@ -2,26 +2,43 @@
 import { site } from "../../lib/site";
 
 interface Props {
+  /** company = simple home footer; cocktail = drink-responsibly + cocktail nav */
+  variant?: "company" | "cocktail";
   showNav?: boolean;
 }
 
-const { showNav = true } = Astro.props;
+const { variant = "cocktail", showNav = true } = Astro.props;
 ---
 
 <footer class="site-footer">
   <div class="diamond-rule diamond-rule--muted diamond-rule--brass" aria-hidden="true" style="width: 100%">
     <span></span><span></span><span></span>
   </div>
-  <p class="site-footer__headline">Drink responsibly.</p>
-  <p>
-    Enjoy in moderation and only if you're of legal drinking age. Never drink and
-    drive.
-  </p>
+  {
+    variant === "cocktail" ? (
+      <>
+        <p class="site-footer__headline">Drink responsibly.</p>
+        <p>
+          Enjoy in moderation and only if you're of legal drinking age. Never drink and
+          drive.
+        </p>
+      </>
+    ) : (
+      <p class="site-footer__headline">{site.brand}</p>
+    )
+  }
   {
     showNav && (
       <nav aria-label="Footer" class="site-footer__nav">
-        <a href="/">All cocktails</a>
-        <a href={site.shopUrl}>Shop coasters</a>
+        {variant === "cocktail" ? (
+          <>
+            <a href="/cocktails">All cocktails</a>
+            <a href="/">Home</a>
+            <a href={site.shopUrl} target="_blank" rel="noopener noreferrer">Shop</a>
+          </>
+        ) : (
+          <a href={site.shopUrl} target="_blank" rel="noopener noreferrer">Shop</a>
+        )}
       </nav>
     )
   }
@@ -57,6 +74,7 @@ const { showNav = true } = Astro.props;
     display: flex;
     justify-content: center;
     gap: var(--space-5);
+    flex-wrap: wrap;
   }
 
   .site-footer__nav a {

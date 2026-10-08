@@ -1,11 +1,12 @@
-# Elevated Solutions Interactive — NFC Cocktail Coasters
+# Elevated Solutions Interactive — NFC Product Platform
 
-Mobile-first recipe site. Each laser-engraved NFC coaster opens one cocktail page when tapped.
+Mobile-first site for NFC-linked Elevated Solutions products. Cocktails are the first live section; more (coffee, prayer, puzzles) will follow.
 
 ## Stack
 
-- **Astro** (static) + **React islands** for servings scaler, cook mode, and home search/filter
+- **Astro** (static) + **React islands** for servings scaler, cook mode, and cocktail search/filter
 - Content: `content/cocktails/*.json` (Zod-validated content collection)
+- Sections directory: `src/lib/sections.ts`
 - Design tokens: `src/styles/tokens.css` (from Claude Design handoff)
 - Deploy: static output → Vercel or Netlify
 
@@ -13,9 +14,10 @@ Mobile-first recipe site. Each laser-engraved NFC coaster opens one cocktail pag
 
 | Route | Page |
 |---|---|
-| `/` | Cocktail library (search + spirit filter) |
-| `/c/[slug]` | Recipe page (NFC target — keep these URLs stable) |
-| `/c/[slug]/cook` | Hands-free cook mode |
+| `/` | Company section directory |
+| `/cocktails` | Cocktail library (search + spirit filter) |
+| `/cocktails/[slug]` | Recipe page (NFC target — keep these URLs stable) |
+| `/cocktails/[slug]/cook` | Hands-free cook mode |
 
 ## Develop
 
@@ -24,7 +26,7 @@ npm install
 npm run dev
 ```
 
-Open at phone width (~390px). Sample recipe: [http://localhost:4321/c/margarita](http://localhost:4321/c/margarita)
+Open at phone width (~390px). Sample recipe: [http://localhost:4321/cocktails/margarita](http://localhost:4321/cocktails/margarita)
 
 ```bash
 npm run build
