@@ -48,12 +48,15 @@ const ALTS = {
 };
 
 /**
- * Keep only the largest ink blob (the drink).
- * Drops the decorative frame, which is a separate thin connected component.
+ * Keep the largest ink blob (the drink) plus nearby garnish blobs
+ * (e.g. espresso beans) whose centers sit inside the drink's bounds.
+ * Drops the decorative frame and corner dots outside that region.
  */
-function keepLargestInkBlob(grey, width, height, threshold = 40) {
+function keepDrinkInk(grey, width, height, threshold = 40) {
   const labels = new Int32Array(width * height);
   const sizes = [0];
+  const sumX = [0];
+  const sumY = [0];
   let label = 0;
 
   for (let y = 0; y < height; y++) {
@@ -62,6 +65,8 @@ function keepLargestInkBlob(grey, width, height, threshold = 40) {
       if (grey[i] <= threshold || labels[i]) continue;
       label += 1;
       sizes[label] = 0;
+      sumX[label] = 0;
+      sumY[label] = 0;
       const stack = [i];
       labels[i] = label;
       while (stack.length) {
@@ -69,22 +74,17 @@ function keepLargestInkBlob(grey, width, height, threshold = 40) {
         sizes[label] += 1;
         const cx = cur % width;
         const cy = (cur - cx) / width;
-        const neighbors = [
-          cur + 1,
-          cur - 1,
-          cur + width,
-          cur - width,
-        ];
+        sumX[label] += cx;
+        sumY[label] += cy;
         const coords = [
           [cx + 1, cy],
           [cx - 1, cy],
           [cx, cy + 1],
           [cx, cy - 1],
         ];
-        for (let n = 0; n < 4; n++) {
-          const [nx, ny] = coords[n];
+        for (const [nx, ny] of coords) {
           if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
-          const ni = neighbors[n];
+          const ni = ny * width + nx;
           if (grey[ni] > threshold && !labels[ni]) {
             labels[ni] = label;
             stack.push(ni);
@@ -94,14 +94,51 @@ function keepLargestInkBlob(grey, width, height, threshold = 40) {
     }
   }
 
+  if (label < 1) return Buffer.alloc(grey.length);
+
   let best = 1;
   for (let id = 2; id <= label; id++) {
     if (sizes[id] > sizes[best]) best = id;
   }
 
+  // Bounding box of the main drink art
+  let minX = width;
+  let minY = height;
+  let maxX = 0;
+  let maxY = 0;
+  for (let i = 0; i < labels.length; i++) {
+    if (labels[i] !== best) continue;
+    const x = i % width;
+    const y = (i - x) / width;
+    if (x < minX) minX = x;
+    if (y < minY) minY = y;
+    if (x > maxX) maxX = x;
+    if (y > maxY) maxY = y;
+  }
+
+  const padX = Math.round((maxX - minX) * 0.08);
+  const padY = Math.round((maxY - minY) * 0.08);
+  minX = Math.max(0, minX - padX);
+  minY = Math.max(0, minY - padY);
+  maxX = Math.min(width - 1, maxX + padX);
+  maxY = Math.min(height - 1, maxY + padY);
+
+  const keep = new Uint8Array(label + 1);
+  keep[best] = 1;
+  // Garnish only: small blobs over the drink. Skip large loops (frame).
+  const maxGarnish = Math.max(80, Math.round(sizes[best] * 0.12));
+  for (let id = 1; id <= label; id++) {
+    if (id === best || sizes[id] === 0 || sizes[id] > maxGarnish) continue;
+    const cx = sumX[id] / sizes[id];
+    const cy = sumY[id] / sizes[id];
+    if (cx >= minX && cx <= maxX && cy >= minY && cy <= maxY) {
+      keep[id] = 1;
+    }
+  }
+
   const out = Buffer.alloc(grey.length);
   for (let i = 0; i < grey.length; i++) {
-    if (labels[i] === best) out[i] = grey[i];
+    if (keep[labels[i]]) out[i] = grey[i];
   }
   return out;
 }
@@ -153,7 +190,7 @@ async function makeHero(srcPath, outPath) {
     .raw()
     .toBuffer({ resolveWithObject: true });
 
-  const cleaned = keepLargestInkBlob(data, info.width, info.height);
+  const cleaned = keepDrinkInk(data, info.width, info.height);
   const bounds = contentBounds(cleaned, info.width, info.height);
   const trimmedGrey = Buffer.alloc(bounds.width * bounds.height);
   for (let y = 0; y < bounds.height; y++) {
