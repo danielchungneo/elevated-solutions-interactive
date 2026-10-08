@@ -26,6 +26,10 @@ const canonical = new URL(canonicalPath, Astro.site ?? Astro.url).href;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <!-- Match mobile browser chrome / status bar to slate hero -->
+    <meta name="theme-color" content="#1F2326" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
