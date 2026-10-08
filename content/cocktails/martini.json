@@ -1,0 +1,116 @@
+{
+  "slug": "martini",
+  "name": "Martini",
+  "tags": [
+    "Gin",
+    "Stirred",
+    "Classic"
+  ],
+  "tagline": "Cold, crisp and impeccably simple.",
+  "intro": "The Martini is gin and dry vermouth, stirred ice cold and served up. It's clean, aromatic and strong, and it shows off the gin. Its simplicity is the point, so the quality of your ingredients and your technique matter most.",
+  "heroImage": "/images/martini-hero.webp",
+  "heroAlt": "Engraved line illustration of a Martini with an olive",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Martini glass or coupe",
+    "note": "Freeze the glass or chill it with ice water first."
+  },
+  "garnish": [
+    "Olive",
+    "Lemon twist"
+  ],
+  "ingredients": [
+    {
+      "amount": "2½ oz",
+      "item": "Gin",
+      "note": "A London dry gin such as Beefeater or Tanqueray is the classic choice."
+    },
+    {
+      "amount": "½ oz",
+      "item": "Dry vermouth",
+      "note": "Use fresh vermouth. Once opened, store it in the fridge and use within a month or two."
+    },
+    {
+      "amount": "1",
+      "item": "Olive or lemon twist",
+      "note": "Choose one. The olive is savory and the lemon twist is bright and aromatic."
+    }
+  ],
+  "equipment": [
+    "Mixing glass",
+    "Bar spoon",
+    "Jigger",
+    "Julep or Hawthorne strainer",
+    "Paring knife or peeler for the twist"
+  ],
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Put your martini glass in the freezer for 10 to 15 minutes, or fill it with ice water while you mix."
+    },
+    {
+      "title": "Combine in a mixing glass",
+      "body": "Add the gin and dry vermouth to a mixing glass. Fill it with fresh, cold ice."
+    },
+    {
+      "title": "Stir",
+      "body": "Stir smoothly for about 25 to 30 seconds. Stirring chills and dilutes the drink while keeping it clear and silky.",
+      "tip": "The outside of the mixing glass should feel frosty."
+    },
+    {
+      "title": "Strain",
+      "body": "Dump the ice water from your serving glass and strain the Martini into it."
+    },
+    {
+      "title": "Garnish",
+      "body": "For a twist, cut a wide strip of lemon peel, squeeze it over the drink to release the oils, wipe it around the rim and drop it in. For an olive, spear one or three on a pick and rest it in the glass."
+    }
+  ],
+  "tips": [
+    "Pro tip: Keep your gin in the freezer for an extra-cold Martini.",
+    "Pro tip: Refrigerate your vermouth after opening. It's wine, and it goes stale.",
+    "Common mistake: Shaking a Martini. It makes it cloudy and over-diluted.",
+    "Common mistake: Using old, oxidized vermouth, which makes the drink taste flat or sour."
+  ],
+  "variations": [
+    {
+      "name": "Dirty Martini",
+      "description": "Add a splash of olive brine and garnish with olives."
+    },
+    {
+      "name": "Gibson",
+      "description": "Garnish with a cocktail onion instead of an olive or twist."
+    },
+    {
+      "name": "Vodka Martini",
+      "description": "Use vodka in place of gin for a cleaner, more neutral drink."
+    },
+    {
+      "name": "Wet or Dry",
+      "description": "Use more vermouth for a wetter Martini, or very little for a bone-dry one."
+    }
+  ],
+  "substitutions": [
+    "Gin: Use a favorite London dry, or try a softer, more floral gin for a different style.",
+    "Dry vermouth: Dolin Dry and Noilly Prat are reliable. Avoid sweet vermouth.",
+    "Garnish: Both olive and lemon twist are classic. Pick whichever you prefer."
+  ],
+  "flavorProfile": {
+    "sweet": 1,
+    "sour": 1,
+    "bitter": 2,
+    "strong": 5
+  },
+  "history": "The Martini's origin is disputed. Some trace it to a drink called the Martinez from the 1800s, while others credit bartenders in New York or elsewhere. What's clear is that gin and vermouth drinks of this kind were common by the late 1800s, and the drink grew drier over time.",
+  "relatedSlugs": [
+    "manhattan",
+    "negroni",
+    "espresso-martini"
+  ],
+  "seo": {
+    "title": "Martini Recipe: Gin, Dry Vermouth and a Twist or Olive",
+    "description": "Make a classic Martini with 2½ oz gin and ½ oz dry vermouth. Learn how to stir it right, with tips and variations."
+  }
+}

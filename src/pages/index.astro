@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/ui/SiteHeader.astro";
+import SiteFooter from "../components/ui/SiteFooter.astro";
+import CocktailLibrary from "../components/cocktail/CocktailLibrary";
+import { getAllCocktails, spiritFromTags } from "../lib/cocktails";
+import { site } from "../lib/site";
+
+const cocktails = await getAllCocktails();
+const drinks = cocktails.map((c) => ({
+  slug: c.id,
+  name: c.data.name,
+  tags: c.data.tags,
+  heroImage: c.data.heroImage,
+  spirit: spiritFromTags(c.data.tags),
+}));
+
+const spirits = [
+  ...new Set(drinks.map((d) => d.spirit)),
+].sort((a, b) => a.localeCompare(b));
+---
+
+<BaseLayout
+  title={`${site.brand} · Cocktail Library`}
+  description={site.description}
+  canonicalPath="/"
+>
+  <div class="page-shell">
+    <SiteHeader variant="home" />
+    <CocktailLibrary client:load drinks={drinks} spirits={spirits} />
+    <SiteFooter showNav={false} />
+  </div>
+</BaseLayout>

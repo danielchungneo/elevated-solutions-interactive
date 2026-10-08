@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import CookMode from "../../../components/cocktail/CookMode";
+import { getAllCocktails } from "../../../lib/cocktails";
+
+export async function getStaticPaths() {
+  const cocktails = await getAllCocktails();
+  return cocktails.map((c) => ({
+    params: { slug: c.id },
+    props: { entry: c },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const slug = entry.id;
+
+const stepParam = Astro.url.searchParams.get("step");
+const parsed = stepParam ? Number.parseInt(stepParam, 10) : 1;
+const initialStep =
+  Number.isFinite(parsed) && parsed >= 1
+    ? Math.min(parsed - 1, data.steps.length - 1)
+    : 0;
+---
+
+<BaseLayout
+  title={`Cook mode · ${data.name}`}
+  description={`Hands-free steps for making a ${data.name}.`}
+  canonicalPath={`/c/${slug}/cook`}
+  bodyClass="cook-body"
+>
+  <CookMode
+    client:load
+    name={data.name}
+    slug={slug}
+    steps={data.steps}
+    ingredients={data.ingredients.map((i) => ({
+      amount: i.amount,
+      item: i.item,
+    }))}
+    garnish={data.garnish}
+    initialStep={initialStep}
+  />
+</BaseLayout>
+
+<style is:global>
+  .cook-body {
+    background: var(--slate-900);
+  }
+</style>

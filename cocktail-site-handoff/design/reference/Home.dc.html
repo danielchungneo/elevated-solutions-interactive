@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cocktail library</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..900;1,6..96,500..700&amp;family=Instrument+Sans:wght@400..700&amp;display=swap">
+<style>
+body{margin:0;background:#16191B}
+a{color:#7A5A1F}a:hover{color:#16191B}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #C9A15B;outline-offset:2px}
+input::placeholder{color:#8F8A80}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1760px; box-sizing: border-box; background: #F4F0E7; color: #16191B; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.55; display: flex; flex-direction: column">
+
+<header style="background: #1F2326; height: 56px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+<span style="color: #F4F0E7; font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 20px; letter-spacing: 0.02em">[YOUR BRAND]</span>
+<a href="#" style="min-height: 44px; display: flex; align-items: center; color: #F4F0E7; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase">Shop coasters</a>
+</header>
+
+<section aria-labelledby="home-h" style="background: #1F2326; color: #F4F0E7; padding: 28px 16px 24px; display: flex; flex-direction: column; gap: 14px">
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 10px; width: 120px">
+<span style="flex: 1; height: 1px; background: #F4F0E7"></span>
+<span style="width: 6px; height: 6px; background: #C9A15B; transform: rotate(45deg)"></span>
+<span style="flex: 1; height: 1px; background: #F4F0E7"></span>
+</div>
+<h1 id="home-h" style="margin: 0; font-family: 'Bodoni Moda', Georgia, serif; font-weight: 900; font-size: 44px; line-height: 1.02; text-transform: uppercase">The Cocktail Library</h1>
+<p style="margin: 0; font-size: 17px; color: #E4DED1">Tap a coaster, or pick a drink below.</p>
+<label for="q" style="margin-top: 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B7B2A8">Search cocktails</label>
+<div style="position: relative">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16191B" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 14px; top: 16px"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg>
+<input id="q" type="search" value="{{query}}" onChange="{{onSearch}}" placeholder="Margarita, gin, citrus…" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 14px 0 44px; border: 0; border-radius: 4px; background: #F4F0E7; color: #16191B; font: 400 17px 'Instrument Sans', system-ui, sans-serif">
+</div>
+</section>
+
+<main style="display: flex; flex-direction: column">
+<div role="group" aria-label="Filter by spirit" style="padding: 16px 16px 4px; display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{chips}}" as="chip" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{chip.pressed}}" onClick="{{chip.pick}}" style="{{chip.style}}">{{chip.label}}</button>
+</sc-for>
+</div>
+
+<p style="margin: 0; padding: 12px 16px 0; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4D5357">{{countLabel}}</p>
+
+<ul style="list-style: none; margin: 0; padding: 8px 16px 32px; display: flex; flex-direction: column">
+<sc-for list="{{drinks}}" as="d" hint-placeholder-count="8">
+<li style="border-bottom: 1px solid #D3CBBB">
+<a href="{{d.href}}" style="padding: 12px 0; display: grid; grid-template-columns: 88px minmax(0, 1fr) 24px; column-gap: 14px; align-items: center; color: #16191B; text-decoration: none">
+<div style="width: 88px; height: 88px; background: #1F2326; border-radius: 4px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<sc-if value="{{d.hasArt}}" hint-placeholder-val="{{ false }}">
+<img src="../../public/images/margarita-hero.webp" alt="" width="80" height="80" style="width: 80px; height: 80px; object-fit: contain">
+</sc-if>
+<sc-if value="{{d.noArt}}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; inset: 6px; border: 1px solid #565D63"></div>
+<span style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 900; font-size: 40px; color: #E4DED1">{{d.initial}}</span>
+</sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1.2">{{d.name}}</span>
+<span style="font-size: 14px; color: #4D5357; letter-spacing: 0.04em">{{d.tags}}</span>
+</div>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16191B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+</a>
+</li>
+</sc-for>
+</ul>
+</main>
+
+<footer style="margin-top: auto; background: #16191B; color: #E4DED1; padding: 32px 16px 40px; display: flex; flex-direction: column; gap: 16px; font-size: 15px; line-height: 1.55">
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 10px">
+<span style="flex: 1; height: 1px; background: #565D63"></span>
+<span style="width: 6px; height: 6px; background: #C9A15B; transform: rotate(45deg)"></span>
+<span style="flex: 1; height: 1px; background: #565D63"></span>
+</div>
+<p style="margin: 0; font-family: 'Bodoni Moda', Georgia, serif; font-size: 20px; font-weight: 700; color: #F4F0E7; text-align: center">Drink responsibly.</p>
+<p style="margin: 0; text-align: center">Enjoy in moderation and only if you're of legal drinking age. Never drink and drive.</p>
+<p style="margin: 0; text-align: center; font-size: 13px; color: #B7B2A8">© [YEAR] [YOUR BRAND]</p>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1760}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { spirit: 'All', query: '' };
+  }
+  renderVals() {
+    const all = [
+      { name: 'Margarita', spirit: 'Tequila', tags: 'Tequila · Citrus · Classic', href: 'Main.dc.html', hasArt: true },
+      { name: 'Old Fashioned', spirit: 'Whiskey', tags: 'Whiskey · Stirred · Classic', href: '#' },
+      { name: 'Whiskey Sour', spirit: 'Whiskey', tags: 'Whiskey · Citrus · Shaken', href: '#' },
+      { name: 'Daiquiri', spirit: 'Rum', tags: 'Rum · Citrus · Classic', href: '#' },
+      { name: 'Mojito', spirit: 'Rum', tags: 'Rum · Mint · Highball', href: '#' },
+      { name: 'Paloma', spirit: 'Tequila', tags: 'Tequila · Grapefruit · Highball', href: '#' },
+      { name: 'Negroni', spirit: 'Gin', tags: 'Gin · Bitter · Stirred', href: '#' },
+      { name: 'Martini', spirit: 'Gin', tags: 'Gin · Stirred · Classic', href: '#' }
+    ];
+    const { spirit, query } = this.state;
+    const q = query.trim().toLowerCase();
+    const drinks = all
+      .filter((d) => spirit === 'All' || d.spirit === spirit)
+      .filter((d) => !q || (d.name + ' ' + d.tags).toLowerCase().indexOf(q) !== -1)
+      .map((d) => ({ ...d, initial: d.name.charAt(0), hasArt: !!d.hasArt, noArt: !d.hasArt }));
+    const chips = ['All', 'Tequila', 'Whiskey', 'Rum', 'Gin'].map((label) => {
+      const on = label === spirit;
+      return {
+        label,
+        pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ spirit: label }),
+        style: 'min-height: 44px; padding: 0 16px; border-radius: 4px; cursor: pointer; font: 600 15px Instrument Sans, system-ui, sans-serif; border: 1.5px solid #16191B; ' +
+          (on ? 'background: #16191B; color: #F4F0E7;' : 'background: transparent; color: #16191B;')
+      };
+    });
+    return {
+      chips,
+      drinks,
+      query,
+      onSearch: (e) => this.setState({ query: e.target.value }),
+      countLabel: drinks.length === 1 ? '1 cocktail' : drinks.length + ' cocktails'
+    };
+  }
+}
+</script>
+</body>
+</html>

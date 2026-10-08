@@ -1,0 +1,67 @@
+---
+import { site } from "../../lib/site";
+
+interface Props {
+  variant?: "recipe" | "home";
+}
+
+const { variant = "recipe" } = Astro.props;
+---
+
+<header class="site-header">
+  {
+    variant === "home" ? (
+      <span class="site-header__brand">{site.brand}</span>
+    ) : (
+      <a class="site-header__brand" href="/">{site.brand}</a>
+    )
+  }
+  {
+    variant === "home" ? (
+      <a class="site-header__link" href={site.shopUrl}>Shop coasters</a>
+    ) : (
+      <a class="site-header__link" href="/">
+        All cocktails
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+    )
+  }
+</header>
+
+<style>
+  .site-header {
+    background: var(--slate-800);
+    height: 56px;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--slate-700);
+  }
+
+  .site-header__brand {
+    color: var(--paper-50);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  .site-header__link {
+    min-height: var(--tap-min);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--paper-50);
+    text-decoration: none;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .site-header__link:hover {
+    color: var(--paper-50);
+  }
+</style>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Margarita cook mode</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..900;1,6..96,500..700&amp;family=Instrument+Sans:wght@400..700&amp;display=swap">
+<style>
+body{margin:0;background:#16191B}
+a{color:#C9A15B}a:hover{color:#F4F0E7}
+button:focus-visible,a:focus-visible{outline:3px solid #C9A15B;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; position: relative; overflow: hidden; background: #16191B; color: #F4F0E7; font-family: 'Instrument Sans', system-ui, sans-serif; display: flex; flex-direction: column">
+
+<header style="height: 64px; padding: 0 8px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0">
+<a href="Main.dc.html" aria-label="Exit cook mode" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; color: #F4F0E7">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+</a>
+<div style="display: flex; flex-direction: column; align-items: center; line-height: 1.2">
+<span style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 19px">Margarita</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #B7B2A8">Cook mode</span>
+</div>
+<button type="button" aria-label="Show ingredients" aria-expanded="{{ingExpanded}}" onClick="{{toggleIng}}" style="{{ingBtnStyle}}">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"></path><circle cx="4.5" cy="6" r="1"></circle><circle cx="4.5" cy="12" r="1"></circle><circle cx="4.5" cy="18" r="1"></circle></svg>
+</button>
+</header>
+
+<div aria-hidden="true" style="padding: 4px 16px 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; flex-shrink: 0">
+<sc-for list="{{segments}}" as="seg" hint-placeholder-count="6">
+<span style="{{seg.style}}"></span>
+</sc-for>
+</div>
+
+<sc-if value="{{notDone}}" hint-placeholder-val="{{ true }}">
+<main aria-live="polite" style="flex: 1; min-height: 0; padding: 32px 20px 16px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #C9A15B">Step {{stepNum}} of 6</span>
+<h1 style="margin: 0; font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 40px; line-height: 1.08">{{step.title}}</h1>
+<p style="margin: 0; font-size: 25px; line-height: 1.45; color: #F4F0E7">{{step.body}}</p>
+<sc-if value="{{step.hasTip}}" hint-placeholder-val="{{ false }}">
+<div style="margin-top: 4px; padding: 16px; background: #2C3135; border-radius: 4px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #C9A15B">Tip</span>
+<p style="margin: 0; font-size: 20px; line-height: 1.45; color: #E4DED1">{{step.tip}}</p>
+</div>
+</sc-if>
+</main>
+</sc-if>
+
+<sc-if value="{{done}}" hint-placeholder-val="{{ false }}">
+<main style="flex: 1; padding: 48px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px">
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 10px; width: 180px">
+<span style="flex: 1; height: 1px; background: #F4F0E7"></span>
+<span style="width: 7px; height: 7px; background: #C9A15B; transform: rotate(45deg)"></span>
+<span style="flex: 1; height: 1px; background: #F4F0E7"></span>
+</div>
+<h1 style="margin: 0; font-family: 'Bodoni Moda', Georgia, serif; font-weight: 900; font-size: 56px; line-height: 1">Cheers.</h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.45; color: #E4DED1">Taste it. Too tart or too sweet? Adjust the next one slightly.</p>
+<p style="margin: 8px 0 0; font-size: 15px; color: #B7B2A8">Please drink responsibly.</p>
+</main>
+</sc-if>
+
+<div style="padding: 0 20px 10px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #B7B2A8; flex-shrink: 0">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+Screen stays awake while cook mode is open
+</div>
+
+<nav aria-label="Step controls" style="padding: 12px 16px 28px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px; border-top: 1px solid #2C3135; flex-shrink: 0">
+<button type="button" onClick="{{back}}" disabled="{{backDisabled}}" style="{{backStyle}}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+Back</button>
+<button type="button" onClick="{{next}}" style="height: 68px; border: 0; border-radius: 4px; background: #C9A15B; color: #16191B; font: 700 19px 'Instrument Sans', system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer">{{nextLabel}}
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</button>
+</nav>
+
+<sc-if value="{{showIng}}" hint-placeholder-val="{{ false }}">
+<section aria-label="Ingredients" style="position: absolute; left: 0; right: 0; top: 64px; bottom: 108px; background: #1F2326; border-top: 1px solid #565D63; padding: 24px 20px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto">
+<div style="display: flex; align-items: baseline; justify-content: space-between">
+<h2 style="margin: 0; font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 30px">Ingredients</h2>
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B7B2A8">1 serving</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid #565D63">
+<li style="display: grid; grid-template-columns: 84px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #3A4045; font-size: 22px"><strong style="font-family: 'Bodoni Moda', Georgia, serif; color: #C9A15B">2 oz</strong><span>Tequila</span></li>
+<li style="display: grid; grid-template-columns: 84px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #3A4045; font-size: 22px"><strong style="font-family: 'Bodoni Moda', Georgia, serif; color: #C9A15B">1 oz</strong><span>Fresh lime juice</span></li>
+<li style="display: grid; grid-template-columns: 84px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #3A4045; font-size: 22px"><strong style="font-family: 'Bodoni Moda', Georgia, serif; color: #C9A15B">1 oz</strong><span>Orange liqueur</span></li>
+<li style="display: grid; grid-template-columns: 84px minmax(0, 1fr); padding: 14px 0; border-bottom: 1px solid #3A4045; font-size: 22px"><strong style="font-family: 'Bodoni Moda', Georgia, serif; color: #C9A15B">Rim</strong><span>Coarse salt</span></li>
+</ul>
+<p style="margin: 0; font-size: 17px; color: #E4DED1">Garnish: coarse salt rim, lime wheel</p>
+</section>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { i: 1, showIng: false, done: false };
+  }
+  renderVals() {
+    const steps = [
+      { title: 'Chill the glass', body: 'Fill your glass with ice and water while you prep. A cold glass keeps the drink crisp for longer.' },
+      { title: 'Rim the glass', body: 'Dump the ice water. Run a lime wedge around the outer edge of the rim only, then roll the outside of the rim in salt on a plate.', tip: "Salt only the outside so it doesn't fall into the drink and make it too salty." },
+      { title: 'Add the spirits and juice', body: 'To a shaker, add the tequila, lime juice and orange liqueur. Measure with a jigger. A Margarita depends on those ratios.' },
+      { title: 'Shake hard', body: 'Fill the shaker about two-thirds with ice and shake hard for 12 to 15 seconds. This chills the drink, adds the right amount of water, and lightens the texture.' },
+      { title: 'Strain over fresh ice', body: 'Fill the rimmed glass with fresh ice and strain the drink over it. Fresh ice dilutes slowly. The ice you shook with is already broken down.', tip: 'If you prefer it up, strain into a chilled coupe without ice.' },
+      { title: 'Garnish and taste', body: "Add a lime wheel on the rim. Take a sip. If it's too tart or too sweet for you, adjust the next one slightly." }
+    ];
+    const { i, showIng, done } = this.state;
+    const s = steps[i];
+    const last = i === steps.length - 1;
+    const segments = steps.map((_, k) => ({
+      style: 'display: block; height: 4px; border-radius: 2px; background: ' + (done || k <= i ? '#C9A15B' : '#3A4045') + ';'
+    }));
+    const backDisabled = i === 0 && !done;
+    return {
+      step: { title: s.title, body: s.body, tip: s.tip || '', hasTip: !!s.tip },
+      stepNum: i + 1,
+      segments,
+      done,
+      notDone: !done,
+      showIng,
+      ingExpanded: showIng ? 'true' : 'false',
+      ingBtnStyle: 'width: 48px; height: 48px; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1.5px solid ' + (showIng ? '#C9A15B' : 'transparent') + '; background: ' + (showIng ? '#2C3135' : 'transparent') + '; color: ' + (showIng ? '#C9A15B' : '#F4F0E7') + ';',
+      toggleIng: () => this.setState({ showIng: !showIng }),
+      nextLabel: done ? 'Start over' : (last ? 'Done' : 'Next'),
+      next: () => {
+        if (done) this.setState({ done: false, i: 0, showIng: false });
+        else if (last) this.setState({ done: true, showIng: false });
+        else this.setState({ i: i + 1, showIng: false });
+      },
+      back: () => {
+        if (done) this.setState({ done: false });
+        else if (i > 0) this.setState({ i: i - 1, showIng: false });
+      },
+      backDisabled,
+      backStyle: 'height: 68px; border-radius: 4px; background: transparent; border: 1.5px solid ' + (backDisabled ? '#3A4045' : '#8F8A80') + '; color: ' + (backDisabled ? '#6B7176' : '#F4F0E7') + '; font: 700 17px Instrument Sans, system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: ' + (backDisabled ? 'default' : 'pointer') + ';'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{
+  "slug": "manhattan",
+  "name": "Manhattan",
+  "tags": [
+    "Rye",
+    "Stirred",
+    "Classic"
+  ],
+  "tagline": "Rich, smooth and effortlessly refined.",
+  "intro": "The Manhattan is rye whiskey, sweet vermouth and bitters stirred until silky and cold. It's spicy, rich and aromatic, and it feels timeless. It's one of the great classics and rewards good ingredients and a steady stir.",
+  "heroImage": "/images/manhattan-hero.webp",
+  "heroAlt": "Engraved line illustration of a Manhattan in a coupe with a cherry",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Coupe or Nick & Nora glass",
+    "note": "Chill it before serving."
+  },
+  "garnish": [
+    "Cocktail cherry",
+    "Orange peel (optional)"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Rye whiskey",
+      "note": "Rye's spice balances the sweet vermouth. Bourbon makes a softer, sweeter Manhattan."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Sweet vermouth",
+      "note": "Use fresh vermouth and keep it refrigerated after opening."
+    },
+    {
+      "amount": "2 dashes",
+      "item": "Angostura bitters",
+      "note": "Adds depth and a warm baking-spice aroma."
+    }
+  ],
+  "equipment": [
+    "Mixing glass",
+    "Bar spoon",
+    "Jigger",
+    "Julep or Hawthorne strainer"
+  ],
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Place your coupe in the freezer, or fill it with ice and water, while you mix."
+    },
+    {
+      "title": "Combine in a mixing glass",
+      "body": "Add the rye, sweet vermouth and bitters to a mixing glass. Fill it with cold, fresh ice."
+    },
+    {
+      "title": "Stir",
+      "body": "Stir for about 25 to 30 seconds. Stirring chills and dilutes the drink while keeping it clear and silky.",
+      "tip": "Shaking would make it cloudy and frothy. Stir for a smooth texture."
+    },
+    {
+      "title": "Strain",
+      "body": "Discard the ice water from your glass and strain the Manhattan into it."
+    },
+    {
+      "title": "Garnish",
+      "body": "Drop in a quality cocktail cherry. If you like, also express an orange peel over the drink for a bright aroma."
+    }
+  ],
+  "tips": [
+    "Pro tip: Use a good cocktail cherry such as Luxardo or Amarena. Bright red maraschino cherries are very sweet.",
+    "Pro tip: Keep your vermouth in the fridge and use it within a month or two of opening.",
+    "Common mistake: Using old vermouth, which tastes stale and flat.",
+    "Common mistake: Shaking the drink instead of stirring."
+  ],
+  "variations": [
+    {
+      "name": "Perfect Manhattan",
+      "description": "Replace part of the sweet vermouth with dry vermouth for a lighter, drier drink."
+    },
+    {
+      "name": "Rob Roy",
+      "description": "Use Scotch whisky in place of rye."
+    },
+    {
+      "name": "Black Manhattan",
+      "description": "Replace the sweet vermouth with Averna amaro for a darker, bittersweet drink."
+    },
+    {
+      "name": "Dry Manhattan",
+      "description": "Use dry vermouth and garnish with a lemon twist."
+    }
+  ],
+  "substitutions": [
+    "Rye whiskey: Bourbon for a sweeter, rounder drink.",
+    "Sweet vermouth: Carpano Antica is rich and vanilla-forward. Cocchi di Torino is brighter.",
+    "Angostura bitters: Orange bitters or a mix of the two make a nice twist."
+  ],
+  "flavorProfile": {
+    "sweet": 2,
+    "sour": 1,
+    "bitter": 3,
+    "strong": 4
+  },
+  "history": "The Manhattan dates to 1870s New York. A popular story ties it to a banquet at the Manhattan Club, but historians doubt that account, so its exact origin is disputed.",
+  "relatedSlugs": [
+    "old-fashioned",
+    "negroni",
+    "martini"
+  ],
+  "seo": {
+    "title": "Manhattan Recipe: Rye Whiskey, Sweet Vermouth and Bitters",
+    "description": "Make a classic Manhattan with 2 oz rye whiskey, 1 oz sweet vermouth and 2 dashes Angostura bitters. Easy steps, tips and variations."
+  }
+}

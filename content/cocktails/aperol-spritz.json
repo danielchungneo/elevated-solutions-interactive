@@ -1,0 +1,113 @@
+{
+  "slug": "aperol-spritz",
+  "name": "Aperol Spritz",
+  "tags": [
+    "Prosecco",
+    "Aperitivo",
+    "Sparkling"
+  ],
+  "tagline": "Bubbly, bittersweet and sunny.",
+  "intro": "The Aperol Spritz is a light, bubbly Italian aperitivo with a gentle bitter orange flavor. It's low in alcohol, easy to make and made to be sipped slowly. Its orange color makes it look as cheerful as it tastes.",
+  "heroImage": "/images/aperol-spritz-hero.webp",
+  "heroAlt": "Engraved line illustration of an Aperol Spritz with an orange slice",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 3,
+  "servings": 1,
+  "glassware": {
+    "name": "Large wine glass",
+    "note": "A stemmed glass gives room for ice and bubbles."
+  },
+  "garnish": [
+    "Orange slice"
+  ],
+  "ingredients": [
+    {
+      "amount": "3 oz",
+      "item": "Prosecco",
+      "note": "Use a dry (brut) prosecco. Keep it well chilled."
+    },
+    {
+      "amount": "2 oz",
+      "item": "Aperol",
+      "note": "A bright, bittersweet orange aperitivo."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Soda water",
+      "note": "Cold and fizzy, added last for a light finish."
+    }
+  ],
+  "equipment": [
+    "Large wine glass",
+    "Jigger",
+    "Bar spoon"
+  ],
+  "steps": [
+    {
+      "title": "Fill with ice",
+      "body": "Fill a large wine glass generously with ice. More ice keeps the drink colder for longer, which means less dilution."
+    },
+    {
+      "title": "Pour the prosecco",
+      "body": "Add the 3 oz of prosecco first, pouring gently down the side of the glass to protect the bubbles.",
+      "tip": "Adding the sparkling wine first helps preserve its fizz."
+    },
+    {
+      "title": "Add the Aperol",
+      "body": "Pour in the 2 oz of Aperol. It will sink and swirl through the prosecco."
+    },
+    {
+      "title": "Top with soda",
+      "body": "Add the 1 oz of soda water."
+    },
+    {
+      "title": "Stir and garnish",
+      "body": "Give it one gentle stir to combine. Tuck in an orange slice and serve right away."
+    }
+  ],
+  "tips": [
+    "Pro tip: Chill all your ingredients ahead of time. Cold bottles keep the bubbles lively.",
+    "Pro tip: Use plenty of ice and a large glass. A packed glass stays colder and dilutes more slowly.",
+    "Common mistake: Stirring too much, which flattens the bubbles.",
+    "Common mistake: Using sweet prosecco, which makes the drink cloying."
+  ],
+  "variations": [
+    {
+      "name": "Campari Spritz",
+      "description": "Replace the Aperol with Campari for a bolder, more bitter drink."
+    },
+    {
+      "name": "Hugo Spritz",
+      "description": "Use elderflower liqueur or syrup with prosecco, soda and fresh mint."
+    },
+    {
+      "name": "Limoncello Spritz",
+      "description": "Swap the Aperol for limoncello for a sweeter, lemon-forward drink."
+    },
+    {
+      "name": "Low-ABV Spritz",
+      "description": "Use a non-alcoholic sparkling wine and a splash of non-alcoholic bitter aperitif."
+    }
+  ],
+  "substitutions": [
+    "Prosecco: Cava or another dry sparkling wine works well.",
+    "Aperol: Select or Campari offer a more bitter alternative.",
+    "Garnish: A green olive is the traditional garnish for a Venetian spritz with Select."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 1,
+    "bitter": 3,
+    "strong": 1
+  },
+  "history": "The spritz tradition comes from the Veneto region of northern Italy, where water or soda was added to local wine. Aperol was created in Padua in 1919. The Aperol Spritz became a global favorite in the 2000s after Campari acquired the brand.",
+  "relatedSlugs": [
+    "negroni",
+    "mojito",
+    "moscow-mule"
+  ],
+  "seo": {
+    "title": "Aperol Spritz Recipe: Prosecco, Aperol and Soda",
+    "description": "Make an Aperol Spritz with 3 oz prosecco, 2 oz Aperol and 1 oz soda water. Easy steps, tips and variations."
+  }
+}

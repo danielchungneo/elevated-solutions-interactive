@@ -1,0 +1,114 @@
+{
+  "slug": "moscow-mule",
+  "name": "Moscow Mule",
+  "tags": [
+    "Vodka",
+    "Ginger",
+    "Long Drink"
+  ],
+  "tagline": "Spicy ginger, crisp lime, ice cold.",
+  "intro": "The Moscow Mule is a quick, fizzy drink that's easy to love: vodka, lime and a generous pour of ginger beer. It's spicy, tart and refreshing, and it needs no shaking. Serve it in a copper mug if you have one.",
+  "heroImage": "/images/moscow-mule-hero.webp",
+  "heroAlt": "Engraved line illustration of a Moscow Mule in a copper mug with lime and mint",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 3,
+  "servings": 1,
+  "glassware": {
+    "name": "Copper mug",
+    "note": "A highball glass works just as well. Copper keeps the drink cold."
+  },
+  "garnish": [
+    "Lime wedge",
+    "Fresh mint sprig (optional)"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Vodka",
+      "note": "A clean, mid-range vodka is all you need."
+    },
+    {
+      "amount": "½ oz",
+      "item": "Fresh lime juice",
+      "note": "Squeeze it fresh. It balances the sweetness of the ginger beer."
+    },
+    {
+      "amount": "4 oz",
+      "item": "Ginger beer",
+      "note": "Choose a spicy ginger beer rather than ginger ale for the proper bite."
+    }
+  ],
+  "equipment": [
+    "Copper mug or highball glass",
+    "Jigger",
+    "Bar spoon"
+  ],
+  "steps": [
+    {
+      "title": "Chill the mug",
+      "body": "Fill the mug with ice and let it sit while you gather your ingredients. A cold mug keeps the drink fizzy and cold."
+    },
+    {
+      "title": "Add vodka and lime",
+      "body": "With the mug full of ice, add the 2 oz of vodka and ½ oz of lime juice."
+    },
+    {
+      "title": "Top with ginger beer",
+      "body": "Slowly pour in the 4 oz of cold ginger beer, tilting the mug slightly to protect the bubbles."
+    },
+    {
+      "title": "Stir once",
+      "body": "Give it one gentle stir from the bottom with a bar spoon. One lift is enough to combine without losing fizz.",
+      "tip": "Over-stirring flattens the carbonation."
+    },
+    {
+      "title": "Garnish",
+      "body": "Squeeze a lime wedge over the top and drop it in, or perch it on the rim. Add a mint sprig if you like the aroma."
+    }
+  ],
+  "tips": [
+    "Pro tip: Keep your ginger beer well chilled. Warm soda foams up and goes flat fast.",
+    "Pro tip: Taste a few ginger beers. They vary from sweet and mild to fiery and dry.",
+    "Common mistake: Using ginger ale. It tastes much sweeter and misses the spicy kick.",
+    "Common mistake: Pouring the ginger beer too fast, which kills the fizz."
+  ],
+  "variations": [
+    {
+      "name": "Kentucky Mule",
+      "description": "Swap the vodka for bourbon for a warmer, caramel-toned drink."
+    },
+    {
+      "name": "Mexican Mule",
+      "description": "Use tequila instead of vodka."
+    },
+    {
+      "name": "Dark and Stormy-style Mule",
+      "description": "Use dark rum in place of vodka for a richer, molasses flavor."
+    },
+    {
+      "name": "Berry Mule",
+      "description": "Muddle a few raspberries or blackberries in the mug before adding ice."
+    }
+  ],
+  "substitutions": [
+    "Ginger beer: A spicy ginger ale works in a pinch, but add a little extra lime to keep it balanced.",
+    "Copper mug: A chilled highball or Collins glass is a fine substitute.",
+    "Vodka: Gin makes a Gin-Gin Mule, with a more herbal edge."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 2,
+    "bitter": 1,
+    "strong": 2
+  },
+  "history": "The Moscow Mule dates to the early 1940s in the United States, where it helped popularize vodka. Accounts of exactly who invented it and where vary, but they involve a vodka brand, a ginger beer producer and the copper mugs it's now known for.",
+  "relatedSlugs": [
+    "mojito",
+    "daiquiri",
+    "aperol-spritz"
+  ],
+  "seo": {
+    "title": "Moscow Mule Recipe: Vodka, Lime and Ginger Beer",
+    "description": "Make a Moscow Mule with 2 oz vodka, ½ oz lime juice and 4 oz ginger beer. Quick steps, tips and variations for a perfect mule."
+  }
+}

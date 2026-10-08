@@ -1,0 +1,124 @@
+{
+  "slug": "pina-colada",
+  "name": "Piña Colada",
+  "tags": [
+    "Rum",
+    "Tropical",
+    "Frozen"
+  ],
+  "tagline": "Creamy coconut, sweet pineapple, island sunshine.",
+  "intro": "The Piña Colada is a creamy, frozen blend of white rum, coconut and pineapple. It's sweet, smooth and unmistakably tropical. A good one is thick, cold and balanced, not syrupy.",
+  "heroImage": "/images/pina-colada-hero.webp",
+  "heroAlt": "Engraved line illustration of a Piña Colada with pineapple, cherry and umbrella",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Hurricane glass",
+    "note": "A tall glass or a large goblet also works."
+  },
+  "garnish": [
+    "Pineapple wedge",
+    "Maraschino cherry"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "White rum",
+      "note": "A light Puerto Rican style rum is classic."
+    },
+    {
+      "amount": "1½ oz",
+      "item": "Cream of coconut",
+      "note": "Use sweetened cream of coconut such as Coco López, not coconut milk or coconut cream. Stir or shake the can first."
+    },
+    {
+      "amount": "1½ oz",
+      "item": "Pineapple juice",
+      "note": "Use good-quality juice, ideally not from concentrate."
+    },
+    {
+      "amount": "1 cup",
+      "item": "Ice",
+      "note": "Use standard cubes. Crushed ice blends faster but can be watery."
+    }
+  ],
+  "equipment": [
+    "Blender",
+    "Jigger",
+    "Measuring cup",
+    "Cocktail pick"
+  ],
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Place your hurricane glass in the freezer while you blend."
+    },
+    {
+      "title": "Stir the cream of coconut",
+      "body": "Cream of coconut separates in the can, so stir it well before measuring.",
+      "tip": "A smooth start means a smooth drink."
+    },
+    {
+      "title": "Add to the blender",
+      "body": "Add the rum, cream of coconut and pineapple juice, then the 1 cup of ice. Adding liquids first helps the blades move freely."
+    },
+    {
+      "title": "Blend",
+      "body": "Blend on high for 15 to 20 seconds until smooth and thick, with no ice chunks. If it's too thick, pulse in a splash of pineapple juice."
+    },
+    {
+      "title": "Pour",
+      "body": "Pour into the chilled glass right away, since a frozen drink melts quickly."
+    },
+    {
+      "title": "Garnish",
+      "body": "Skewer a cherry and a pineapple wedge on a pick and set it on the rim."
+    }
+  ],
+  "tips": [
+    "Pro tip: Freeze pineapple juice in an ice tray and use some as part of the ice for extra flavor.",
+    "Pro tip: Use cold ingredients so the drink stays thick.",
+    "Common mistake: Using coconut milk or coconut cream instead of cream of coconut. It won't be sweet enough or the right texture.",
+    "Common mistake: Over-blending, which melts the ice and thins out the drink."
+  ],
+  "variations": [
+    {
+      "name": "Virgin Piña Colada",
+      "description": "Leave out the rum. Add a little extra pineapple juice if needed."
+    },
+    {
+      "name": "Chi Chi",
+      "description": "Use vodka instead of rum."
+    },
+    {
+      "name": "Dark Rum Float",
+      "description": "Float a splash of dark rum on top for a deeper flavor."
+    },
+    {
+      "name": "Miami Vice",
+      "description": "Layer a Piña Colada with a frozen strawberry Daiquiri in the same glass."
+    }
+  ],
+  "substitutions": [
+    "White rum: Gold or coconut rum works for a richer or more coconut-forward flavor.",
+    "Cream of coconut: Coco López is the standard. Other brands are fine, but check the sweetness.",
+    "Pineapple juice: Fresh pineapple blended with ice gives an even brighter flavor."
+  ],
+  "flavorProfile": {
+    "sweet": 5,
+    "sour": 1,
+    "bitter": 1,
+    "strong": 2
+  },
+  "history": "The Piña Colada comes from Puerto Rico, which made it the national drink in 1978. Its exact inventor is disputed. Several Puerto Rican bartenders, including those connected to the Caribe Hilton and to Barrachina, claim credit in the 1950s and 1960s.",
+  "relatedSlugs": [
+    "daiquiri",
+    "mojito",
+    "margarita"
+  ],
+  "seo": {
+    "title": "Piña Colada Recipe: White Rum, Cream of Coconut and Pineapple",
+    "description": "Make a creamy Piña Colada with 2 oz white rum, 1½ oz cream of coconut, 1½ oz pineapple juice and 1 cup ice. Steps, tips and variations."
+  }
+}

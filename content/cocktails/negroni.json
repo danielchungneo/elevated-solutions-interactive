@@ -1,0 +1,115 @@
+{
+  "slug": "negroni",
+  "name": "Negroni",
+  "tags": [
+    "Gin",
+    "Bittersweet",
+    "Stirred"
+  ],
+  "tagline": "Equal parts, endlessly bold.",
+  "intro": "The Negroni is gin, Campari and sweet vermouth in equal parts. It's bitter, sweet and herbal all at once, with a ruby color and a long finish. It's easy to make and has a way of winning people over, even if the first sip is a surprise.",
+  "heroImage": "/images/negroni-hero.webp",
+  "heroAlt": "Engraved line illustration of a Negroni in a rocks glass with an orange slice",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 3,
+  "servings": 1,
+  "glassware": {
+    "name": "Rocks glass",
+    "note": "Serve over a large ice cube if you have one."
+  },
+  "garnish": [
+    "Orange peel"
+  ],
+  "ingredients": [
+    {
+      "amount": "1 oz",
+      "item": "Gin",
+      "note": "A juniper-forward London dry gin holds up best."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Campari",
+      "note": "The bitter orange and herbal backbone of the drink."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Sweet vermouth",
+      "note": "Carpano Antica is rich. Cocchi di Torino is brighter. Keep opened vermouth refrigerated."
+    }
+  ],
+  "equipment": [
+    "Mixing glass",
+    "Bar spoon",
+    "Jigger",
+    "Julep or Hawthorne strainer",
+    "Peeler or paring knife"
+  ],
+  "steps": [
+    {
+      "title": "Add the ingredients",
+      "body": "Pour the gin, Campari and sweet vermouth into a mixing glass."
+    },
+    {
+      "title": "Add ice and stir",
+      "body": "Fill the glass with ice and stir for 20 to 30 seconds. You want the drink cold and softened, not watery.",
+      "tip": "Stirring keeps the Negroni silky and clear."
+    },
+    {
+      "title": "Prepare the serving glass",
+      "body": "Place a large ice cube in a rocks glass. A large cube melts slowly, keeping the drink cold without watering it down."
+    },
+    {
+      "title": "Strain",
+      "body": "Strain the mixture over the ice."
+    },
+    {
+      "title": "Express the orange peel",
+      "body": "Cut a wide strip of orange peel. Squeeze it over the drink to release the oils, rub it around the rim, and drop it in or rest it on the ice."
+    }
+  ],
+  "tips": [
+    "Pro tip: Chill your gin and glass for a crisper drink.",
+    "Pro tip: Try different sweet vermouths. They change the drink more than you'd expect.",
+    "Common mistake: Using stale vermouth, which makes the drink taste dull and sour.",
+    "Common mistake: Skipping the orange peel. The aroma balances the bitterness."
+  ],
+  "variations": [
+    {
+      "name": "Boulevardier",
+      "description": "Replace the gin with bourbon or rye for a warmer, richer drink."
+    },
+    {
+      "name": "Negroni Sbagliato",
+      "description": "Replace the gin with prosecco for a lighter, bubbly version."
+    },
+    {
+      "name": "White Negroni",
+      "description": "Use gin, a bitter gentian liqueur such as Suze and a dry aperitif wine like Lillet Blanc."
+    },
+    {
+      "name": "Mezcal Negroni",
+      "description": "Swap the gin for mezcal for a smoky twist."
+    }
+  ],
+  "substitutions": [
+    "Campari: Aperol is milder and sweeter, which makes a gentler drink.",
+    "Gin: A softer, more floral gin gives a different but pleasant result.",
+    "Orange peel: A grapefruit peel adds a sharper citrus note."
+  ],
+  "flavorProfile": {
+    "sweet": 2,
+    "sour": 1,
+    "bitter": 5,
+    "strong": 4
+  },
+  "history": "The Negroni is commonly traced to Florence around 1919, when Count Camillo Negroni asked for gin in place of soda water in his Americano. The story is widely told but not firmly documented.",
+  "relatedSlugs": [
+    "manhattan",
+    "martini",
+    "aperol-spritz"
+  ],
+  "seo": {
+    "title": "Negroni Recipe: Equal Parts Gin, Campari and Sweet Vermouth",
+    "description": "Make a classic Negroni with 1 oz each of gin, Campari and sweet vermouth. Easy steps, pro tips and variations."
+  }
+}

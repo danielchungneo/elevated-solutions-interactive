@@ -1,0 +1,115 @@
+{
+  "slug": "whiskey-sour",
+  "name": "Whiskey Sour",
+  "tags": [
+    "Bourbon",
+    "Citrus",
+    "Shaken"
+  ],
+  "tagline": "Tart, smooth and a little bit sweet.",
+  "intro": "The Whiskey Sour pairs bourbon with lemon and a touch of sweetness. It's balanced, bright and easy to drink, with the whiskey still clearly in front. It's also a great starting point if you're new to whiskey cocktails.",
+  "heroImage": "/images/whiskey-sour-hero.webp",
+  "heroAlt": "Engraved line illustration of a Whiskey Sour with citrus and a cherry",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Rocks glass",
+    "note": "Serve over ice. Use a coupe if you'd like it up."
+  },
+  "garnish": [
+    "Lemon wheel",
+    "Cocktail cherry (optional)"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Bourbon",
+      "note": "A 90 to 100 proof bourbon holds up well to the lemon."
+    },
+    {
+      "amount": "¾ oz",
+      "item": "Fresh lemon juice",
+      "note": "Always squeeze it fresh."
+    },
+    {
+      "amount": "¾ oz",
+      "item": "Simple syrup",
+      "note": "Equal parts sugar and water, stirred until dissolved."
+    }
+  ],
+  "equipment": [
+    "Cocktail shaker",
+    "Jigger",
+    "Citrus juicer",
+    "Hawthorne strainer"
+  ],
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Fill a rocks glass with ice to chill it while you mix."
+    },
+    {
+      "title": "Combine the ingredients",
+      "body": "Add the bourbon, lemon juice and simple syrup to a shaker."
+    },
+    {
+      "title": "Shake with ice",
+      "body": "Fill the shaker with ice and shake hard for 12 to 15 seconds. You want the shaker to feel frosty cold, which means the drink is chilled and diluted well."
+    },
+    {
+      "title": "Strain",
+      "body": "Dump the ice from your glass and add fresh ice. Strain the drink over it.",
+      "tip": "For a silkier texture, strain through a fine mesh strainer as well."
+    },
+    {
+      "title": "Garnish",
+      "body": "Add a lemon wheel, and a cherry if you like. Taste, and adjust your next round to suit your preference."
+    }
+  ],
+  "tips": [
+    "Pro tip: Make your simple syrup in advance. It keeps in the fridge for about two weeks.",
+    "Pro tip: For a fuller foam, try a dry shake first: shake without ice, then shake again with ice.",
+    "Common mistake: Using bottled lemon juice or sour mix, which tastes flat and overly sweet.",
+    "Common mistake: Not shaking long enough. The drink should be very cold with a soft, rounded edge."
+  ],
+  "variations": [
+    {
+      "name": "New York Sour",
+      "description": "Float about ½ oz of dry red wine on top for color and a tannic edge."
+    },
+    {
+      "name": "Boston Sour",
+      "description": "Add egg white to the shaker for a silky texture and thick foam, using the dry shake method."
+    },
+    {
+      "name": "Gold Rush",
+      "description": "Replace the simple syrup with honey syrup and use lemon juice."
+    },
+    {
+      "name": "Rye Whiskey Sour",
+      "description": "Use rye in place of bourbon for a spicier, drier version."
+    }
+  ],
+  "substitutions": [
+    "Bourbon: Rye whiskey or a smooth blended whiskey also work well.",
+    "Simple syrup: Honey syrup (equal parts honey and warm water) or maple syrup adds richer flavor.",
+    "Lemon juice: Fresh lime makes a tarter drink, similar to a whiskey daiquiri."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 4,
+    "bitter": 1,
+    "strong": 3
+  },
+  "history": "Sours, a family of drinks made from spirit, citrus and sugar, were well established by the mid-1800s. The Whiskey Sour appears in Jerry Thomas's 1862 bartender's guide.",
+  "relatedSlugs": [
+    "old-fashioned",
+    "daiquiri",
+    "margarita"
+  ],
+  "seo": {
+    "title": "Whiskey Sour Recipe: Bourbon, Lemon and Simple Syrup",
+    "description": "Make a classic Whiskey Sour with 2 oz bourbon, ¾ oz lemon juice and ¾ oz simple syrup. Easy steps, tips and variations."
+  }
+}

@@ -1,0 +1,93 @@
+---
+interface Props {
+  name: string;
+  tags: string[];
+  href: string;
+  heroImage?: string;
+  compact?: boolean;
+}
+
+const { name, tags, href, heroImage, compact = false } = Astro.props;
+const initial = name.charAt(0).toUpperCase();
+const tagLine = tags.slice(0, 2).join(" · ");
+---
+
+<a class:list={["drink-tile", compact && "drink-tile--compact"]} href={href}>
+  <div class="drink-tile__art">
+    {
+      heroImage ? (
+        <img src={heroImage} alt="" width="160" height="160" loading="lazy" />
+      ) : (
+        <>
+          <div class="drink-tile__frame" aria-hidden="true"></div>
+          <span class="drink-tile__mono" aria-hidden="true">{initial}</span>
+        </>
+      )
+    }
+  </div>
+  <div class="drink-tile__meta">
+    <span class="drink-tile__name">{name}</span>
+    <span class="drink-tile__tags">{tagLine}</span>
+  </div>
+</a>
+
+<style>
+  .drink-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--slate-900);
+    text-decoration: none;
+  }
+
+  .drink-tile:hover {
+    color: var(--slate-900);
+  }
+
+  .drink-tile__art {
+    aspect-ratio: 1 / 1;
+    background: var(--slate-800);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .drink-tile__art img {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+  }
+
+  .drink-tile__frame {
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--slate-500);
+  }
+
+  .drink-tile__mono {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #e4ded1;
+  }
+
+  .drink-tile__meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drink-tile__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1.2;
+  }
+
+  .drink-tile__tags {
+    font-size: 0.8125rem;
+    color: var(--ink-muted);
+  }
+</style>

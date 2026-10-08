@@ -1,0 +1,125 @@
+{
+  "slug": "espresso-martini",
+  "name": "Espresso Martini",
+  "tags": [
+    "Vodka",
+    "Coffee",
+    "Shaken"
+  ],
+  "tagline": "Rich, cold and wide awake.",
+  "intro": "The Espresso Martini is vodka, coffee liqueur and fresh espresso shaken until it grows a thick, creamy foam. It's bittersweet and silky, and it works as an after-dinner drink or a pick-me-up. The foam is the signature, and it comes from technique.",
+  "heroImage": "/images/espresso-martini-hero.webp",
+  "heroAlt": "Engraved line illustration of an Espresso Martini in a coupe with foam and coffee beans",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 7,
+  "servings": 1,
+  "glassware": {
+    "name": "Coupe or martini glass",
+    "note": "Chill it beforehand so the foam holds its shape."
+  },
+  "garnish": [
+    "Three coffee beans"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Vodka",
+      "note": "A clean, neutral vodka lets the coffee flavor lead."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Coffee liqueur",
+      "note": "Kahlúa is sweeter. Mr Black is drier and more intensely coffee."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Fresh espresso",
+      "note": "Brew it right before you mix. The crema helps create the foam."
+    },
+    {
+      "amount": "½ oz",
+      "item": "Simple syrup",
+      "note": "Made from equal parts sugar and water. Use less if your coffee liqueur is very sweet."
+    }
+  ],
+  "equipment": [
+    "Cocktail shaker",
+    "Jigger",
+    "Espresso machine, moka pot or AeroPress",
+    "Hawthorne strainer",
+    "Fine mesh strainer"
+  ],
+  "steps": [
+    {
+      "title": "Chill your glass",
+      "body": "Place your coupe in the freezer or fill it with ice water while you prepare the drink."
+    },
+    {
+      "title": "Brew the espresso",
+      "body": "Pull a fresh shot, about 1 oz. Let it cool for a minute or so.",
+      "tip": "Piping hot espresso melts the ice too quickly and thins the foam."
+    },
+    {
+      "title": "Combine in a shaker",
+      "body": "Add the vodka, coffee liqueur, espresso and simple syrup to the shaker."
+    },
+    {
+      "title": "Add ice and shake hard",
+      "body": "Fill the shaker with ice and shake as hard as you can for about 15 seconds. The vigorous shaking whips air into the espresso's oils and creates the foam."
+    },
+    {
+      "title": "Double strain",
+      "body": "Strain through the shaker's strainer and a fine mesh strainer into the chilled glass. This catches ice shards and gives the cleanest, smoothest texture."
+    },
+    {
+      "title": "Garnish",
+      "body": "Let the foam settle for a few seconds, then float three coffee beans on top.",
+      "tip": "Three beans traditionally stand for health, wealth and happiness."
+    }
+  ],
+  "tips": [
+    "Pro tip: Use freshly brewed espresso. Old coffee tastes flat and gives a thinner foam.",
+    "Pro tip: Fill the shaker with plenty of ice. More ice chills faster with less dilution.",
+    "Common mistake: Shaking gently. A weak shake gives a thin, watery foam.",
+    "Common mistake: Skipping the fine strain, which leaves small ice chips in the foam."
+  ],
+  "variations": [
+    {
+      "name": "Cold Brew Martini",
+      "description": "Replace the espresso with strong cold brew concentrate if you don't have an espresso machine."
+    },
+    {
+      "name": "Vanilla Espresso Martini",
+      "description": "Use vanilla vodka, or add a drop of vanilla extract."
+    },
+    {
+      "name": "Irish Espresso Martini",
+      "description": "Swap the vodka for Irish whiskey for a warmer, rounder flavor."
+    },
+    {
+      "name": "Salted Caramel Espresso Martini",
+      "description": "Add a small spoonful of caramel syrup and finish with a pinch of flaky salt."
+    }
+  ],
+  "substitutions": [
+    "Espresso: 1 oz strong cold brew concentrate or a strong moka pot coffee.",
+    "Coffee liqueur: Tia Maria, Mr Black or another coffee liqueur. Adjust the simple syrup to taste.",
+    "Simple syrup: Demerara syrup adds a toasty note."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 1,
+    "bitter": 3,
+    "strong": 3
+  },
+  "history": "The Espresso Martini is widely credited to London bartender Dick Bradsell in the 1980s, who created it at a Soho bar. Early on, it was reportedly called the Vodka Espresso.",
+  "relatedSlugs": [
+    "martini",
+    "old-fashioned",
+    "manhattan"
+  ],
+  "seo": {
+    "title": "Espresso Martini Recipe: Vodka, Coffee Liqueur and Fresh Espresso",
+    "description": "Make a foamy Espresso Martini with 2 oz vodka, 1 oz coffee liqueur, 1 oz fresh espresso and ½ oz simple syrup. Easy steps and pro tips."
+  }
+}

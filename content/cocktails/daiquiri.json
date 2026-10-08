@@ -1,0 +1,115 @@
+{
+  "slug": "daiquiri",
+  "name": "Daiquiri",
+  "tags": [
+    "Rum",
+    "Citrus",
+    "Shaken"
+  ],
+  "tagline": "Three ingredients, perfectly balanced.",
+  "intro": "The classic Daiquiri is white rum, lime and sugar, shaken until ice cold. It's tart, clean and refreshing, and nothing like the blended versions you may know. It's a great test of balance and technique, and a joy when you get it right.",
+  "heroImage": "/images/daiquiri-hero.webp",
+  "heroAlt": "Engraved line illustration of a Daiquiri in a coupe with lime",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Coupe",
+    "note": "Chill it ahead of time. A small cocktail glass also works."
+  },
+  "garnish": [
+    "Lime wheel or twist"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "White rum",
+      "note": "Choose a clean, lightly flavored rum."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Fresh lime juice",
+      "note": "Squeeze it just before mixing."
+    },
+    {
+      "amount": "¾ oz",
+      "item": "Simple syrup",
+      "note": "Equal parts sugar and water, stirred until dissolved."
+    }
+  ],
+  "equipment": [
+    "Cocktail shaker",
+    "Jigger",
+    "Citrus juicer",
+    "Hawthorne strainer",
+    "Fine mesh strainer"
+  ],
+  "steps": [
+    {
+      "title": "Chill the coupe",
+      "body": "Fill the glass with ice and water, or place it in the freezer, while you make the drink."
+    },
+    {
+      "title": "Combine",
+      "body": "Add the rum, lime juice and simple syrup to a shaker."
+    },
+    {
+      "title": "Shake hard",
+      "body": "Fill the shaker with ice and shake for 12 to 15 seconds. This chills and dilutes the drink, and gives it a light, frothy texture.",
+      "tip": "The shaker should be painfully cold to hold."
+    },
+    {
+      "title": "Double strain",
+      "body": "Discard the ice water from your glass. Strain the drink through the shaker's strainer and a fine mesh strainer for a smooth finish with no ice shards."
+    },
+    {
+      "title": "Garnish",
+      "body": "Float a thin lime wheel on top or express a lime twist over the drink. Serve right away."
+    }
+  ],
+  "tips": [
+    "Pro tip: Taste before serving. If it's too tart or sweet for your limes, adjust the next one slightly.",
+    "Pro tip: Make simple syrup in advance and keep it in the fridge.",
+    "Common mistake: Using bottled lime juice, which tastes dull and slightly bitter.",
+    "Common mistake: Under-shaking, which leaves the drink warm and sharp."
+  ],
+  "variations": [
+    {
+      "name": "Hemingway Daiquiri",
+      "description": "Add a splash of grapefruit juice and maraschino liqueur and reduce the sugar, in the style of the Floridita in Havana."
+    },
+    {
+      "name": "Frozen Strawberry Daiquiri",
+      "description": "Blend the ingredients with ripe strawberries and ice until smooth."
+    },
+    {
+      "name": "Aged Rum Daiquiri",
+      "description": "Use a gold or aged rum for notes of caramel and vanilla."
+    },
+    {
+      "name": "Spiced Daiquiri",
+      "description": "Use a spiced rum for a warmer take."
+    }
+  ],
+  "substitutions": [
+    "White rum: Light Cuban-style or Puerto Rican rum works best. Avoid overly flavored rums.",
+    "Simple syrup: Demerara syrup adds a deeper, toasty flavor.",
+    "Lime juice: Lemon makes a different, softer sour but isn't the classic."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 4,
+    "bitter": 1,
+    "strong": 3
+  },
+  "history": "The Daiquiri is named after the Daiquirí area near Santiago de Cuba. It's commonly credited to an American engineer named Jennings Cox around 1900, though the story is not fully proven. Havana bartender Constantino Ribalaigua later helped refine and popularize it.",
+  "relatedSlugs": [
+    "margarita",
+    "mojito",
+    "whiskey-sour"
+  ],
+  "seo": {
+    "title": "Daiquiri Recipe: White Rum, Lime and Simple Syrup",
+    "description": "Make a classic Daiquiri with 2 oz white rum, 1 oz lime juice and ¾ oz simple syrup. Step-by-step method, tips and variations."
+  }
+}

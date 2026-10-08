@@ -1,0 +1,502 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteHeader from "../../../components/ui/SiteHeader.astro";
+import SiteFooter from "../../../components/ui/SiteFooter.astro";
+import RecipeHero from "../../../components/cocktail/RecipeHero.astro";
+import DrinkTile from "../../../components/cocktail/DrinkTile.astro";
+import Ingredients from "../../../components/cocktail/Ingredients";
+import {
+  getAllCocktails,
+  getRelated,
+  recipeJsonLd,
+} from "../../../lib/cocktails";
+import { splitTips, mistakeLead } from "../../../lib/tips";
+
+export async function getStaticPaths() {
+  const cocktails = await getAllCocktails();
+  return cocktails.map((c) => ({
+    params: { slug: c.id },
+    props: { entry: c },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const slug = entry.id;
+const related = await getRelated(data.relatedSlugs);
+const { proTips, mistakes } = splitTips(data.tips);
+const glassShort = data.glassware.name.replace(/ glass$/i, "");
+const path = `/c/${slug}`;
+const pageUrl = new URL(path, Astro.site ?? Astro.url).href;
+const jsonLd = recipeJsonLd(data, pageUrl);
+---
+
+<BaseLayout
+  title={data.seo.title}
+  description={data.seo.description}
+  canonicalPath={path}
+  jsonLd={jsonLd}
+>
+  <div class="page-shell">
+    <SiteHeader />
+    <RecipeHero
+      name={data.name}
+      tags={data.tags}
+      tagline={data.tagline}
+      heroImage={data.heroImage}
+      heroAlt={data.heroAlt}
+    />
+
+    <main>
+      <section class="section section--tight-top">
+        <p class="intro">{data.intro}</p>
+      </section>
+
+      <section aria-label="Quick facts" class="section section--tight-top">
+        <dl class="facts">
+          <div>
+            <dt>Difficulty</dt>
+            <dd>{data.difficulty}</dd>
+          </div>
+          <div class="facts__mid">
+            <dt>Prep</dt>
+            <dd>{data.prepTimeMinutes} min</dd>
+          </div>
+          <div>
+            <dt>Glass</dt>
+            <dd>{glassShort}</dd>
+          </div>
+        </dl>
+        {
+          data.glassware.note && (
+            <p class="facts__note">{data.glassware.note}</p>
+          )
+        }
+      </section>
+
+      <Ingredients
+        client:load
+        ingredients={data.ingredients}
+        garnish={data.garnish}
+        equipment={data.equipment}
+        baseServings={data.servings}
+      />
+
+      <section aria-labelledby="method-h" class="method">
+        <div class="method__head">
+          <h2 id="method-h">Method</h2>
+          <a class="method__cook-link" href={`/c/${slug}/cook`}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"></rect><path d="M7 9h10M7 13h6"></path></svg>
+            Cook mode
+          </a>
+        </div>
+        <ol class="method__list">
+          {
+            data.steps.map((step, i) => (
+              <li>
+                <span class="method__num" aria-hidden="true">{i + 1}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                  {step.tip && (
+                    <div class="tip">
+                      <span>Tip</span>
+                      <p>{step.tip}</p>
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section aria-labelledby="tips-h" class="section--band">
+        <h2 id="tips-h" class="h2">Pro tips</h2>
+        <ul class="tip-list">
+          {
+            proTips.map((t) => (
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+                <p>{t}</p>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          mistakes.length > 0 && (
+            <>
+              <h3 class="mistakes-h">Common mistakes</h3>
+              <ul class="tip-list">
+                {mistakes.map((t) => {
+                  const { lead, rest } = mistakeLead(t);
+                  return (
+                    <li>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--slate-900)" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"></path></svg>
+                      <p>
+                        {rest ? (
+                          <>
+                            <strong>{lead}</strong> {rest}
+                          </>
+                        ) : (
+                          t
+                        )}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          )
+        }
+      </section>
+
+      <section aria-labelledby="var-h" class="variations">
+        <h2 id="var-h" class="h2">Variations</h2>
+        <ul>
+          {
+            data.variations.map((v) => (
+              <li>
+                <h3>{v.name}</h3>
+                <p>{v.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section aria-labelledby="more-h" class="more">
+        <div class="more__head">
+          <h2 id="more-h" class="h2">More cocktails</h2>
+          <a href="/">See all</a>
+        </div>
+        <ul class="more__grid">
+          {
+            related.slice(0, 3).map((r) => (
+              <li>
+                <DrinkTile
+                  name={r.data.name}
+                  tags={[...r.data.tags]}
+                  href={`/c/${r.id}`}
+                  heroImage={r.data.heroImage}
+                />
+              </li>
+            ))
+          }
+          <li>
+            <a class="more__all" href="/">
+              <div class="more__all-card">
+                <span>All cocktails</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </div>
+              <span class="more__all-sub">Browse the library</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="sticky-bar">
+        <a href={`/c/${slug}/cook`}>
+          Start cook mode
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </main>
+
+    <SiteFooter />
+  </div>
+</BaseLayout>
+
+<style>
+  .intro {
+    font: var(--text-lead);
+  }
+
+  .facts {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1.5px solid var(--slate-900);
+    border-bottom: 1.5px solid var(--slate-900);
+  }
+
+  .facts > div {
+    padding: 14px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .facts__mid {
+    border-left: 1px solid var(--paper-300);
+    border-right: 1px solid var(--paper-300);
+  }
+
+  .facts dt {
+    font: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .facts dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3125rem;
+    line-height: 1.2;
+  }
+
+  .facts__note {
+    margin: 10px 0 0;
+    font: var(--text-small);
+    color: var(--ink-muted);
+  }
+
+  .h2 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.875rem;
+    line-height: 1.1;
+  }
+
+  .method {
+    padding: 40px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .method__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .method__cook-link {
+    min-height: var(--tap-min);
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid var(--slate-900);
+    border-radius: var(--radius);
+    color: var(--slate-900);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .method__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .method__list > li {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .method__num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 2.375rem;
+    line-height: 0.95;
+    color: var(--accent-ink);
+  }
+
+  .method__list h3 {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .method__list p {
+    margin-top: 4px;
+  }
+
+  .tip {
+    margin-top: 8px;
+    padding: 12px 14px;
+    background: var(--paper-100);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .tip span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+  }
+
+  .tip p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .section--band {
+    margin-top: 40px;
+    padding: 36px 16px;
+    background: var(--paper-100);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .tip-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tip-list li {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .tip-list svg {
+    margin-top: 2px;
+  }
+
+  .mistakes-h {
+    margin: 8px 0 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .variations {
+    padding: 40px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .variations ul {
+    list-style: none;
+    border-top: 1.5px solid var(--slate-900);
+  }
+
+  .variations li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--paper-300);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .variations h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3125rem;
+    line-height: 1.25;
+  }
+
+  .variations p {
+    color: var(--slate-700);
+  }
+
+  .more {
+    padding: 40px 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .more__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .more__head a {
+    min-height: var(--tap-min);
+    display: flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    font-weight: 700;
+  }
+
+  .more__grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .more__all {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--slate-900);
+    text-decoration: none;
+  }
+
+  .more__all:hover {
+    color: var(--slate-900);
+  }
+
+  .more__all-card {
+    aspect-ratio: 1 / 1;
+    border: 1.5px solid var(--slate-900);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .more__all-sub {
+    font-size: 0.8125rem;
+    color: var(--ink-muted);
+  }
+
+  .sticky-bar {
+    position: sticky;
+    bottom: 0;
+    padding: 12px 16px 16px;
+    background: var(--paper-50);
+    border-top: 1px solid var(--paper-300);
+  }
+
+  .sticky-bar a {
+    height: var(--btn-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--slate-900);
+    color: var(--paper-50);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .sticky-bar a:hover {
+    color: var(--paper-50);
+  }
+</style>

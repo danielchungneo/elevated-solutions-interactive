@@ -1,0 +1,152 @@
+---
+interface Props {
+  name: string;
+  tags: [string, string, string];
+  tagline: string;
+  heroImage?: string;
+  heroAlt?: string;
+}
+
+const { name, tags, tagline, heroImage, heroAlt } = Astro.props;
+---
+
+<section class="recipe-hero" aria-labelledby="drink-name">
+  <div class="recipe-hero__frame">
+    <span class="recipe-hero__dot recipe-hero__dot--tl" aria-hidden="true"></span>
+    <span class="recipe-hero__dot recipe-hero__dot--tr" aria-hidden="true"></span>
+    <span class="recipe-hero__dot recipe-hero__dot--bl" aria-hidden="true"></span>
+    <span class="recipe-hero__dot recipe-hero__dot--br" aria-hidden="true"></span>
+
+    <div class="recipe-hero__nfc">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 8.5a5 5 0 0 1 0 7"></path><path d="M11.5 6a8.5 8.5 0 0 1 0 12"></path><path d="M15 3.5a12 12 0 0 1 0 17"></path></svg>
+      Tapped from your coaster
+    </div>
+
+    <h1 id="drink-name">{name}</h1>
+
+    <div class="diamond-rule" aria-hidden="true" style="color: var(--paper-50)">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="recipe-hero__tags" aria-label="Tags">
+      <li>{tags[0]}</li>
+      <li aria-hidden="true">•</li>
+      <li>{tags[1]}</li>
+      <li aria-hidden="true">•</li>
+      <li>{tags[2]}</li>
+    </ul>
+
+    <p class="recipe-hero__tagline">{tagline}</p>
+
+    {
+      heroImage ? (
+        <img
+          class="recipe-hero__art"
+          src={heroImage}
+          alt={heroAlt || ""}
+          width="290"
+          height="326"
+        />
+      ) : (
+        <div class="recipe-hero__mono" aria-hidden="true">
+          {name.charAt(0).toUpperCase()}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .recipe-hero {
+    background: var(--slate-800);
+    color: var(--paper-50);
+    padding: 20px var(--gutter) var(--space-6);
+  }
+
+  .recipe-hero__frame {
+    position: relative;
+    border: 1.5px solid var(--stone-400);
+    outline: 1px solid var(--slate-500);
+    outline-offset: 5px;
+    margin: 6px;
+    padding: 28px 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .recipe-hero__dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--paper-50);
+  }
+
+  .recipe-hero__dot--tl { top: -12px; left: -12px; }
+  .recipe-hero__dot--tr { top: -12px; right: -12px; }
+  .recipe-hero__dot--bl { bottom: -12px; left: -12px; }
+  .recipe-hero__dot--br { bottom: -12px; right: -12px; }
+
+  .recipe-hero__nfc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .recipe-hero h1 {
+    font: var(--text-display);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  .recipe-hero__tags {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .recipe-hero__tags li[aria-hidden="true"] {
+    color: var(--accent);
+  }
+
+  .recipe-hero__tagline {
+    margin-top: 4px;
+    font: var(--text-tagline);
+    color: #e4ded1;
+  }
+
+  .recipe-hero__art {
+    display: block;
+    width: 290px;
+    height: 326px;
+    object-fit: contain;
+    margin-top: 4px;
+  }
+
+  .recipe-hero__mono {
+    width: 200px;
+    height: 200px;
+    margin: 12px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 7rem;
+    color: #e4ded1;
+    border: 1px solid var(--slate-500);
+  }
+</style>

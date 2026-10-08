@@ -1,0 +1,125 @@
+{
+  "slug": "old-fashioned",
+  "name": "Old Fashioned",
+  "tags": [
+    "Whiskey",
+    "Stirred",
+    "Classic"
+  ],
+  "tagline": "Whiskey, sugar, bitters. Nothing more.",
+  "intro": "The Old Fashioned is the whiskey cocktail in its simplest form: spirit, sugar, bitters and a little water. It's slow-sipping, aromatic and endlessly adjustable. Done well, it lets the whiskey stay in charge.",
+  "heroImage": "/images/old-fashioned-hero.webp",
+  "heroAlt": "Engraved line illustration of an Old Fashioned with a large ice cube, orange and cherry",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Rocks glass",
+    "note": "Also called an old fashioned glass. Chill it first."
+  },
+  "garnish": [
+    "Orange peel",
+    "Cocktail cherry (optional)"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Bourbon or rye",
+      "note": "Bourbon is rounder and sweeter. Rye is spicier and drier."
+    },
+    {
+      "amount": "1",
+      "item": "Sugar cube",
+      "note": "Demerara cubes add a hint of caramel. Plain white works fine."
+    },
+    {
+      "amount": "2 dashes",
+      "item": "Angostura bitters",
+      "note": "Orange bitters make a good addition, not a replacement."
+    },
+    {
+      "amount": "1 tsp",
+      "item": "Water",
+      "note": "Used to help dissolve the sugar cube."
+    }
+  ],
+  "equipment": [
+    "Mixing glass or the serving glass",
+    "Muddler or bar spoon",
+    "Jigger",
+    "Bar spoon"
+  ],
+  "steps": [
+    {
+      "title": "Build the base",
+      "body": "Place the sugar cube in the glass. Add the bitters and the water."
+    },
+    {
+      "title": "Muddle to a paste",
+      "body": "Press and crush the cube with a muddler or the back of a bar spoon until it's mostly dissolved into a syrupy paste.",
+      "tip": "Take your time here. Leftover grains of sugar will sink to the bottom."
+    },
+    {
+      "title": "Add the whiskey",
+      "body": "Pour in the 2 oz of bourbon or rye and give it a quick stir to mix the sugar paste through."
+    },
+    {
+      "title": "Add ice",
+      "body": "Add one large ice cube if you have one. Large ice melts slowly, so the drink chills without watering down fast."
+    },
+    {
+      "title": "Stir to chill",
+      "body": "Stir gently for about 20 to 30 seconds. You want the drink cold with a softened edge but still whiskey-forward."
+    },
+    {
+      "title": "Express the peel",
+      "body": "Cut a wide strip of orange peel, avoiding the white pith. Squeeze it over the drink, peel side facing down, to release the oils. Rub it around the rim and drop it in.",
+      "tip": "Add a cocktail cherry if you like, but skip the muddled fruit salad."
+    }
+  ],
+  "tips": [
+    "Pro tip: Choose a whiskey you'd happily sip neat. There's nothing to hide behind.",
+    "Pro tip: Use a large ice cube or sphere to slow dilution.",
+    "Common mistake: Muddling orange and cherry into the glass. That's a modern bar shortcut, not the classic.",
+    "Common mistake: Under-stirring. Without enough dilution the drink tastes hot and harsh."
+  ],
+  "variations": [
+    {
+      "name": "Rum Old Fashioned",
+      "description": "Use aged rum in place of whiskey for notes of vanilla and caramel."
+    },
+    {
+      "name": "Maple Old Fashioned",
+      "description": "Swap the sugar cube for a small spoon of maple syrup and stir to combine."
+    },
+    {
+      "name": "Oaxaca Old Fashioned",
+      "description": "Use a mix of reposado tequila and mezcal, with agave syrup and a dash of chocolate or mole bitters."
+    },
+    {
+      "name": "Smoked Old Fashioned",
+      "description": "Smoke the glass or the finished drink with a small flame-charred wood chip or a smoking cloche."
+    }
+  ],
+  "substitutions": [
+    "Sugar cube: A bar spoon of simple syrup or demerara syrup works if you're out of cubes.",
+    "Angostura bitters: Orange bitters or aromatic bitters from another brand are fine, though the flavor will change.",
+    "No large ice cube: Use a few regular cubes, but stir for slightly less time to avoid over-diluting."
+  ],
+  "flavorProfile": {
+    "sweet": 2,
+    "sour": 1,
+    "bitter": 3,
+    "strong": 4
+  },
+  "history": "The basic formula of spirit, sugar, water and bitters matches the earliest published description of a cocktail, from an 1806 American newspaper. The name Old Fashioned appears later in the 1880s, as drinkers asked for their drinks made the old-fashioned way. The Pendennis Club in Louisville is often credited with the modern drink, but that claim is disputed.",
+  "relatedSlugs": [
+    "manhattan",
+    "whiskey-sour",
+    "negroni"
+  ],
+  "seo": {
+    "title": "Old Fashioned Recipe: Bourbon or Rye, Sugar and Bitters",
+    "description": "Make a classic Old Fashioned with 2 oz bourbon or rye, a sugar cube, Angostura bitters and a splash of water. Easy steps, tips and variations."
+  }
+}

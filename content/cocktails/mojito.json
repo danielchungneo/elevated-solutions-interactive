@@ -1,0 +1,135 @@
+{
+  "slug": "mojito",
+  "name": "Mojito",
+  "tags": [
+    "Rum",
+    "Mint",
+    "Refreshing"
+  ],
+  "tagline": "Mint, lime and rum over crushed ice.",
+  "intro": "The Mojito is cool, bright and herbal, built right in the glass with muddled mint, lime and white rum. A splash of soda adds sparkle. It's one of the most refreshing drinks you can make on a warm day.",
+  "heroImage": "/images/mojito-hero.webp",
+  "heroAlt": "Engraved line illustration of a Mojito in a highball glass with mint and lime",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 7,
+  "servings": 1,
+  "glassware": {
+    "name": "Highball glass",
+    "note": "A tall glass leaves room for plenty of ice and soda."
+  },
+  "garnish": [
+    "Fresh mint sprig",
+    "Lime wheel"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "White rum",
+      "note": "A light, clean Cuban-style or Puerto Rican white rum works best."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Fresh lime juice",
+      "note": "Squeeze it fresh for the brightest flavor."
+    },
+    {
+      "amount": "2 tsp",
+      "item": "Sugar",
+      "note": "Superfine sugar dissolves most easily. Granulated is fine if you stir well."
+    },
+    {
+      "amount": "8",
+      "item": "Mint leaves",
+      "note": "Spearmint is the traditional choice for its sweet, cool flavor."
+    },
+    {
+      "amount": "Top",
+      "item": "Soda water",
+      "note": "Chilled. Add a splash to finish, not to dilute."
+    }
+  ],
+  "equipment": [
+    "Highball glass",
+    "Muddler",
+    "Jigger",
+    "Bar spoon",
+    "Citrus juicer"
+  ],
+  "steps": [
+    {
+      "title": "Wake up the mint",
+      "body": "Place the 8 mint leaves in your palm and give them a firm clap. This releases the aromatic oils without damaging the leaves."
+    },
+    {
+      "title": "Muddle gently",
+      "body": "In the glass, add the mint, sugar and lime juice. Press the leaves lightly four or five times with the muddler.",
+      "tip": "Press, don't grind. Shredded mint turns bitter and leaves green flecks in the drink."
+    },
+    {
+      "title": "Add the rum",
+      "body": "Pour in the 2 oz of white rum and stir for a few seconds until the sugar dissolves."
+    },
+    {
+      "title": "Add crushed ice",
+      "body": "Fill the glass about two-thirds with crushed ice. If you don't have crushed ice, wrap cubes in a clean towel and smash them with a rolling pin."
+    },
+    {
+      "title": "Churn",
+      "body": "Use a bar spoon to lift from the bottom and push up through the ice a few times. This mixes everything and chills the drink."
+    },
+    {
+      "title": "Top with soda",
+      "body": "Pack more crushed ice on top, then add a splash of soda water to finish."
+    },
+    {
+      "title": "Garnish",
+      "body": "Slap a fresh mint sprig lightly to release its aroma, then tuck it in alongside a lime wheel.",
+      "tip": "Place the straw close to the mint so you smell it as you sip."
+    }
+  ],
+  "tips": [
+    "Pro tip: Use fresh, perky mint. Wilted mint tastes dull and grassy.",
+    "Pro tip: Dissolve the sugar in the lime juice before adding the ice. Sugar won't dissolve properly in cold liquid.",
+    "Common mistake: Over-muddling the mint, which makes the drink bitter.",
+    "Common mistake: Using too much soda. It should add lift, not wash out the rum and lime."
+  ],
+  "variations": [
+    {
+      "name": "Berry Mojito",
+      "description": "Muddle a few raspberries or blackberries with the mint and lime."
+    },
+    {
+      "name": "Coconut Mojito",
+      "description": "Replace the white rum with coconut rum, or add a splash of coconut water."
+    },
+    {
+      "name": "Virgin Mojito",
+      "description": "Leave out the rum and add extra soda water and a splash of lime."
+    },
+    {
+      "name": "Dark Rum Mojito",
+      "description": "Use an aged rum for deeper vanilla and caramel flavors."
+    }
+  ],
+  "substitutions": [
+    "Sugar: 2 tsp of simple syrup (about ½ oz) works if you don't have superfine sugar.",
+    "Mint: Spearmint is best. Peppermint is stronger and can taste medicinal.",
+    "Crushed ice: Cubed ice works too. Just stir a little longer."
+  ],
+  "flavorProfile": {
+    "sweet": 3,
+    "sour": 3,
+    "bitter": 1,
+    "strong": 2
+  },
+  "history": "The Mojito has Cuban roots and is tied to Havana, though its exact origin is disputed. Some trace it to a 16th-century medicinal drink, while others point to later Cuban bartending. It was popularized worldwide partly through Havana bars such as La Bodeguita del Medio.",
+  "relatedSlugs": [
+    "daiquiri",
+    "pina-colada",
+    "moscow-mule"
+  ],
+  "seo": {
+    "title": "Mojito Recipe: White Rum, Mint, Lime and Soda",
+    "description": "Make a classic Mojito with 2 oz white rum, 1 oz lime juice, 2 tsp sugar, 8 mint leaves and soda water. Simple steps and pro tips."
+  }
+}
