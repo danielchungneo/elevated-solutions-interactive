@@ -1,0 +1,37 @@
+---
+import CoffeeLayout from "../../../layouts/CoffeeLayout.astro";
+import BrewMode from "../../../components/coffee/BrewMode";
+import { getAllCoffee } from "../../../lib/coffee";
+
+export async function getStaticPaths() {
+  const drinks = await getAllCoffee();
+  return drinks.map((c) => ({
+    params: { slug: c.id },
+    props: { entry: c },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const slug = entry.id;
+const stepParam = Astro.url.searchParams.get("step");
+const initialStep = stepParam
+  ? Math.max(0, Number.parseInt(stepParam, 10) - 1)
+  : 0;
+---
+
+<CoffeeLayout
+  title={`${data.name} · Brew mode`}
+  description={`Step-by-step brew guide for ${data.name}.`}
+  canonicalPath={`/coffee/${slug}/guide`}
+  bodyClass="brew-page"
+>
+  <BrewMode
+    client:load
+    name={data.name}
+    slug={slug}
+    steps={data.steps}
+    timer={data.timer}
+    initialStep={Number.isFinite(initialStep) ? initialStep : 0}
+  />
+</CoffeeLayout>

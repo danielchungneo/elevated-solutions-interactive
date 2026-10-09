@@ -1,0 +1,148 @@
+{
+  "slug": "cappuccino",
+  "name": "Cappuccino",
+  "tags": [
+    "ESPRESSO",
+    "MILK",
+    "FOAM"
+  ],
+  "tagline": "AIRY • BALANCED • ITALIAN",
+  "intro": "A cappuccino is a classic balance of espresso, steamed milk and a thick, airy cap of foam. It's light and cloud-like on top, with a noticeably coffee-forward flavor underneath. It's a smaller drink than a latte, so the espresso really shines.",
+  "heroImage": "/images/coffee/cappuccino-hero.webp",
+  "heroAlt": "Engraved line illustration of a cappuccino with foam",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 8,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Cappuccino cup (ceramic, pre-warmed)",
+    "sizeOz": 6,
+    "note": "The coaster recipe totals about 6 oz, so a 6 oz cup is a snug fit."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "2 oz",
+      "item": "steamed milk",
+      "note": "Whole milk froths easiest and gives the richest foam."
+    },
+    {
+      "amount": "2 oz",
+      "item": "milk foam",
+      "note": "Thick and airy, more spoonable than silky."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine with steam wand",
+      "alternative": "Moka pot plus a handheld frother or French press (see home methods)"
+    },
+    {
+      "item": "Milk pitcher"
+    },
+    {
+      "item": "Thermometer (optional)",
+      "alternative": "Heat the milk until the pitcher is hot but comfortable to hold briefly"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30",
+    "milkTempF": 140
+  },
+  "steps": [
+    {
+      "title": "Warm the cup",
+      "body": "Fill the cup with hot water and set it aside while you work. A warm cup keeps your drink hot, which matters in a small drink with a lot of foam."
+    },
+    {
+      "title": "Pull the espresso",
+      "body": "Pull a double shot into the cup, using about 18 g of finely ground coffee. A cappuccino has less milk than a latte, so you want a well-extracted shot that holds its own.",
+      "tip": "Start frothing right as the shot finishes so the espresso doesn't sit."
+    },
+    {
+      "title": "Start with cold milk",
+      "body": "Pour cold milk into a cold pitcher, filling it about one-third full. Cold milk gives you more time to build foam before it gets too hot.",
+      "tip": "Start with milk straight from the fridge."
+    },
+    {
+      "title": "Stretch the milk",
+      "body": "Place the steam wand tip just below the surface and open the steam. Let in a little air for a few seconds until the milk expands noticeably and sounds like gentle paper tearing. A cappuccino wants more air than a latte, giving a thicker foam.",
+      "tip": "Stop adding air when the pitcher feels slightly warm."
+    },
+    {
+      "title": "Texture and heat",
+      "body": "Sink the wand deeper so the milk spins into a smooth whirlpool, which blends the foam and milk together. Heat to roughly 140°F, about when the pitcher gets too hot to hold comfortably for long. Beyond this, milk starts to taste flat and cooked.",
+      "tip": "Tap the pitcher on the counter and swirl to break up big bubbles."
+    },
+    {
+      "title": "Pour and spoon",
+      "body": "Pour the steamed milk into the espresso, holding back the foam with a spoon at first, then finish by spooning the foam on top. Aim for roughly equal thirds: espresso, milk, foam."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot + handheld frother",
+      "note": "Brew a moka pot and froth warm milk with a handheld frother. It tastes bold and creamy, though the coffee lacks the crema and intensity of true espresso, and the foam is usually a bit looser."
+    },
+    {
+      "method": "AeroPress + jar frothing",
+      "note": "Press a concentrated shot, then warm milk and shake it hard in a sealed jar or froth it by hand. Foam holds well but is less fine than steam-wand foam."
+    },
+    {
+      "method": "French press milk frothing",
+      "note": "Pump warm milk in a French press plunger several times to create foam. This is a good no-machine foam, but the coffee itself will be a strong brew rather than espresso."
+    }
+  ],
+  "tips": [
+    "Whole milk is easiest for beginners. Plant milks vary a lot, so look for barista versions.",
+    "A cappuccino should feel light for its size. If it feels heavy, you may have too much milk.",
+    "Proportions vary by café, and some serve larger or wetter cappuccinos."
+  ],
+  "commonMistakes": [
+    "Letting the milk get too hot, which kills sweetness.",
+    "Adding too little air, which gives you a latte instead of a cappuccino.",
+    "Big, bubbly foam from not swirling and tapping.",
+    "Using a cup that's too large so the proportions are off."
+  ],
+  "variations": [
+    {
+      "name": "Dry cappuccino",
+      "description": "More foam, less steamed milk. The definition varies by café."
+    },
+    {
+      "name": "Wet cappuccino",
+      "description": "More steamed milk, less foam. Closer to a small latte."
+    },
+    {
+      "name": "Cocoa dusting",
+      "description": "A light sprinkle of cocoa powder on top for a classic touch."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 3,
+    "sweet": 2,
+    "creamy": 3,
+    "strong": 4
+  },
+  "history": "The name is commonly linked to the color of the robes worn by Capuchin friars, though the exact origin of the drink is not firmly settled. Cappuccino as we know it with espresso became widespread in Italy and beyond in the 20th century.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "latte",
+    "flat-white",
+    "espresso",
+    "espresso-macchiato"
+  ],
+  "seo": {
+    "title": "How to Make a Cappuccino at Home: Espresso, Milk and Foam",
+    "description": "Make a classic cappuccino with 2 oz espresso, 2 oz steamed milk and 2 oz foam. Includes frothing tips and no-espresso-machine options."
+  }
+}

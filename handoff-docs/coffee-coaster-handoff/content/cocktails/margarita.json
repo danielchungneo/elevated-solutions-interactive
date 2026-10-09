@@ -1,0 +1,140 @@
+{
+  "collection": "cocktails",
+  "slug": "margarita",
+  "name": "Margarita",
+  "tags": [
+    "Tequila",
+    "Citrus",
+    "Classic"
+  ],
+  "tagline": "Bright, tart and salt-kissed.",
+  "intro": "The Margarita is tequila, lime and orange liqueur in near-perfect balance. It's sharp, a little sweet, and made for a salted rim. Once you've made one properly, you'll never go back to the bottled mix.",
+  "heroImage": "/images/cocktails/margarita-hero.webp",
+  "heroAlt": "Engraved line illustration of a Margarita in a rocks glass with a salted rim and a lime wheel",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "glassware": {
+    "name": "Rocks glass",
+    "note": "A coupe or classic margarita glass also works if you serve it without ice."
+  },
+  "garnish": [
+    "Coarse salt rim",
+    "Lime wheel"
+  ],
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "Tequila",
+      "note": "Use 100% agave blanco (silver) for a clean, peppery edge. Reposado adds a soft oak note."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Fresh lime juice",
+      "note": "Squeeze it just before mixing. Bottled juice tastes flat."
+    },
+    {
+      "amount": "1 oz",
+      "item": "Orange liqueur",
+      "note": "Cointreau is drier and brighter. Triple sec is sweeter and softer."
+    },
+    {
+      "amount": "Rim",
+      "item": "Coarse salt",
+      "note": "Kosher or flaky sea salt sticks best and tastes cleaner than table salt."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Cocktail shaker"
+    },
+    {
+      "item": "Jigger"
+    },
+    {
+      "item": "Citrus juicer"
+    },
+    {
+      "item": "Hawthorne strainer"
+    },
+    {
+      "item": "Small plate for the rim"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Fill your glass with ice and water while you prep. A cold glass keeps the drink crisp for longer."
+    },
+    {
+      "title": "Rim the glass",
+      "body": "Dump the ice water. Run a lime wedge around the outer edge of the rim only, then roll the outside of the rim in salt on a plate.",
+      "tip": "Salt only the outside so it doesn't fall into the drink and make it too salty."
+    },
+    {
+      "title": "Add the spirits and juice",
+      "body": "To a shaker, add the tequila, lime juice and orange liqueur. Measure with a jigger. A Margarita depends on those ratios."
+    },
+    {
+      "title": "Shake hard",
+      "body": "Fill the shaker about two-thirds with ice and shake hard for 12 to 15 seconds. This chills the drink, adds the right amount of water, and lightens the texture."
+    },
+    {
+      "title": "Strain over fresh ice",
+      "body": "Fill the rimmed glass with fresh ice and strain the drink over it. Fresh ice dilutes slowly. The ice you shook with is already broken down.",
+      "tip": "If you prefer it up, strain into a chilled coupe without ice."
+    },
+    {
+      "title": "Garnish and taste",
+      "body": "Add a lime wheel on the rim. Take a sip. If it's too tart or too sweet for you, adjust the next one slightly."
+    }
+  ],
+  "tips": [
+    "Taste your limes. Very tart limes can pull the drink off balance. Small tweaks next round are better than changing the base spec.",
+    "Keep the salt on the outside edge so each sip is salty and the drink isn't."
+  ],
+  "commonMistakes": [
+    "Using bottled sour mix. Fresh lime juice is the single biggest upgrade.",
+    "Shaking for only a few seconds. Under-shaken Margaritas are warm and sharp."
+  ],
+  "variations": [
+    {
+      "name": "Tommy's Margarita",
+      "description": "Replace the orange liqueur with agave syrup for a cleaner, more tequila-forward drink."
+    },
+    {
+      "name": "Spicy Margarita",
+      "description": "Muddle two or three jalapeño slices in the shaker before adding the other ingredients, or use a chili-salt rim."
+    },
+    {
+      "name": "Smoky Margarita",
+      "description": "Swap a portion of the tequila for mezcal for a smoky edge."
+    },
+    {
+      "name": "Frozen Margarita",
+      "description": "Blend the ingredients with about a cup of ice until slushy and pour into a chilled glass."
+    }
+  ],
+  "substitutions": [
+    "Orange liqueur: Cointreau, triple sec, Grand Marnier (richer, with a cognac base) or Curaçao.",
+    "Tequila: Reposado for a rounder, oakier flavor. Avoid mixto tequilas if you can.",
+    "No coarse salt: Use fine sea salt sparingly, or try a chili-lime salt blend."
+  ],
+  "flavorProfile": {
+    "sweet": 2,
+    "sour": 4,
+    "bitter": 1,
+    "strong": 3
+  },
+  "history": "The Margarita's origin is disputed, with several bartenders and socialites claiming credit from the 1930s to the 1940s. It's closely related to the Daisy, a classic family of spirit, citrus and sweetener drinks. Margarita is the Spanish word for daisy.",
+  "relatedSlugs": [
+    "daiquiri",
+    "whiskey-sour",
+    "mojito"
+  ],
+  "seo": {
+    "title": "Margarita Recipe: Classic Tequila, Lime and Orange Liqueur",
+    "description": "Make a bar-quality Margarita at home with 2 oz tequila, 1 oz lime juice and 1 oz orange liqueur. Step-by-step method, tips and variations."
+  },
+  "containsAlcohol": true
+}

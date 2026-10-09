@@ -1,0 +1,142 @@
+{
+  "slug": "flat-white",
+  "name": "Flat White",
+  "tags": [
+    "ESPRESSO",
+    "MILK",
+    "MICROFOAM"
+  ],
+  "tagline": "SILKY • STRONG • REFINED",
+  "intro": "A flat white is a small, velvety drink where a double espresso meets glossy, finely textured milk. The coffee flavor stays front and center, with a smooth, sweet creaminess that feels rich without being heavy. It's for people who want a latte's comfort with a cappuccino's coffee punch.",
+  "heroImage": "/images/coffee/flat-white-hero.webp",
+  "heroAlt": "Engraved line illustration of a flat white with microfoam",
+  "difficulty": "Advanced",
+  "prepTimeMinutes": 8,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Small ceramic cup",
+    "sizeOz": 6,
+    "note": "The coaster recipe totals 6 oz, so a 6 oz cup keeps the ratio right."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "double espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "4 oz",
+      "item": "steamed milk",
+      "note": "Whole milk, textured into silky microfoam with very little visible foam."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine with steam wand",
+      "alternative": "Moka pot or AeroPress plus a handheld frother (see home methods)"
+    },
+    {
+      "item": "Small milk pitcher"
+    },
+    {
+      "item": "Thermometer (optional)",
+      "alternative": "Stop when the pitcher is hot to hold for just a couple of seconds"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30",
+    "milkTempF": 135
+  },
+  "steps": [
+    {
+      "title": "Warm the cup",
+      "body": "Preheat your small cup with hot water. With only 6 oz of liquid, a cold cup takes a surprising amount of heat out of the drink."
+    },
+    {
+      "title": "Pull a strong double",
+      "body": "Pull a double shot into the cup. Because there is little milk, the espresso must taste good on its own. Sour or harsh shots stand out in a flat white.",
+      "tip": "If it tastes thin, try a slightly finer grind."
+    },
+    {
+      "title": "Measure the milk",
+      "body": "Pour about 4 oz of cold milk plus a splash extra into a small, cold pitcher. A small pitcher lets you control a small amount of milk."
+    },
+    {
+      "title": "Barely stretch",
+      "body": "Keep the wand tip just below the surface and add air for only a second or two. You want to gently expand the milk, not make visible foam. Less air is what gives a flat white its smooth, flat surface.",
+      "tip": "The milk should sound like a quiet hiss, not a loud slurp."
+    },
+    {
+      "title": "Texture to silk",
+      "body": "Sink the wand and create a whirlpool, heating to about 130 to 140°F. The spin breaks air into tiny bubbles, making microfoam that looks like wet paint. Stop heating before it gets too hot to hold.",
+      "tip": "If you see big bubbles, tap the pitcher firmly and swirl until glossy."
+    },
+    {
+      "title": "Pour with care",
+      "body": "Pour in a steady, low stream so the espresso and milk integrate, finishing with a thin, even layer on top. Aim for a smooth surface with little to no dome."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot + handheld frother",
+      "note": "Brew a moka pot and froth a small amount of warm milk gently. It's a bold and creamy approximation, though the texture is less silky than steam-wand microfoam."
+    },
+    {
+      "method": "AeroPress + whisked milk",
+      "note": "Press a concentrated shot and whisk or froth warm milk lightly. Pour while swirling. The result is creamy but less glossy than a café version."
+    },
+    {
+      "method": "Strong brewed coffee + warm milk",
+      "note": "Strong coffee and gently frothed milk makes a mellow drink in the right spirit, but it will be milder and not the same as a true flat white."
+    }
+  ],
+  "tips": [
+    "Smaller amounts of milk heat very fast, so watch temperature closely.",
+    "Whole milk gives the silkiest texture.",
+    "Flat white size and espresso amount vary by café and country."
+  ],
+  "commonMistakes": [
+    "Adding too much air, which makes it a latte or cappuccino.",
+    "Overheating small amounts of milk.",
+    "Using a large cup that waters down the ratio.",
+    "Skipping the swirl and tap, leaving bubbles in the milk."
+  ],
+  "variations": [
+    {
+      "name": "Ristretto flat white",
+      "description": "Uses ristretto shots for a sweeter, more intense taste. Common in some cafés."
+    },
+    {
+      "name": "Oat milk flat white",
+      "description": "Barista oat milk can create a good microfoam, though results vary by brand."
+    },
+    {
+      "name": "Iced flat white",
+      "description": "Pour a double shot over ice and top with cold milk for a stronger iced option."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 3,
+    "sweet": 3,
+    "creamy": 4,
+    "strong": 4
+  },
+  "history": "The flat white is generally credited to Australia or New Zealand in the 1980s. Which came first is disputed, and both countries claim it.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "latte",
+    "cappuccino",
+    "espresso",
+    "americano"
+  ],
+  "seo": {
+    "title": "How to Make a Flat White: Silky Microfoam and Double Espresso",
+    "description": "Learn to make a flat white with 2 oz double espresso and 4 oz steamed milk, plus microfoam tips and no-machine alternatives."
+  }
+}

@@ -1,7 +1,7 @@
 # Cocktail coaster site — build brief
 
-Mobile-first NFC product platform. The home page is a company section directory; cocktails are the first live section.
-Each laser-engraved NFC coaster opens one cocktail's page when tapped with a phone.
+Mobile-first NFC product platform. The home page (`/`) is the Elevated Solutions platform directory (Laser Studio theme); cocktails and coffee are live sections.
+Each laser-engraved NFC coaster opens one cocktail's or coffee's page when tapped with a phone.
 More page types will be added later, so build reusable components on shared design tokens.
 
 ## Stack (recommended)
@@ -15,12 +15,19 @@ More page types will be added later, so build reusable components on shared desi
 
 | Route | Page | Design reference |
 |---|---|---|
-| `/` | Company directory (sections; Coming soon placeholders) | — |
+| `/` | Platform home (Elevated Solutions), theme `platform` | `handoff-docs/home-handoff/design/reference/platform/home.dc.html` |
 | `/cocktails` | Cocktail library, search + spirit filter | `design/reference/Home.dc.html` |
 | `/cocktails/[slug]` | Recipe page (NFC target) | `design/reference/Main.dc.html` |
 | `/cocktails/[slug]/cook` | Cook mode | `design/reference/CookMode.dc.html` |
+| `/coffee` | Coffee library, search + Hot/Iced/milk filter | `handoff-docs/coffee-coaster-handoff/design/reference/coffee/home.dc.html` |
+| `/coffee/[slug]` | Coffee recipe page (NFC target) | `…/coffee/recipe-espresso.dc.html` |
+| `/coffee/[slug]/guide` | Brew mode (+ shot timer when present) | `…/coffee/brew-mode.dc.html` |
 
-Keep NFC URLs stable (`https://<domain>/cocktails/margarita`). Never change a slug once a coaster ships; add redirects instead.
+Keep NFC URLs stable (`https://<domain>/cocktails/margarita`, `https://<domain>/coffee/espresso`). Never change a slug once a coaster ships; add redirects instead.
+
+Platform home is its own module: `PlatformLayout`, tokens (`src/styles/platform.css`), content `content/platform.json`, components under `src/components/platform/`. Spec: `handoff-docs/home-handoff/docs/HANDOFF-platform-home.md`.
+
+Coffee is a **separate module** from cocktails: own layout (`CoffeeLayout`), tokens (`src/styles/coffee.css`), and components under `src/components/coffee/`. Do not share cocktail slate/paper styling with coffee pages.
 
 ## Design references
 

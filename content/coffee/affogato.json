@@ -1,0 +1,135 @@
+{
+  "slug": "affogato",
+  "name": "Affogato",
+  "tags": [
+    "ESPRESSO",
+    "VANILLA",
+    "DESSERT"
+  ],
+  "tagline": "HOT • COLD • INDULGENT",
+  "intro": "An affogato is a scoop of vanilla ice cream 'drowned' in a shot of hot espresso. The contrast is the magic: hot, bitter coffee melting into cold, sweet cream. It's a dessert and a coffee in one, and it takes about two minutes.",
+  "heroImage": "/images/coffee/affogato-hero.webp",
+  "heroAlt": "Engraved line illustration of an affogato with espresso over ice cream",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 4,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Small glass or dessert bowl",
+    "sizeOz": 6,
+    "note": "A pre-chilled glass keeps the ice cream firmer for longer."
+  },
+  "ingredients": [
+    {
+      "amount": "1 scoop",
+      "item": "vanilla ice cream",
+      "note": "A good-quality, slightly firm vanilla works best."
+    },
+    {
+      "amount": "2 oz",
+      "item": "hot espresso",
+      "note": "Freshly pulled, from roughly 18 g of finely ground coffee."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine",
+      "alternative": "Moka pot or AeroPress (see home methods)"
+    },
+    {
+      "item": "Ice cream scoop"
+    },
+    {
+      "item": "Small glass or bowl"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30"
+  },
+  "steps": [
+    {
+      "title": "Chill the glass",
+      "body": "Put your glass or bowl in the freezer for 10 to 15 minutes beforehand if you can. A cold vessel slows the melting so the ice cream stays scoopable longer.",
+      "tip": "No time? Even a few minutes helps."
+    },
+    {
+      "title": "Scoop the ice cream",
+      "body": "Add a round scoop of vanilla ice cream. Let it soften for a minute if rock-hard, since a slightly softer scoop is easier to shape and will melt more beautifully."
+    },
+    {
+      "title": "Pull the espresso",
+      "body": "Pull a fresh, hot double shot of about 2 oz. Hot espresso is what creates the signature contrast, so make it just before serving.",
+      "tip": "A strong, slightly sweet shot balances the ice cream best."
+    },
+    {
+      "title": "Pour over",
+      "body": "Pour the hot espresso right over the ice cream. It will melt into a creamy swirl around the scoop.",
+      "tip": "Serve at the table and pour in front of your guest for a little drama."
+    },
+    {
+      "title": "Serve and enjoy",
+      "body": "Eat immediately with a spoon, since it melts fast. Each bite should have both hot coffee and cold cream."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot",
+      "note": "Brew a small moka pot and pour a couple of ounces over ice cream. It's rich and bold, and works well since the ice cream softens the intensity. It won't have crema."
+    },
+    {
+      "method": "AeroPress",
+      "note": "A concentrated AeroPress shot is a clean, strong stand-in for espresso. It's a great match for ice cream."
+    },
+    {
+      "method": "Very strong brewed coffee",
+      "note": "Use hot, double-strength coffee. It works, but it's thinner and more diluted than espresso, so the ice cream will melt faster and taste milder."
+    }
+  ],
+  "tips": [
+    "Use real vanilla ice cream, since a good one makes a big difference.",
+    "Serve immediately, as it's best at the moment of pouring.",
+    "Consider a drizzle of chocolate or a sprinkle of crushed cookies on top."
+  ],
+  "commonMistakes": [
+    "Letting the espresso sit and cool before pouring.",
+    "Using very soft ice cream that dissolves instantly.",
+    "Using weak coffee that disappears in the cream.",
+    "Taking too long to serve."
+  ],
+  "variations": [
+    {
+      "name": "Boozy affogato",
+      "description": "Add a splash of amaretto or coffee liqueur. If you do, note that this adds alcohol, so the standard coaster recipe is alcohol-free."
+    },
+    {
+      "name": "Chocolate affogato",
+      "description": "Use chocolate or coffee ice cream for a richer dessert."
+    },
+    {
+      "name": "Gelato affogato",
+      "description": "Vanilla gelato (fior di latte) gives a denser, silkier texture."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 3,
+    "sweet": 4,
+    "creamy": 4,
+    "strong": 3
+  },
+  "history": "'Affogato' means 'drowned' in Italian. It's a classic Italian dessert, though its precise origin is not well documented.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "espresso",
+    "mocha",
+    "espresso-macchiato"
+  ],
+  "seo": {
+    "title": "How to Make an Affogato: Vanilla Ice Cream and Hot Espresso",
+    "description": "Make a classic affogato with 1 scoop of vanilla ice cream and 2 oz of hot espresso. Includes tips and no-machine alternatives."
+  }
+}

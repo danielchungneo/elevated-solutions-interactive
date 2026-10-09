@@ -1,0 +1,99 @@
+---
+import { coffeeBrand } from "../../lib/coffee";
+import { site } from "../../lib/site";
+
+interface Props {
+  variant?: "home" | "recipe";
+}
+
+const { variant = "recipe" } = Astro.props;
+---
+
+<header class="coffee-header">
+  <a class="coffee-header__brand" href="/">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6.5" ry="9" transform="rotate(35 12 12)"></ellipse><path d="M8.2 17.5c1.5-2.5 1.2-4.6 2.9-6.3 1.6-1.6 3.3-2.3 4.7-5"></path></svg>
+    {coffeeBrand.name}
+  </a>
+  {
+    variant === "home" ? (
+      <a
+        class="coffee-header__shop"
+        href={site.shopUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+        Shop
+      </a>
+    ) : (
+      <a class="coffee-header__link" href="/coffee">
+        All coffee
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+      </a>
+    )
+  }
+</header>
+
+<style>
+  .coffee-header {
+    height: 60px;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .coffee-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-variation-settings: "SOFT" 100;
+  }
+
+  .coffee-header__link {
+    min-height: var(--tap-min);
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .coffee-header__link:hover {
+    color: var(--color-ink);
+  }
+
+  .coffee-header__shop {
+    min-height: 40px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9375rem;
+    box-shadow: var(--shadow-primary);
+    transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+  }
+
+  .coffee-header__shop:hover {
+    color: var(--color-on-accent);
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
+
+  .coffee-header__shop:active {
+    transform: translateY(1px);
+  }
+</style>

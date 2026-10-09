@@ -1,0 +1,139 @@
+{
+  "slug": "americano",
+  "name": "Americano",
+  "tags": [
+    "ESPRESSO",
+    "WATER",
+    "SIMPLE"
+  ],
+  "tagline": "CLEAN • LIGHT • LONG",
+  "intro": "An Americano is a double shot of espresso lengthened with hot water, giving you a larger, easy-sipping cup. It keeps the roasty depth of espresso but feels lighter and cleaner, closer to a strong black coffee. It's an easy way to slow down and enjoy a shot.",
+  "heroImage": "/images/coffee/americano-hero.webp",
+  "heroAlt": "Engraved line illustration of an Americano in a mug",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Mug or Americano cup",
+    "sizeOz": 8,
+    "note": "The 2 oz espresso plus 6 oz water fills about 8 oz."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "double shot espresso",
+      "note": "Made from roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "6 oz",
+      "item": "hot water",
+      "note": "Just off the boil, around 190 to 200°F, is a good range."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine",
+      "alternative": "Moka pot or AeroPress (see home methods)"
+    },
+    {
+      "item": "Kettle or machine hot-water tap"
+    },
+    {
+      "item": "Mug"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 195,
+    "timeSeconds": "25-30"
+  },
+  "steps": [
+    {
+      "title": "Heat the water",
+      "body": "Heat your water to just under boiling, around 190 to 200°F. Water that's too hot can make the finished drink taste harsh, while lukewarm water makes it dull and weak.",
+      "tip": "If your kettle has no temperature control, let it sit about 30 seconds after boiling."
+    },
+    {
+      "title": "Warm the mug",
+      "body": "Add a splash of hot water to your mug and swirl it, then pour it out. A warm mug keeps the Americano hot while you drink it."
+    },
+    {
+      "title": "Pull a double shot",
+      "body": "Pull your double shot straight into the mug. Starting with the espresso keeps the crema intact on top.",
+      "tip": "Aim for about 25 to 30 seconds from start to finish."
+    },
+    {
+      "title": "Add hot water",
+      "body": "Pour 6 oz of hot water over the shot. A gentle pour keeps some of the crema on the surface and gives a more integrated flavor.",
+      "tip": "Pouring espresso into the water instead gives a different look and, to many people, a slightly smoother taste."
+    },
+    {
+      "title": "Taste and adjust",
+      "body": "If it's too strong, add a bit more hot water. If it's too weak, next time try a slightly finer grind or a bit less water. Keep the coaster ratio as your starting point."
+    },
+    {
+      "title": "Enjoy right away",
+      "body": "Sip while hot. An Americano gets bitter-tasting as it cools, so it's best enjoyed fresh."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot",
+      "note": "Make a moka pot brew and add hot water. The coffee is strong and rich, but it lacks the crema and slight sweetness of true espresso, so the result tastes heavier and less smooth."
+    },
+    {
+      "method": "AeroPress",
+      "note": "Brew a concentrated AeroPress shot (fine grind, small water volume) and top with hot water. It's a good approximation: clean and balanced, but no crema."
+    },
+    {
+      "method": "Strong brewed coffee",
+      "note": "Regular drip coffee made a little stronger is the closest everyday swap. It's similar in feel to an Americano, though lighter on body and without the espresso character."
+    }
+  ],
+  "tips": [
+    "Use hot water from a kettle rather than boiling-hot water straight from the heat.",
+    "The ratio is easy to scale: the coaster uses 1 part espresso to 3 parts water.",
+    "Fresh beans make a clean drink taste even cleaner."
+  ],
+  "commonMistakes": [
+    "Using water that's boiling hot, which can taste harsh.",
+    "Adding the water first and letting the espresso sit.",
+    "Using stale or very dark, oily beans that taste burnt once diluted.",
+    "Waiting too long to drink it."
+  ],
+  "variations": [
+    {
+      "name": "Long Black",
+      "description": "Hot water goes in first and the espresso is poured on top to preserve the crema. Common in Australia and New Zealand. Differences from an Americano vary by café."
+    },
+    {
+      "name": "Iced Americano",
+      "description": "Pour the shot and cold water over ice for a refreshing, light cold drink."
+    },
+    {
+      "name": "Splash of milk",
+      "description": "A small pour of milk makes a quick, café-style cup without turning it into a latte."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 3,
+    "sweet": 1,
+    "creamy": 1,
+    "strong": 3
+  },
+  "history": "A popular story says the name came from American soldiers in Italy during World War II who diluted espresso to resemble the coffee at home. It's a widely told account, but the origin is not firmly documented and is disputed.",
+  "containsAlcohol": false,
+  "milk": false,
+  "relatedSlugs": [
+    "espresso",
+    "cold-brew",
+    "flat-white"
+  ],
+  "seo": {
+    "title": "How to Make an Americano: Espresso + Hot Water",
+    "description": "Make a smooth, clean Americano with a double shot of espresso and 6 oz of hot water. Includes no-machine methods using a moka pot or AeroPress."
+  }
+}

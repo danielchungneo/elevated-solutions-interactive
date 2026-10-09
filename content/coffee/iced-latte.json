@@ -1,0 +1,144 @@
+{
+  "slug": "iced-latte",
+  "name": "Iced Latte",
+  "tags": [
+    "ESPRESSO",
+    "MILK",
+    "ICE"
+  ],
+  "tagline": "CHILLED • MELLOW • REFRESHING",
+  "intro": "An iced latte is espresso poured over cold milk and ice, giving you a cool, mellow drink that's creamy without being heavy. It's smooth and lightly sweet, with a coffee flavor that stays gentle. It's a go-to for warm days.",
+  "heroImage": "/images/coffee/iced-latte-hero.webp",
+  "heroAlt": "Engraved line illustration of an iced latte in a tall glass",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 5,
+  "servings": 1,
+  "serveTemp": "Iced",
+  "vessel": {
+    "name": "Tall glass",
+    "sizeOz": 12,
+    "note": "Room for 1 cup of ice plus the liquids."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "6 oz",
+      "item": "cold milk",
+      "note": "Whole milk gives the creamiest result."
+    },
+    {
+      "amount": "1 cup",
+      "item": "ice",
+      "note": "Larger cubes melt more slowly."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine",
+      "alternative": "Moka pot or AeroPress (see home methods)"
+    },
+    {
+      "item": "Tall glass"
+    },
+    {
+      "item": "Long spoon"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30"
+  },
+  "steps": [
+    {
+      "title": "Fill the glass",
+      "body": "Add 1 cup of ice to a tall glass. Starting with ice ready means the hot espresso is cooled quickly, which keeps flavors fresh and avoids a bitter, stewed taste."
+    },
+    {
+      "title": "Pour in the milk",
+      "body": "Pour 6 oz of cold milk over the ice. Adding the milk before the espresso creates the classic layered look and helps cool things down.",
+      "tip": "Shake or stir the milk briefly if you add sweetener or syrup."
+    },
+    {
+      "title": "Pull the espresso",
+      "body": "Pull a double shot of espresso, using about 18 g of finely ground coffee. Iced drinks dilute as the ice melts, so a strong, well-extracted shot is important.",
+      "tip": "If your iced lattes taste weak, try a slightly finer grind."
+    },
+    {
+      "title": "Pour over",
+      "body": "Pour the hot espresso over the milk and ice. It will swirl into beautiful ribbons before blending.",
+      "tip": "Pour slowly if you want the layered look."
+    },
+    {
+      "title": "Stir and sweeten",
+      "body": "Give it a gentle stir to blend. Taste and add sweetener now if you like, since sugar dissolves best while the shot is still warm."
+    },
+    {
+      "title": "Serve right away",
+      "body": "Enjoy while the ice is fresh. Over time the ice melts and the flavor mellows."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot",
+      "note": "Brew in a moka pot and pour over milk and ice. It tastes bold and slightly rustic, a nice stand-in, though it lacks the crema and smoothness of espresso."
+    },
+    {
+      "method": "AeroPress",
+      "note": "A concentrated AeroPress shot over milk and ice is a clean, strong approximation. No crema, but the flavor works well when chilled."
+    },
+    {
+      "method": "Strong brewed coffee",
+      "note": "Double-strength brewed coffee, cooled, with milk and ice makes an easy iced coffee. It will taste milder and thinner than a true iced latte. Making coffee ice cubes helps avoid watering it down."
+    }
+  ],
+  "tips": [
+    "Larger ice cubes dilute your drink more slowly.",
+    "Coffee ice cubes are a great trick to keep flavor strong.",
+    "Dissolve sugar in the warm espresso or use simple syrup, as granulated sugar doesn't dissolve well in cold drinks."
+  ],
+  "commonMistakes": [
+    "Using too little ice so the espresso melts it fast.",
+    "Making a weak shot that vanishes in cold milk.",
+    "Letting it sit and become watery.",
+    "Using small, fast-melting ice."
+  ],
+  "variations": [
+    {
+      "name": "Vanilla iced latte",
+      "description": "Add 1 to 2 tsp of vanilla syrup to the glass before the milk."
+    },
+    {
+      "name": "Oat milk iced latte",
+      "description": "Oat milk makes a creamy, slightly sweet iced latte. Results vary by brand."
+    },
+    {
+      "name": "Iced mocha",
+      "description": "Stir chocolate syrup into the espresso before pouring over milk and ice."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 2,
+    "sweet": 2,
+    "creamy": 4,
+    "strong": 2
+  },
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "latte",
+    "cold-brew",
+    "vietnamese-iced-coffee",
+    "mocha"
+  ],
+  "seo": {
+    "title": "How to Make an Iced Latte at Home: Espresso, Milk and Ice",
+    "description": "Make a refreshing iced latte with 2 oz espresso, 6 oz cold milk and 1 cup of ice, plus no-machine methods using a moka pot or AeroPress."
+  }
+}

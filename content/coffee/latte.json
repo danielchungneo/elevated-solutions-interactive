@@ -1,0 +1,147 @@
+{
+  "slug": "latte",
+  "name": "Latte",
+  "tags": [
+    "ESPRESSO",
+    "MILK",
+    "COMFORT"
+  ],
+  "tagline": "CREAMY • GENTLE • COZY",
+  "intro": "A latte is a gentle, creamy drink of espresso mellowed by plenty of steamed milk and finished with a thin layer of foam. It's soft, slightly sweet from the milk, and easy to love. It's the cozy go-to for anyone who wants coffee without the sharp edge.",
+  "heroImage": "/images/coffee/latte-hero.webp",
+  "heroAlt": "Engraved line illustration of a latte in a wide cup",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 8,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Latte glass or large mug",
+    "sizeOz": 12,
+    "note": "The coaster recipe totals about 10 oz plus foam, so a 12 oz vessel gives breathing room."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "8 oz",
+      "item": "steamed milk",
+      "note": "Whole milk gives the creamiest result."
+    },
+    {
+      "amount": "1 thin layer",
+      "item": "milk foam",
+      "note": "Roughly a quarter inch (about 0.5 cm) on top."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine with steam wand",
+      "alternative": "Moka pot plus a handheld frother (see home methods)"
+    },
+    {
+      "item": "Milk pitcher"
+    },
+    {
+      "item": "Thermometer (optional)",
+      "alternative": "Heat until the pitcher is hot to hold for only a few seconds"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30",
+    "milkTempF": 140
+  },
+  "steps": [
+    {
+      "title": "Warm the glass",
+      "body": "Rinse your glass or mug with hot water. A latte is a bigger drink, and a cold vessel cools it down quickly."
+    },
+    {
+      "title": "Pull the espresso",
+      "body": "Pull a double shot of espresso into your vessel. The milk will soften it, so a well-balanced shot, not a sour one, is the goal.",
+      "tip": "If lattes taste thin or milky, try a slightly finer grind for a stronger shot."
+    },
+    {
+      "title": "Pour cold milk",
+      "body": "Fill a cold pitcher with about 8 oz of cold milk, plus a little extra to account for what clings to the pitcher. Cold milk gives you time to texture it before it overheats."
+    },
+    {
+      "title": "Add a little air",
+      "body": "With the steam wand just under the surface, add air for only a couple of seconds. A latte wants a thin, smooth layer of foam, much less than a cappuccino.",
+      "tip": "You should hear a soft hiss, not loud slurping."
+    },
+    {
+      "title": "Swirl and heat",
+      "body": "Lower the wand so the milk spins in a whirlpool until it reaches about 140°F. Spinning folds the air into the milk, making it glossy like wet paint, and temperature control keeps the milk sweet.",
+      "tip": "Swirl the pitcher and tap it to pop surface bubbles before pouring."
+    },
+    {
+      "title": "Pour and finish",
+      "body": "Pour the milk into the espresso in a steady stream, finishing with a thin layer of foam on top. If you like latte art, bring the pitcher close and pour with a gentle wiggle."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot + warm milk",
+      "note": "Brew a moka pot and add warmed milk. It's cozy and rich, but the coffee is less concentrated than real espresso and has no crema."
+    },
+    {
+      "method": "AeroPress + frothed milk",
+      "note": "Make a strong AeroPress shot and top with warm milk and handheld-frothed foam. It's a convincing homemade latte, though the texture is looser than steam-wand milk."
+    },
+    {
+      "method": "Strong brewed coffee + frothed milk",
+      "note": "Strongly brewed coffee with warm frothed milk is closer to a café au lait than a latte. It's still tasty and comforting, but it won't have the espresso intensity."
+    }
+  ],
+  "tips": [
+    "Milk should never boil, as overheated milk tastes flat and scalded.",
+    "Fresh, cold milk froths best.",
+    "Café sizes and espresso amounts vary, so this coaster recipe is a home-sized guideline."
+  ],
+  "commonMistakes": [
+    "Adding too much air and making a foam-heavy drink.",
+    "Overheating the milk.",
+    "Pouring too fast and breaking up the foam.",
+    "Using a weak shot that disappears under the milk."
+  ],
+  "variations": [
+    {
+      "name": "Flavored latte",
+      "description": "Add a pump or teaspoon of vanilla, caramel or other syrup to the cup before the espresso."
+    },
+    {
+      "name": "Oat or almond latte",
+      "description": "Barista-style plant milks steam best, though results vary by brand."
+    },
+    {
+      "name": "Iced latte",
+      "description": "See the Iced Latte page for the cold version."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 2,
+    "sweet": 3,
+    "creamy": 5,
+    "strong": 2
+  },
+  "history": "In Italy, caffè latte simply means coffee with milk and has long been a home breakfast drink, and asking for a 'latte' alone there will get you plain milk. The popular café-style latte with espresso grew in popularity in the US and elsewhere in the late 20th century.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "cappuccino",
+    "flat-white",
+    "iced-latte",
+    "mocha"
+  ],
+  "seo": {
+    "title": "How to Make a Latte at Home: Creamy Espresso and Steamed Milk",
+    "description": "Make a cozy latte with 2 oz espresso, 8 oz steamed milk and a thin layer of foam, with tips for milk texture and no-machine alternatives."
+  }
+}

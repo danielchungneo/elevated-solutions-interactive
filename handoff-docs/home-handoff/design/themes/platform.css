@@ -1,0 +1,45 @@
+/* Platform theme "Laser Studio": Elevated Solutions home and any non-collection pages.
+   Drop into design/themes/ next to cocktail.css and coffee.css.
+   Reference: Page 3 of the design canvas (PlatformHome + PlatformTheme). */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+[data-theme="platform"] {
+  --color-bg: #F3F4F1;               /* aluminum */
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F3F4F1;
+  --color-ink: #101826;              /* ink navy, 16.1:1 on bg */
+  --color-ink-muted: #566070;        /* steel, 5.8:1 */
+  --color-ink-soft: #3A4352;         /* body on bg/surface */
+  --color-rule: #DDE1E6;
+  --color-rule-strong: #101826;
+  --color-rule-dashed: #AEB6C2;      /* "cut path": coming-soon borders only */
+  --color-accent: #E8461E;           /* laser: lines, dots, icons only. Never text or button fill */
+  --color-accent-ink: #B3330C;       /* laser as text, 5.6:1 */
+  --color-accent-soft: #FDE9E2;      /* badge fill; badge text #9A2C0B */
+  --color-primary: #101826;          /* primary buttons and arrow circles */
+  --color-on-primary: #FFFFFF;
+  --color-inverse: #101826;          /* footer */
+  --color-on-inverse: #F3F4F1;
+  --color-on-inverse-muted: #AEB6C2; /* 8.7:1 */
+  --color-accent-on-inverse: #FF6A3D;
+  --color-focus: #E8461E;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-label: "IBM Plex Mono", ui-monospace, monospace;
+  --weight-display: 800;
+  --display-tracking: -0.035em;      /* h1; h2 uses -0.02em */
+  --display-case: none;
+  --leading-body: 1.55;
+  --label-case: uppercase;
+  --label-tracking: 0.12em;
+
+  --radius-card: 16px;
+  --radius-control: 999px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgba(16, 24, 38, 0.05);
+  --texture: none;
+  --hero-grid: linear-gradient(rgba(16,24,38,0.05) 1px, transparent 1px),
+               linear-gradient(90deg, rgba(16,24,38,0.05) 1px, transparent 1px);
+  --hero-grid-size: 24px 24px;
+}

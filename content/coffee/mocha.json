@@ -1,0 +1,151 @@
+{
+  "slug": "mocha",
+  "name": "Mocha",
+  "tags": [
+    "ESPRESSO",
+    "CHOCOLATE",
+    "MILK"
+  ],
+  "tagline": "DECADENT • WARM • SWEET",
+  "intro": "A mocha is a latte with chocolate stirred in, topped with a cloud of whipped cream. It tastes like a warm hug: sweet and chocolatey up front, with a coffee backbone underneath. It's a treat that works as dessert or a cozy afternoon pick-me-up.",
+  "heroImage": "/images/coffee/mocha-hero.webp",
+  "heroAlt": "Engraved line illustration of a mocha with chocolate and milk",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 8,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Large mug or latte glass",
+    "sizeOz": 12,
+    "note": "The coaster recipe totals about 9 oz plus whipped cream, so a 12 oz mug has room."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "1 oz",
+      "item": "chocolate syrup",
+      "note": "Any good chocolate syrup works. Sweetness varies by brand."
+    },
+    {
+      "amount": "6 oz",
+      "item": "steamed milk",
+      "note": "Whole milk gives the creamiest result."
+    },
+    {
+      "amount": "1 swirl",
+      "item": "whipped cream",
+      "note": "Lightly sweetened, from a can or whipped fresh."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine with steam wand",
+      "alternative": "Moka pot or AeroPress plus saucepan or microwave for milk"
+    },
+    {
+      "item": "Milk pitcher or saucepan"
+    },
+    {
+      "item": "Spoon or small whisk"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30",
+    "milkTempF": 150
+  },
+  "steps": [
+    {
+      "title": "Add the chocolate",
+      "body": "Pour 1 oz of chocolate syrup into the bottom of your mug. Adding it first lets the hot espresso melt and mix it in easily.",
+      "tip": "Warm the mug first so the syrup loosens up."
+    },
+    {
+      "title": "Pull the espresso",
+      "body": "Pull a double shot of espresso directly onto the chocolate. The heat of the shot helps the syrup dissolve, so stir right away until it's smooth.",
+      "tip": "Stirring well prevents a layer of syrup stuck at the bottom."
+    },
+    {
+      "title": "Steam the milk",
+      "body": "Steam 6 oz of milk to about 140 to 150°F with a small amount of foam. Slightly warmer than a latte works because chocolate drinks hold their sweetness, but don't scald the milk.",
+      "tip": "No steam wand? Heat milk gently on the stove and whisk until slightly foamy."
+    },
+    {
+      "title": "Combine",
+      "body": "Pour the steamed milk into the chocolate espresso, holding back foam with a spoon at first and then adding it on top. Give it a gentle stir to blend everything."
+    },
+    {
+      "title": "Top with whipped cream",
+      "body": "Add a generous swirl of whipped cream. Fresh or canned both work, and lightly sweetened is best so it doesn't become overly sugary."
+    },
+    {
+      "title": "Garnish (optional)",
+      "body": "Finish with a drizzle of chocolate syrup or a dusting of cocoa. The aroma is part of the treat."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot",
+      "note": "Brew a moka pot and mix with chocolate syrup and warm milk. Chocolate softens the coffee's rougher edges, so a moka pot works well here, though it's less concentrated than espresso."
+    },
+    {
+      "method": "AeroPress",
+      "note": "A strong AeroPress shot stirred into chocolate and warm milk makes a very good home mocha. No crema, but chocolate hides that."
+    },
+    {
+      "method": "Strong brewed coffee",
+      "note": "Double-strength coffee with chocolate syrup and hot milk is a cozy mocha-style drink. It tastes milder and less coffee-forward than the real thing."
+    }
+  ],
+  "tips": [
+    "Taste your syrup. Some are very sweet, so you may want to adjust.",
+    "Dissolve chocolate in the espresso, not the milk, so there are no lumps.",
+    "Mocha recipes vary by café, some using melted chocolate, cocoa powder or sauce."
+  ],
+  "commonMistakes": [
+    "Not stirring, leaving syrup at the bottom.",
+    "Scorching the milk.",
+    "Using a weak coffee that disappears behind the chocolate.",
+    "Adding too much chocolate and losing the espresso."
+  ],
+  "variations": [
+    {
+      "name": "White chocolate mocha",
+      "description": "Swap in white chocolate sauce for a sweeter, creamier drink."
+    },
+    {
+      "name": "Mint mocha",
+      "description": "Add a few drops of peppermint syrup for a seasonal twist."
+    },
+    {
+      "name": "Iced mocha",
+      "description": "Mix espresso and chocolate, add cold milk and ice."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 2,
+    "sweet": 5,
+    "creamy": 4,
+    "strong": 2
+  },
+  "history": "The name comes from the Yemeni port of Mocha, historically important in the coffee trade. How the name came to describe chocolate-and-coffee drinks is not precisely documented.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "latte",
+    "cappuccino",
+    "iced-latte",
+    "affogato"
+  ],
+  "seo": {
+    "title": "How to Make a Mocha: Espresso, Chocolate and Steamed Milk",
+    "description": "Make a cozy mocha with 2 oz espresso, 1 oz chocolate syrup, 6 oz steamed milk and whipped cream, plus easy no-machine methods."
+  }
+}

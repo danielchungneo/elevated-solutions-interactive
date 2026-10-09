@@ -1,0 +1,148 @@
+{
+  "slug": "cold-brew",
+  "name": "Cold Brew",
+  "tags": [
+    "COFFEE",
+    "WATER",
+    "TIME"
+  ],
+  "tagline": "STEEPED • SMOOTH • COOL",
+  "intro": "Cold brew is coffee steeped slowly in cold water, which pulls out sweetness and keeps the sharp, acidic edge to a minimum. It's smooth, mellow and naturally chocolatey. You make it once and enjoy it for days.",
+  "heroImage": "/images/coffee/cold-brew-hero.webp",
+  "heroAlt": "Engraved line illustration of cold brew coffee",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 10,
+  "totalTimeMinutes": 840,
+  "servings": 4,
+  "serveTemp": "Iced",
+  "vessel": {
+    "name": "Tall glass over ice",
+    "sizeOz": 12,
+    "note": "The batch makes a concentrate. Dilute it to taste when serving."
+  },
+  "ingredients": [
+    {
+      "amount": "1 cup",
+      "item": "coarse ground coffee",
+      "note": "Coarse, like breadcrumbs or sea salt. By weight this varies with grind and roast, roughly 80 to 100 g."
+    },
+    {
+      "amount": "4 cups",
+      "item": "cold water",
+      "note": "Filtered water gives a cleaner taste."
+    },
+    {
+      "amount": "to taste",
+      "item": "ice",
+      "note": "For serving."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Large jar, pitcher or French press (at least 5 cups)",
+      "alternative": "Any clean food-safe container with a lid"
+    },
+    {
+      "item": "Fine mesh strainer plus paper coffee filter or cheesecloth",
+      "alternative": "French press plunger for straining"
+    },
+    {
+      "item": "Coffee grinder",
+      "alternative": "Pre-ground coffee labeled coarse or for French press"
+    }
+  ],
+  "dialIn": {
+    "grind": "Coarse",
+    "waterTempF": 70,
+    "timeSeconds": "43200-64800 (12 to 18 hours)"
+  },
+  "steps": [
+    {
+      "title": "Grind coarse",
+      "body": "Grind your coffee coarse, like breadcrumbs. Cold water extracts slowly, so a coarse grind prevents over-extraction and makes it easier to filter later.",
+      "tip": "Fine grounds make cold brew muddy and bitter."
+    },
+    {
+      "title": "Combine",
+      "body": "Add 1 cup of grounds to your container, then pour in 4 cups of cold or room-temperature water. Stir gently so all the grounds are wet.",
+      "tip": "Press down any dry clumps floating on the surface."
+    },
+    {
+      "title": "Steep",
+      "body": "Cover and steep for 12 to 18 hours. Shorter steeping is lighter and brighter, while longer steeping is stronger and deeper. Room temperature works and is a bit faster, while the fridge is slower and gentler.",
+      "tip": "If you're not sure, start with 14 to 16 hours in the fridge and adjust next time."
+    },
+    {
+      "title": "Strain",
+      "body": "Strain through a fine mesh strainer, then a second time through a paper filter or cheesecloth for a clean, sediment-free brew. Be patient, as paper filters drip slowly.",
+      "tip": "Don't squeeze the grounds, as it can push out bitter flavors and sediment."
+    },
+    {
+      "title": "Store",
+      "body": "Pour into a clean, sealed container and keep refrigerated. For best flavor, enjoy within about a week."
+    },
+    {
+      "title": "Serve over ice",
+      "body": "Fill a glass with ice, pour in the cold brew, and taste. This batch is fairly strong, so dilute with water or milk to your liking, often around equal parts.",
+      "tip": "Start with 1:1 and adjust. Strength varies a lot with beans and steep time."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "French press",
+      "note": "Steep in a French press and plunge to strain. It's easy and needs no extra gear, though the result has a bit more sediment than paper-filtered brew."
+    },
+    {
+      "method": "Mason jar + strainer",
+      "note": "A jar with a fine strainer and coffee filter works great and is the most common home setup. The result is clean and smooth."
+    },
+    {
+      "method": "Hot-brewed coffee, chilled (iced coffee)",
+      "note": "This is not cold brew. Brew strong coffee, then chill and pour over ice. It tastes brighter and more acidic, and it's ready much faster, but lacks cold brew's smoothness."
+    }
+  ],
+  "tips": [
+    "This is a concentrate, so dilute to taste.",
+    "Use filtered water for a cleaner flavor.",
+    "Medium and dark roasts give classic chocolate and nutty flavors, and light roasts can taste fruity but sometimes thin.",
+    "Steeping time and strength vary by beans and taste, so adjust."
+  ],
+  "commonMistakes": [
+    "Grinding too fine, which causes muddiness and bitterness.",
+    "Steeping too long and ending up with woody flavors.",
+    "Skipping the second filtration and getting gritty coffee.",
+    "Keeping it too long. Freshness fades after about a week."
+  ],
+  "variations": [
+    {
+      "name": "Cold brew with milk",
+      "description": "Dilute with cold milk and a splash of syrup for a creamy iced coffee."
+    },
+    {
+      "name": "Nitro-style",
+      "description": "Cafés use nitrogen for a creamy, foamy texture. It's hard to replicate at home without special equipment."
+    },
+    {
+      "name": "Vanilla cold brew",
+      "description": "Add a splash of vanilla syrup when serving."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 2,
+    "sweet": 3,
+    "creamy": 1,
+    "strong": 4
+  },
+  "history": "Cold-water coffee brewing has appeared in various forms around the world, including Japanese slow-drip methods, but the exact origins are unclear and disputed.",
+  "containsAlcohol": false,
+  "milk": false,
+  "relatedSlugs": [
+    "iced-latte",
+    "americano",
+    "vietnamese-iced-coffee"
+  ],
+  "seo": {
+    "title": "How to Make Cold Brew Coffee at Home: Smooth and Easy",
+    "description": "Make smooth cold brew with 1 cup coarse coffee and 4 cups cold water. Step-by-step guide with steeping times, straining tips and storage."
+  }
+}

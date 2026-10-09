@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coffee drinks</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&amp;family=Nunito:wght@400..800&amp;display=swap">
+<style>
+body{margin:0;background:#F5EDE0}
+.paper{background-color:#F5EDE0;background-image:url(/textures/paper-grain.png);background-size:256px 256px}
+h1,h2,h3,.serif{font-variation-settings:"SOFT" 100}
+a{color:#974722}a:hover{color:#2B1D14}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #A9532A;outline-offset:2px}
+input::placeholder{color:#8A715F}
+</style>
+</helmet>
+<div class="paper" style="width: 390px; min-height: 2100px; box-sizing: border-box; color: #2B1D14; font-family: Nunito, ui-rounded, system-ui, sans-serif; font-size: 17px; line-height: 1.6; display: flex; flex-direction: column">
+
+<header style="height: 60px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between">
+<span style="display: flex; align-items: center; gap: 8px; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 20px; font-variation-settings: 'SOFT' 100">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9532A" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6.5" ry="9" transform="rotate(35 12 12)"></ellipse><path d="M8.2 17.5c1.5-2.5 1.2-4.6 2.9-6.3 1.6-1.6 3.3-2.3 4.7-5"></path></svg>
+[YOUR CAFÉ]</span>
+<a href="#" style="min-height: 44px; display: flex; align-items: center; color: #2B1D14; text-decoration: none; font-weight: 700; font-size: 15px">Shop coasters</a>
+</header>
+
+<section aria-labelledby="home-h" style="padding: 16px 16px 8px; display: flex; flex-direction: column; gap: 12px">
+<svg width="40" height="28" viewBox="0 0 40 28" fill="none" stroke="#A9532A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 26c-4-4 4-7 0-11s4-7 0-11"></path><path d="M20 26c-4-4 4-7 0-11s4-7 0-11"></path><path d="M28 26c-4-4 4-7 0-11s4-7 0-11"></path></svg>
+<h1 id="home-h" style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 44px; line-height: 1.05">The Coffee Bar</h1>
+<p style="margin: 0; font-size: 18px; color: #4A382C">Twelve drinks, one coaster each. Tap yours, or pick something cozy below.</p>
+<label for="q" style="margin-top: 4px; font-size: 14px; font-weight: 800">Search drinks</label>
+<div style="position: relative">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B5242" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" style="position: absolute; left: 16px; top: 16px"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.5 4.5"></path></svg>
+<input id="q" type="search" value="{{query}}" onChange="{{onSearch}}" placeholder="Latte, iced, milk…" style="width: 100%; box-sizing: border-box; height: 52px; padding: 0 16px 0 46px; border: 1.5px solid #E0D3C0; border-radius: 999px; background: #FCF7EE; color: #2B1D14; font: 500 17px Nunito, system-ui, sans-serif; box-shadow: 0 1px 2px rgba(43,29,20,0.06)">
+</div>
+<div role="group" aria-label="Filter" style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px">
+<sc-for list="{{chips}}" as="chip" hint-placeholder-count="4">
+<button type="button" aria-pressed="{{chip.pressed}}" onClick="{{chip.pick}}" style="{{chip.style}}">{{chip.label}}</button>
+</sc-for>
+</div>
+</section>
+
+<main style="padding: 8px 16px 40px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14px; font-weight: 800; color: #6B5242">{{countLabel}}</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<sc-for list="{{drinks}}" as="d" hint-placeholder-count="12">
+<li>
+<a href="{{d.href}}" style="height: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; padding: 10px; background: #FCF7EE; border-radius: 20px; box-shadow: 0 1px 2px rgba(43,29,20,0.06), 0 6px 18px rgba(43,29,20,0.06); color: #2B1D14; text-decoration: none">
+<div style="aspect-ratio: 1 / 1; border-radius: 14px; background: #EFE4D3; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<sc-if value="{{d.hasArt}}" hint-placeholder-val="{{ false }}">
+<img src="/images/coffee/espresso-hero.webp" alt="" width="148" height="132" style="width: 92%; height: auto; object-fit: contain; mix-blend-mode: multiply">
+</sc-if>
+<sc-if value="{{d.noArt}}" hint-placeholder-val="{{ true }}">
+<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#A9532A" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6.5" ry="9" transform="rotate(35 12 12)"></ellipse><path d="M8.2 17.5c1.5-2.5 1.2-4.6 2.9-6.3 1.6-1.6 3.3-2.3 4.7-5"></path></svg>
+</sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px 4px">
+<span style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 19px; line-height: 1.2; font-variation-settings: 'SOFT' 100">{{d.name}}</span>
+<span style="font-size: 13px; color: #6B5242; line-height: 1.4">{{d.meta}}</span>
+<span style="{{d.tempStyle}}">{{d.temp}}</span>
+</div>
+</a>
+</li>
+</sc-for>
+</ul>
+</main>
+
+<footer style="margin-top: auto; background: #3A2A20; color: #E8C9A4; padding: 32px 16px 40px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; font-size: 15px; line-height: 1.6">
+<svg width="36" height="26" viewBox="0 0 40 28" fill="none" stroke="#D89A5E" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 26c-4-4 4-7 0-11s4-7 0-11"></path><path d="M26 26c-4-4 4-7 0-11s4-7 0-11"></path></svg>
+<p style="margin: 0; font-family: Fraunces, Georgia, serif; font-size: 22px; font-weight: 700; color: #F5EDE0; font-variation-settings: 'SOFT' 100">Slow down and enjoy the cup.</p>
+<p style="margin: 0">Most of these drinks contain caffeine. Go easy if you're sensitive.</p>
+<p style="margin: 0; font-size: 13px; color: #C9B8A6">© [YEAR] [YOUR CAFÉ]</p>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filter: 'All', query: '' };
+  }
+  renderVals() {
+    const all = [
+      { name: 'Espresso', meta: 'Pure · Créma', temp: 'Hot', milk: false, href: 'recipe-espresso.dc.html', hasArt: true },
+      { name: 'Americano', meta: 'Espresso · Hot water', temp: 'Hot', milk: false },
+      { name: 'Espresso Macchiato', meta: 'Espresso · Milk foam', temp: 'Hot', milk: true },
+      { name: 'Cortado', meta: 'Espresso · Steamed milk', temp: 'Hot', milk: true },
+      { name: 'Flat White', meta: 'Espresso · Microfoam', temp: 'Hot', milk: true },
+      { name: 'Cappuccino', meta: 'Espresso · Milk · Foam', temp: 'Hot', milk: true },
+      { name: 'Caffè Latte', meta: 'Espresso · Steamed milk', temp: 'Hot', milk: true },
+      { name: 'Mocha', meta: 'Espresso · Chocolate · Milk', temp: 'Hot', milk: true },
+      { name: 'Affogato', meta: 'Espresso · Ice cream', temp: 'Dessert', milk: false },
+      { name: 'Iced Latte', meta: 'Espresso · Cold milk', temp: 'Iced', milk: true },
+      { name: 'Iced Americano', meta: 'Espresso · Cold water', temp: 'Iced', milk: false },
+      { name: 'Cold Brew', meta: 'Slow-steeped · Smooth', temp: 'Iced', milk: false }
+    ];
+    const { filter, query } = this.state;
+    const q = query.trim().toLowerCase();
+    const drinks = all
+      .filter((d) => filter === 'All' || (filter === 'With milk' ? d.milk : d.temp === filter))
+      .filter((d) => !q || (d.name + ' ' + d.meta + ' ' + d.temp).toLowerCase().indexOf(q) !== -1)
+      .map((d) => ({
+        ...d,
+        href: d.href || '#',
+        hasArt: !!d.hasArt, noArt: !d.hasArt,
+        tempStyle: 'align-self: flex-start; margin-top: 2px; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; ' +
+          (d.temp === 'Iced' ? 'background: #E3E8DB; color: #4E5C45;' : 'background: #F3DCCB; color: #7E3B1B;')
+      }));
+    const chips = ['All', 'Hot', 'Iced', 'With milk'].map((label) => {
+      const on = label === filter;
+      return {
+        label, pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ filter: label }),
+        style: 'min-height: 44px; padding: 0 18px; border-radius: 999px; cursor: pointer; font: 800 15px Nunito, system-ui, sans-serif; ' +
+          (on ? 'border: 0; background: #2B1D14; color: #FCF7EE;' : 'border: 1.5px solid #E0D3C0; background: #FCF7EE; color: #2B1D14;')
+      };
+    });
+    return {
+      chips, drinks, query,
+      onSearch: (e) => this.setState({ query: e.target.value }),
+      countLabel: drinks.length === 1 ? '1 drink' : drinks.length + ' drinks'
+    };
+  }
+}
+</script>
+</body>
+</html>

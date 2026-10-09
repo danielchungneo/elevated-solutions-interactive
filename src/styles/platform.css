@@ -1,0 +1,95 @@
+/* Platform theme "Laser Studio": Elevated Solutions home only. */
+[data-theme="platform"] {
+  --color-bg: #f3f4f1;
+  --color-surface: #ffffff;
+  --color-surface-2: #f3f4f1;
+  --color-ink: #101826;
+  --color-ink-muted: #566070;
+  --color-ink-soft: #3a4352;
+  --color-rule: #dde1e6;
+  --color-rule-strong: #101826;
+  --color-rule-dashed: #aeb6c2;
+  --color-accent: #e8461e;
+  --color-accent-ink: #b3330c;
+  --color-accent-soft: #fde9e2;
+  --color-badge-ink: #9a2c0b;
+  --color-primary: #101826;
+  --color-on-primary: #ffffff;
+  --color-inverse: #101826;
+  --color-on-inverse: #f3f4f1;
+  --color-on-inverse-muted: #aeb6c2;
+  --color-accent-on-inverse: #ff6a3d;
+  --color-focus: #e8461e;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-label: "IBM Plex Mono", ui-monospace, monospace;
+  --weight-display: 800;
+  --display-tracking: -0.035em;
+  --display-case: none;
+  --leading-body: 1.55;
+  --label-case: uppercase;
+  --label-tracking: 0.12em;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --gutter: 16px;
+  --tap-min: 44px;
+
+  --radius-card: 16px;
+  --radius-control: 999px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgba(16, 24, 38, 0.05);
+  --texture: none;
+  --hero-grid: linear-gradient(rgba(16, 24, 38, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 24, 38, 0.05) 1px, transparent 1px);
+  --hero-grid-size: 24px 24px;
+
+  /* Collection swatch previews (read collection theme colors, not platform) */
+  --swatch-cocktail-bg: #1f2326;
+  --swatch-cocktail-frame: #565d63;
+  --swatch-cocktail-icon: #c9a15b;
+  --swatch-coffee-bg: #f5ede0;
+  --swatch-coffee-ring: #e0d3c0;
+  --swatch-coffee-icon: #a9532a;
+}
+
+.platform-root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: var(--leading-body);
+}
+
+.platform-root a {
+  color: var(--color-accent-ink);
+}
+
+.platform-root a:hover {
+  color: var(--color-ink);
+}
+
+.platform-root :focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-root *,
+  .platform-root *::before,
+  .platform-root *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

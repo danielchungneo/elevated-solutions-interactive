@@ -1,0 +1,147 @@
+{
+  "slug": "espresso-macchiato",
+  "name": "Espresso Macchiato",
+  "tags": [
+    "ESPRESSO",
+    "FOAM",
+    "SPOT"
+  ],
+  "tagline": "SMALL • MIGHTY • MARKED",
+  "intro": "An espresso macchiato is a shot of espresso 'marked' with just a spoonful of foamed milk. It stays bold and intense, with the foam softening the edge slightly and adding a touch of sweetness. It's perfect when you want milk's mellowness without losing the espresso.",
+  "heroImage": "/images/coffee/espresso-macchiato-hero.webp",
+  "heroAlt": "Engraved line illustration of an espresso macchiato with a dollop of foam",
+  "difficulty": "Medium",
+  "prepTimeMinutes": 6,
+  "servings": 1,
+  "serveTemp": "Hot",
+  "vessel": {
+    "name": "Espresso cup (demitasse), pre-warmed",
+    "sizeOz": 3,
+    "note": "A small cup keeps the proportions right."
+  },
+  "ingredients": [
+    {
+      "amount": "2 oz",
+      "item": "double shot espresso",
+      "note": "From roughly 18 g of finely ground coffee."
+    },
+    {
+      "amount": "1 tbsp",
+      "item": "foamed milk",
+      "note": "Thick, spoonable foam from a small amount of milk."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Espresso machine with steam wand",
+      "alternative": "Moka pot or AeroPress plus a handheld frother (see home methods)"
+    },
+    {
+      "item": "Small pitcher or cup"
+    },
+    {
+      "item": "Teaspoon"
+    }
+  ],
+  "dialIn": {
+    "doseGrams": 18,
+    "yieldGrams": 38,
+    "grind": "Fine (espresso)",
+    "waterTempF": 200,
+    "timeSeconds": "25-30",
+    "milkTempF": 140
+  },
+  "timer": {
+    "stepIndex": 1,
+    "targetMinSeconds": 25,
+    "targetMaxSeconds": 30,
+    "scaleMaxSeconds": 40
+  },
+  "steps": [
+    {
+      "title": "Warm the cup",
+      "body": "Preheat a small cup with hot water. An espresso macchiato is a small drink, and a warm cup keeps it from cooling too quickly."
+    },
+    {
+      "title": "Pull the shot",
+      "body": "Pull a double shot straight into the cup. The crema should look rich and golden, since it's the base for the foam.",
+      "tip": "Pull the shot right before you make the foam so it's fresh."
+    },
+    {
+      "title": "Froth a little milk",
+      "body": "Pour a small amount of cold milk, about 2 to 3 oz, into a small pitcher so you can froth properly. The extra milk is easier to steam well, and you'll only use a spoonful of the foam.",
+      "tip": "If you have no steam wand, use a handheld frother in a mug."
+    },
+    {
+      "title": "Build thick foam",
+      "body": "Add plenty of air at the start to make stiff, creamy foam, then heat to around 140°F. Thick foam sits on top of the espresso instead of sinking, which gives the drink its 'mark'.",
+      "tip": "Tap and swirl until it looks glossy but holds its shape."
+    },
+    {
+      "title": "Spoon on the foam",
+      "body": "Use a teaspoon to scoop about 1 tbsp of foam and dollop it in the center of the espresso. Don't stir, as the contrast between the foam and the shot is part of the experience."
+    },
+    {
+      "title": "Sip right away",
+      "body": "Drink it while the foam is warm and the espresso is still hot. A few sips is all it takes."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "Moka pot + handheld frother",
+      "note": "Pour a small moka pot brew into a cup and top with foam from a handheld frother. It's bold and a good home version, but the coffee is less concentrated and has no crema."
+    },
+    {
+      "method": "AeroPress",
+      "note": "A strong, fine-grind AeroPress shot works well. Add a dollop of foamed milk. The foam holds, but the shot is cleaner and lighter than real espresso."
+    },
+    {
+      "method": "Strong brewed coffee",
+      "note": "A small cup of very strong coffee with a spoon of frothed milk captures the spirit but not the intensity. Expect a milder result."
+    }
+  ],
+  "tips": [
+    "Use fresh whole milk for the best, thickest foam.",
+    "Don't stir it, so you can enjoy the layers.",
+    "In some countries, 'macchiato' can mean a larger milk-based drink, so definitions vary by café and region."
+  ],
+  "commonMistakes": [
+    "Adding too much milk and turning it into a cortado or small latte.",
+    "Making foam that's too thin to sit on top.",
+    "Stirring the foam in immediately.",
+    "Using a cold cup."
+  ],
+  "variations": [
+    {
+      "name": "Latte macchiato",
+      "description": "The reverse: espresso poured into a tall glass of steamed milk."
+    },
+    {
+      "name": "Single-shot macchiato",
+      "description": "Uses one shot of espresso instead of a double."
+    },
+    {
+      "name": "Cortado",
+      "description": "Espresso with a roughly equal amount of warm milk. It's milder than a macchiato."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 4,
+    "sweet": 2,
+    "creamy": 2,
+    "strong": 5
+  },
+  "history": "'Macchiato' means 'marked' or 'stained' in Italian, referring to the espresso being marked with milk. The exact origin of the drink is unclear.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "espresso",
+    "cappuccino",
+    "flat-white",
+    "latte"
+  ],
+  "seo": {
+    "title": "How to Make an Espresso Macchiato: Espresso Marked with Foam",
+    "description": "Make a classic espresso macchiato with a double shot and 1 tbsp of foamed milk. Includes easy home methods without an espresso machine."
+  }
+}

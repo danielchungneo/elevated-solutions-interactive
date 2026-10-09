@@ -1,0 +1,27 @@
+---
+import CoffeeLayout from "../../layouts/CoffeeLayout.astro";
+import CoffeeHeader from "../../components/coffee/CoffeeHeader.astro";
+import CoffeeFooter from "../../components/coffee/CoffeeFooter.astro";
+import CoffeeLibrary from "../../components/coffee/CoffeeLibrary";
+import { coffeeBrand, getAllCoffee, titleCaseTag } from "../../lib/coffee";
+import { site } from "../../lib/site";
+
+const drinks = (await getAllCoffee()).map((c) => ({
+  slug: c.id,
+  name: c.data.name,
+  meta: c.data.tags.map(titleCaseTag).join(" · "),
+  serveTemp: c.data.serveTemp,
+  milk: c.data.milk,
+  heroImage: c.data.heroImage,
+}));
+---
+
+<CoffeeLayout
+  title={`${coffeeBrand.homeTitle} · ${site.brand}`}
+  description={coffeeBrand.homeIntro}
+  canonicalPath="/coffee"
+>
+  <CoffeeHeader variant="home" />
+  <CoffeeLibrary client:load drinks={drinks} />
+  <CoffeeFooter />
+</CoffeeLayout>

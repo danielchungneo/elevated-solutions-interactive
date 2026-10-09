@@ -1,0 +1,151 @@
+{
+  "slug": "vietnamese-iced-coffee",
+  "name": "Vietnamese Iced Coffee",
+  "tags": [
+    "COFFEE",
+    "SWEET",
+    "ICED"
+  ],
+  "tagline": "BOLD • SWEET • VIETNAMESE",
+  "intro": "Vietnamese iced coffee, or cà phê sữa đá, is strong, dark coffee dripped slowly onto sweetened condensed milk and poured over ice. It's bold, syrupy and wonderfully sweet, with a deep roasted flavor. A little goes a long way on a hot day.",
+  "heroImage": "/images/coffee/vietnamese-iced-coffee-hero.webp",
+  "heroAlt": "Engraved line illustration of Vietnamese iced coffee with condensed milk",
+  "difficulty": "Easy",
+  "prepTimeMinutes": 10,
+  "servings": 1,
+  "serveTemp": "Iced",
+  "vessel": {
+    "name": "Short glass filled with ice",
+    "sizeOz": 8,
+    "note": "Use a heatproof glass for the hot brew."
+  },
+  "ingredients": [
+    {
+      "amount": "2 tbsp",
+      "item": "dark ground coffee",
+      "note": "Medium-coarse grind. Dark roasts, often including robusta, are traditional in Vietnam."
+    },
+    {
+      "amount": "2 tbsp",
+      "item": "sweetened condensed milk",
+      "note": "Adjust to taste next time, but this is the base recipe."
+    },
+    {
+      "amount": "4 oz",
+      "item": "hot water",
+      "note": "Just off the boil, around 195 to 205°F."
+    },
+    {
+      "amount": "to fill",
+      "item": "ice",
+      "note": "Added after stirring."
+    }
+  ],
+  "equipment": [
+    {
+      "item": "Phin filter (Vietnamese drip filter)",
+      "alternative": "AeroPress, French press or small pour-over (see home methods)"
+    },
+    {
+      "item": "Heatproof glass"
+    },
+    {
+      "item": "Spoon"
+    },
+    {
+      "item": "Kettle"
+    }
+  ],
+  "dialIn": {
+    "waterTempF": 200,
+    "grind": "Medium-coarse",
+    "timeSeconds": "240-300"
+  },
+  "steps": [
+    {
+      "title": "Add the condensed milk",
+      "body": "Spoon 2 tbsp of sweetened condensed milk into the bottom of a heatproof glass. The coffee will drip right onto it and start melting it.",
+      "tip": "Warm the glass slightly to help it blend."
+    },
+    {
+      "title": "Set up the phin",
+      "body": "Place the phin on top of the glass, add 2 tbsp of ground coffee, and gently shake level. Press the filter insert on lightly. Too much pressure slows the drip too much.",
+      "tip": "Press just enough to even the surface."
+    },
+    {
+      "title": "Bloom",
+      "body": "Pour a splash of hot water over the grounds, just enough to wet them, and wait about 30 seconds. This lets the coffee swell and degas, helping extraction be even."
+    },
+    {
+      "title": "Slow drip",
+      "body": "Fill the phin with the remaining hot water, up to a total of 4 oz, and cover it with the lid. Let it drip slowly, about 4 to 5 minutes. The slow drip makes a strong, concentrated brew.",
+      "tip": "If it drips in under 2 minutes, grind finer or press a bit harder. If it barely drips, grind coarser."
+    },
+    {
+      "title": "Stir",
+      "body": "Remove the phin and stir the coffee thoroughly with the condensed milk until blended into a caramel-colored syrup. Taste it, as it should be sweet and strong."
+    },
+    {
+      "title": "Pour over ice",
+      "body": "Fill a second glass with ice, then pour the coffee over it, or add ice directly if the glass is big enough. Stir and serve.",
+      "tip": "Pour slowly over ice to avoid splashes."
+    }
+  ],
+  "homeMethods": [
+    {
+      "method": "AeroPress",
+      "note": "Use a medium-fine grind, 2 tbsp coffee and about 4 oz of hot water, then press into the condensed milk. It's a great substitute and gives a strong, clean cup, though less syrupy than phin-drip."
+    },
+    {
+      "method": "French press",
+      "note": "Steep 2 tbsp of dark coffee with 4 oz of hot water for about 4 minutes, plunge into condensed milk. The result is bold but a bit lighter and less concentrated than phin coffee."
+    },
+    {
+      "method": "Moka pot or strong brewed coffee",
+      "note": "A small moka pot brew or double-strength drip coffee poured over condensed milk will give a similar sweet, strong drink. It misses some of the phin's slow-drip intensity."
+    }
+  ],
+  "tips": [
+    "Dark, bold coffee stands up best to the sweet milk.",
+    "Condensed milk is very sweet, so taste and adjust the amount in future batches.",
+    "Brands and roast styles in Vietnam vary, and some include chicory or other additions."
+  ],
+  "commonMistakes": [
+    "Grinding too fine and getting a drip that stalls.",
+    "Skipping the bloom and getting uneven extraction.",
+    "Not stirring the condensed milk in fully.",
+    "Using a light roast that tastes thin and sour next to the sweetness."
+  ],
+  "variations": [
+    {
+      "name": "Hot cà phê sữa",
+      "description": "Skip the ice and serve it hot, with the coffee dripped onto condensed milk in a small cup."
+    },
+    {
+      "name": "Coconut coffee",
+      "description": "Use coconut condensed milk or coconut cream for a tropical twist."
+    },
+    {
+      "name": "Egg coffee (cà phê trứng)",
+      "description": "A Vietnamese specialty topped with whipped egg yolk and sweetened milk. It's a separate, more involved drink."
+    }
+  ],
+  "flavorProfile": {
+    "bitter": 3,
+    "sweet": 5,
+    "creamy": 3,
+    "strong": 4
+  },
+  "history": "Condensed milk is often said to have become common in Vietnamese coffee because fresh milk was hard to get and store, a story widely told but not fully documented. Coffee growing in Vietnam began in the French colonial era in the 1800s.",
+  "containsAlcohol": false,
+  "milk": true,
+  "relatedSlugs": [
+    "cold-brew",
+    "iced-latte",
+    "americano"
+  ],
+  "seo": {
+    "title": "How to Make Vietnamese Iced Coffee (Cà Phê Sữa Đá)",
+    "description": "Make bold, sweet Vietnamese iced coffee with dark coffee, sweetened condensed milk and ice. Includes phin and no-phin methods."
+  }
+}

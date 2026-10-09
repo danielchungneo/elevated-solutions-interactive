@@ -1,0 +1,49 @@
+/* Coffee theme: cozy neighborhood coffeehouse, rainy-morning café.
+   Reference: design/reference/coffee/*.dc.html */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Nunito:wght@400..800&display=swap");
+
+[data-theme="coffee"] {
+  --color-bg: #F5EDE0;               /* oat */
+  --color-surface: #FCF7EE;          /* cream cards */
+  --color-surface-2: #EFE4D3;        /* latte: tips, tracks, segmented bg */
+  --color-ink: #2B1D14;              /* espresso, 14.0:1 on bg */
+  --color-ink-muted: #6B5242;        /* 6.2:1 on bg, 6.8:1 on surface */
+  --color-rule: #E0D3C0;
+  --color-rule-strong: #C9B8A6;
+  --color-accent: #A9532A;           /* terracotta fill: cream text on it 5.0:1 */
+  --color-on-accent: #FCF7EE;
+  --color-accent-ink: #974722;       /* terracotta as text, 5.6:1 */
+  --color-accent-soft: #D89A5E;      /* caramel: on inverse only (5.7:1 on cocoa) */
+  --color-primary: #A9532A;
+  --color-on-primary: #FCF7EE;
+  --color-secondary: #4E5C45;        /* sage ink, 5.7:1 on sage-soft */
+  --color-secondary-soft: #E3E8DB;
+  --color-inverse: #3A2A20;          /* cocoa: dial-in card, timer, footer */
+  --color-inverse-deep: #3A2A20;
+  --color-inverse-raised: #4A382C;
+  --color-on-inverse: #F5EDE0;       /* 11.8:1 */
+  --color-on-inverse-muted: #E8C9A4; /* 7.0:1 on raised */
+  --color-focus: #A9532A;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Nunito", ui-rounded, system-ui, sans-serif;
+  --weight-display: 700;
+  --display-variation: "SOFT" 100;
+  --display-case: none;
+  --display-tracking: -0.01em;
+  --leading-body: 1.65;
+  --label-case: none;
+  --label-tracking: 0;
+
+  --radius-card: 20px;
+  --radius-control: 999px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgba(43, 29, 20, 0.06), 0 8px 24px rgba(43, 29, 20, 0.08);
+  --shadow-primary: 0 6px 16px rgba(169, 83, 42, 0.28);
+  --texture: url("/textures/paper-grain.png");
+  --texture-size: 256px 256px;
+
+  --hero-frame: card;                /* cream card + inset 1px rule, radius 24 */
+  --hero-surface: var(--color-surface);
+  --guided-surface: var(--color-bg); /* brew mode stays light; timer card is cocoa */
+}

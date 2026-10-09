@@ -1,207 +1,406 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import SiteHeader from "../components/ui/SiteHeader.astro";
-import SiteFooter from "../components/ui/SiteFooter.astro";
-import { sections } from "../lib/sections";
-import { site } from "../lib/site";
+import { getCollection } from "astro:content";
+import PlatformLayout from "../layouts/PlatformLayout.astro";
+import SectionCard from "../components/platform/SectionCard.astro";
+import {
+  platform,
+  platformShopUrl,
+  platformContactUrl,
+  platformCopyright,
+  sectionsStatusLabel,
+} from "../lib/platform";
+
+const cocktails = await getCollection("cocktails");
+const coffee = await getCollection("coffee");
+
+const catalogCounts: Record<string, number> = {
+  cocktails: cocktails.length,
+  coffee: coffee.length,
+};
+
+const shopUrl = platformShopUrl();
+const contactUrl = platformContactUrl();
+const statusLabel = sectionsStatusLabel(platform.sections);
+const liveTitles = platform.sections
+  .filter((s) => s.status === "live")
+  .map((s) => s.title);
+const description = `${platform.intro} Live sections: ${liveTitles.join(", ")}.`;
+const title = `${platform.brandName}: ${platform.tagline.lead} ${platform.tagline.accent}`;
+const siteOrigin = Astro.site ?? Astro.url;
+const canonical = new URL("/", siteOrigin).href;
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: platform.brandName,
+    url: canonical,
+    description: platform.footer.tagline,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: platform.brandName,
+    url: canonical,
+    description,
+  },
+];
 ---
 
-<BaseLayout
-  title={site.brand}
-  description={site.description}
+<PlatformLayout
+  title={title}
+  description={description}
   canonicalPath="/"
+  ogImage={platform.heroImage}
+  jsonLd={jsonLd}
 >
-  <div class="page-shell">
-    <SiteHeader variant="home" />
+  <header class="plat-header">
+    <span class="plat-header__brand">
+      <span class="plat-dot" aria-hidden="true"></span>
+      {platform.brandName}
+    </span>
+    <a
+      class="plat-header__shop"
+      href={shopUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Shop
+    </a>
+  </header>
 
-    <section class="dir-hero" aria-labelledby="home-h">
-      <div class="diamond-rule diamond-rule--brass" aria-hidden="true" style="width: 120px; color: var(--paper-50)">
-        <span></span><span></span><span></span>
+  <section class="plat-hero" aria-labelledby="hero-h">
+    <span class="plat-eyebrow">{platform.eyebrow}</span>
+    <h1 id="hero-h">{platform.brandName}</h1>
+    <p class="plat-hero__lead">
+      {platform.tagline.lead}{" "}
+      <span class="plat-hero__accent">{platform.tagline.accent}</span>
+    </p>
+    <p class="plat-hero__intro">{platform.intro}</p>
+    <figure class="plat-hero__figure">
+      <img
+        src={platform.heroImage}
+        alt={platform.heroAlt}
+        width="1074"
+        height="677"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </figure>
+  </section>
+
+  <main>
+    <section class="plat-sections" aria-labelledby="sections-h">
+      <div class="plat-sections__head">
+        <h2 id="sections-h">Sections</h2>
+        <span class="plat-sections__count">{statusLabel}</span>
       </div>
-      <h1 id="home-h">{site.brand}</h1>
-      <p class="dir-hero__tagline">{site.tagline}</p>
-      <p class="dir-hero__lead">
-        Tap a product to open its guide. Choose a section below.
-      </p>
-    </section>
-
-    <main class="dir-main">
-      <p class="dir-count label">
-        {sections.length} sections
-      </p>
-      <ul class="dir-list">
+      <ul class="plat-sections__list">
         {
-          sections.map((section) => (
-            <li>
-              {section.status === "live" && section.href ? (
-                <a class="dir-row" href={section.href}>
-                  <div class="dir-row__art" aria-hidden="true">
-                    <div class="dir-row__frame" />
-                    <span class="dir-row__mono">{section.initial}</span>
-                  </div>
-                  <div class="dir-row__meta">
-                    <span class="dir-row__name">{section.name}</span>
-                    <span class="dir-row__blurb">{section.blurb}</span>
-                  </div>
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M9 6l6 6-6 6" />
-                  </svg>
-                </a>
-              ) : (
-                <div class="dir-row dir-row--soon" aria-disabled="true">
-                  <div class="dir-row__art" aria-hidden="true">
-                    <div class="dir-row__frame" />
-                    <span class="dir-row__mono">{section.initial}</span>
-                  </div>
-                  <div class="dir-row__meta">
-                    <span class="dir-row__name">{section.name}</span>
-                    <span class="dir-row__blurb">{section.blurb}</span>
-                  </div>
-                  <span class="dir-row__badge">Coming soon</span>
-                </div>
-              )}
-            </li>
+          platform.sections.map((section, index) => (
+            <SectionCard
+              section={section}
+              index={index}
+              catalogCount={catalogCounts[section.id] ?? 0}
+            />
           ))
         }
       </ul>
-    </main>
+    </section>
 
-    <SiteFooter variant="company" />
-  </div>
-</BaseLayout>
+    <section class="plat-how" aria-labelledby="how-h">
+      <h2 id="how-h">How it works</h2>
+      <ol class="plat-how__list">
+        {
+          platform.howItWorks.map((step, i) => (
+            <li class="plat-how__row">
+              <span class="plat-how__num">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span class="plat-how__body">
+                <strong>{step.title}</strong>
+                <span>{step.body}</span>
+              </span>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </main>
+
+  <footer class="plat-footer">
+    <div class="plat-footer__brand">
+      <span class="plat-dot plat-dot--inverse" aria-hidden="true"></span>
+      {platform.brandName}
+    </div>
+    <p class="plat-footer__tagline">{platform.footer.tagline}</p>
+    <nav aria-label="Footer" class="plat-footer__nav">
+      <a href={shopUrl} target="_blank" rel="noopener noreferrer">Shop</a>
+      {
+        contactUrl ? (
+          <a href={contactUrl}>Contact</a>
+        ) : (
+          <span class="plat-footer__muted">Contact</span>
+        )
+      }
+    </nav>
+    <span class="plat-footer__copy">{platformCopyright()}</span>
+  </footer>
+</PlatformLayout>
 
 <style>
-  .dir-hero {
-    background: var(--slate-800);
-    color: var(--paper-50);
-    padding: 28px var(--gutter) 24px;
+  .plat-header {
+    height: 60px;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .plat-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: var(--weight-display);
+    font-size: 1.1875rem;
+    letter-spacing: -0.02em;
+  }
+
+  .plat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(232, 70, 30, 0.18);
+    flex-shrink: 0;
+  }
+
+  .plat-dot--inverse {
+    background: var(--color-accent-on-inverse);
+    box-shadow: none;
+  }
+
+  .plat-header__shop {
+    min-height: var(--tap-min);
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--color-ink);
+    border-radius: var(--radius-pill);
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+
+  .plat-header__shop:hover {
+    color: var(--color-ink);
+  }
+
+  .plat-hero {
+    padding: 32px var(--gutter) 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-bottom: 1px solid var(--color-rule);
+    background-color: var(--color-bg);
+    background-image: var(--hero-grid);
+    background-size: var(--hero-grid-size);
+  }
+
+  .plat-eyebrow {
+    font-family: var(--font-label);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: var(--label-tracking);
+    text-transform: var(--label-case);
+    color: var(--color-ink-muted);
+  }
+
+  .plat-hero h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: var(--weight-display);
+    font-size: 3.375rem;
+    line-height: 0.95;
+    letter-spacing: var(--display-tracking);
+  }
+
+  .plat-hero__lead {
+    margin: 0;
+    font-size: 1.375rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  .plat-hero__accent {
+    color: var(--color-accent-ink);
+  }
+
+  .plat-hero__intro {
+    margin: 0;
+    font-size: 1.0625rem;
+    color: var(--color-ink-soft);
+  }
+
+  .plat-hero__figure {
+    margin: 10px 0 0;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: #f6f5f0;
+  }
+
+  .plat-hero__figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .plat-sections {
+    padding: 28px var(--gutter) 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .plat-sections__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .plat-sections h2,
+  .plat-how h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: var(--weight-display);
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .plat-sections__count {
+    font-family: var(--font-label);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+    white-space: nowrap;
+  }
+
+  .plat-sections__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .plat-how {
+    padding: 32px var(--gutter) 36px;
     display: flex;
     flex-direction: column;
     gap: 14px;
   }
 
-  .dir-hero h1 {
-    margin: 0;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 2.75rem;
-    line-height: 1.02;
-    text-transform: uppercase;
-  }
-
-  .dir-hero__tagline {
-    margin: 0;
-    font: var(--text-tagline);
-    color: #e4ded1;
-  }
-
-  .dir-hero__lead {
-    margin: 0;
-    font-size: 1.0625rem;
-    color: var(--on-dark-muted);
-  }
-
-  .dir-main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dir-count {
-    margin: 0;
-    padding: 16px var(--gutter) 0;
-  }
-
-  .dir-list {
+  .plat-how__list {
     list-style: none;
     margin: 0;
-    padding: 8px var(--gutter) 32px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .plat-how__row {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .plat-how__num {
+    font-family: var(--font-label);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--color-accent-ink);
+  }
+
+  .plat-how__body {
     display: flex;
     flex-direction: column;
   }
 
-  .dir-list > li {
-    border-bottom: 1px solid var(--paper-300);
+  .plat-how__body strong {
+    font-weight: 600;
   }
 
-  .dir-row {
-    padding: 12px 0;
-    display: grid;
-    grid-template-columns: 88px minmax(0, 1fr) auto;
-    column-gap: 14px;
+  .plat-how__body span {
+    font-size: 0.9375rem;
+    color: var(--color-ink-soft);
+  }
+
+  .plat-footer {
+    margin-top: auto;
+    background: var(--color-inverse);
+    color: var(--color-on-inverse-muted);
+    padding: 32px var(--gutter) 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 0.9375rem;
+  }
+
+  .plat-footer__brand {
+    display: flex;
     align-items: center;
-    color: var(--slate-900);
+    gap: 8px;
+    color: var(--color-on-inverse);
+    font-family: var(--font-display);
+    font-weight: var(--weight-display);
+    font-size: 1.375rem;
+    letter-spacing: -0.02em;
+  }
+
+  .plat-footer__tagline {
+    margin: 0;
+  }
+
+  .plat-footer__nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .plat-footer__nav a {
+    min-height: var(--tap-min);
+    display: flex;
+    align-items: center;
+    color: var(--color-on-inverse);
     text-decoration: none;
   }
 
-  .dir-row:hover {
-    color: var(--slate-900);
+  .plat-footer__nav a:hover {
+    color: var(--color-accent-on-inverse);
   }
 
-  .dir-row--soon {
-    opacity: 0.72;
-  }
-
-  .dir-row__art {
-    width: 88px;
-    height: 88px;
-    background: var(--slate-800);
-    border-radius: var(--radius);
-    position: relative;
+  .plat-footer__muted {
+    min-height: var(--tap-min);
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    color: var(--color-on-inverse-muted);
   }
 
-  .dir-row__frame {
-    position: absolute;
-    inset: 6px;
-    border: 1px solid var(--slate-500);
-  }
-
-  .dir-row__mono {
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 2.5rem;
-    color: #e4ded1;
-  }
-
-  .dir-row__meta {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-  }
-
-  .dir-row__name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.375rem;
-    line-height: 1.2;
-  }
-
-  .dir-row__blurb {
-    font-size: 0.875rem;
-    color: var(--ink-muted);
-    letter-spacing: 0.02em;
-  }
-
-  .dir-row__badge {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+  .plat-footer__copy {
+    font-family: var(--font-label);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--accent-ink);
-    white-space: nowrap;
   }
 </style>

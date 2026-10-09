@@ -1,0 +1,104 @@
+---
+interface Props {
+  name: string;
+  meta: string;
+  href: string;
+  serveTemp: "Hot" | "Iced";
+  heroImage?: string;
+}
+
+const { name, meta, href, serveTemp, heroImage } = Astro.props;
+---
+
+<a class="drink-tile" href={href}>
+  <div class="drink-tile__art">
+    {
+      heroImage ? (
+        <img src={heroImage} alt="" width="148" height="132" loading="lazy" />
+      ) : (
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6.5" ry="9" transform="rotate(35 12 12)"></ellipse><path d="M8.2 17.5c1.5-2.5 1.2-4.6 2.9-6.3 1.6-1.6 3.3-2.3 4.7-5"></path></svg>
+      )
+    }
+  </div>
+  <div class="drink-tile__meta">
+    <span class="drink-tile__name">{name}</span>
+    <span class="drink-tile__blurb">{meta}</span>
+    <span class:list={["drink-tile__temp", serveTemp === "Iced" && "drink-tile__temp--iced"]}>
+      {serveTemp}
+    </span>
+  </div>
+</a>
+
+<style>
+  .drink-tile {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .drink-tile:hover {
+    color: var(--color-ink);
+  }
+
+  .drink-tile__art {
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    background: var(--color-surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .drink-tile__art img {
+    width: 78%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .drink-tile__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 4px 4px;
+  }
+
+  .drink-tile__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1.2;
+    font-variation-settings: "SOFT" 100;
+  }
+
+  .drink-tile__blurb {
+    font-size: 0.8125rem;
+    color: var(--color-ink-muted);
+    line-height: 1.4;
+  }
+
+  .drink-tile__temp {
+    align-self: flex-start;
+    margin-top: 2px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    background: var(--color-hot-soft);
+    color: var(--color-hot-ink);
+  }
+
+  .drink-tile__temp--iced {
+    background: var(--color-secondary-soft);
+    color: var(--color-secondary);
+  }
+</style>

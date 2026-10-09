@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shared layout and themes</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&amp;family=Nunito:wght@400..800&amp;family=Bodoni+Moda:opsz,wght@6..96,500..900&amp;family=Instrument+Sans:wght@400..700&amp;display=swap">
+<style>
+body{margin:0;background:#F5EDE0}
+.paper{background-color:#F5EDE0;background-image:url(/textures/paper-grain.png);background-size:256px 256px}
+h1,h2,h3{font-variation-settings:"SOFT" 100}
+a{color:#974722}a:hover{color:#2B1D14}
+</style>
+</helmet>
+<div class="paper" style="width: 1280px; min-height: 2500px; box-sizing: border-box; padding: 64px; color: #2B1D14; font-family: Nunito, ui-rounded, system-ui, sans-serif; font-size: 16px; line-height: 1.55; display: flex; flex-direction: column; gap: 56px">
+
+<header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-bottom: 24px; border-bottom: 1.5px solid #E0D3C0">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; font-weight: 800; color: #974722">One platform · two collections</span>
+<h1 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 60px; line-height: 1.02">Shared layout + themes</h1>
+</div>
+<p style="margin: 0; max-width: 460px; color: #4A382C; font-size: 17px">Structure, components, spacing and type sizes are shared. Each collection swaps one theme file: colors, fonts, corner radius, shadow and texture. Components only ever read semantic tokens, never raw hex.</p>
+</header>
+
+<section style="display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px">Theme tokens</h2>
+<div style="background: #FCF7EE; border-radius: 24px; box-shadow: 0 1px 2px rgba(43,29,20,0.06), 0 8px 24px rgba(43,29,20,0.06); padding: 8px 28px">
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr) 250px 250px; column-gap: 20px; padding: 14px 0; border-bottom: 1.5px solid #E0D3C0; font-size: 13px; font-weight: 800; color: #6B5242">
+<span>Token</span><span>Role</span><span>Cocktails</span><span>Coffee</span>
+</div>
+<sc-for list="{{tokens}}" as="t" hint-placeholder-count="16">
+<div style="display: grid; grid-template-columns: 220px minmax(0, 1fr) 250px 250px; column-gap: 20px; align-items: center; padding: 10px 0; border-bottom: 1px solid #EFE4D3">
+<code style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: #2B1D14">{{t.name}}</code>
+<span style="font-size: 15px; color: #4A382C">{{t.role}}</span>
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px"><span style="{{t.aSwatch}}"></span>{{t.a}}</span>
+<span style="display: flex; align-items: center; gap: 10px; font-size: 14px"><span style="{{t.bSwatch}}"></span>{{t.b}}</span>
+</div>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 15px; color: #6B5242">Coffee contrast: ink on oat 14.0:1 · muted text 6.2:1 · terracotta text ink 5.6:1 · cream on terracotta button 5.0:1 · sage on sage-soft 5.7:1 · cream on cocoa 11.8:1.</p>
+</section>
+
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px">
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px">Shared, never themed</h2>
+<div style="background: #FCF7EE; border-radius: 24px; padding: 8px 24px">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Spacing</span><strong>4 · 8 · 12 · 16 · 24 · 32 · 40 · 64</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Page gutter / max width</span><strong>16px / 640px</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Type sizes (role)</span><strong>50 · 38 · 30 · 21 · 18 · 17 · 15 · 13</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Guided-mode body</span><strong>23–25px</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Touch target / primary / guided</span><strong>44 / 56 / 68px</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #EFE4D3"><span>Focus ring</span><strong>3px accent, 2px offset</strong></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0"><span>Primary action zone</span><strong>Bottom third, sticky</strong></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px">Recipe page anatomy</h2>
+<ol style="margin: 0; padding: 20px 24px 20px 48px; background: #FCF7EE; border-radius: 24px; display: flex; flex-direction: column; gap: 6px">
+<li><strong>PageHeader</strong> · wordmark, back to collection</li>
+<li><strong>DrinkTitle</strong> · name, tagline, 3 tags</li>
+<li><strong>HeroArt</strong> · coaster line art in a frame</li>
+<li><strong>QuickFacts</strong> · 3–4 cells, driven by data</li>
+<li><strong>Intro</strong></li>
+<li><strong>Ingredients</strong> + <strong>ServingsSelector</strong> (1 · 2 · 4)</li>
+<li><strong>Equipment</strong> · optional "no machine?" alternative per item</li>
+<li><strong>Steps</strong> · numbered, optional tip</li>
+<li><strong>DialIn</strong> · optional module (coffee)</li>
+<li><strong>MethodSwitcher</strong> · optional module (coffee)</li>
+<li><strong>TipsList</strong> · pro tips, common mistakes</li>
+<li><strong>Variations</strong></li>
+<li><strong>FlavorProfile</strong> · dots, any 4 axes from data</li>
+<li><strong>RelatedGrid</strong> · from relatedSlugs</li>
+<li><strong>StickyCTA → GuidedMode</strong> · cook mode / brew mode + timer</li>
+<li><strong>Footer</strong> · note text set per collection</li>
+</ol>
+<p style="margin: 0; font-size: 15px; color: #6B5242">Optional modules render only when their data exists, so a cocktail with no <code>dialIn</code> simply skips it.</p>
+</section>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px">Same component, two themes</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+<div style="background: #F4F0E7; border-radius: 4px; padding: 28px; display: flex; flex-direction: column; gap: 14px; font-family: 'Instrument Sans', system-ui, sans-serif; color: #16191B">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4D5357">Cocktail theme · Ingredients</span>
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 30px">Ingredients</span>
+<div style="display: flex; border: 1.5px solid #16191B; border-radius: 4px; overflow: hidden">
+<span style="width: 44px; height: 40px; display: flex; align-items: center; justify-content: center; background: #16191B; color: #F4F0E7; font-weight: 700">1</span>
+<span style="width: 44px; height: 40px; display: flex; align-items: center; justify-content: center; border-left: 1.5px solid #16191B; font-weight: 700">2</span>
+<span style="width: 44px; height: 40px; display: flex; align-items: center; justify-content: center; border-left: 1.5px solid #16191B; font-weight: 700">4</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); column-gap: 14px; padding: 14px 0; border-top: 1px solid #D3CBBB; border-bottom: 1px solid #D3CBBB">
+<span style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 800; font-size: 22px">2 oz</span>
+<span style="display: flex; flex-direction: column"><strong>Tequila</strong><span style="font-size: 15px; color: #4D5357">100% agave blanco for a clean, peppery edge.</span></span>
+</div>
+<span style="align-self: flex-start; height: 52px; padding: 0 22px; display: flex; align-items: center; background: #16191B; color: #F4F0E7; border-radius: 4px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 15px">Start cook mode</span>
+</div>
+<div style="background: #FCF7EE; border-radius: 24px; box-shadow: 0 1px 2px rgba(43,29,20,0.06), 0 8px 24px rgba(43,29,20,0.08); padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 14px; font-weight: 800; color: #6B5242">Coffee theme · Ingredients</span>
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 30px; font-variation-settings: 'SOFT' 100">Ingredients</span>
+<div style="display: flex; gap: 4px; padding: 4px; background: #EFE4D3; border-radius: 999px">
+<span style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #2B1D14; color: #FCF7EE; font-weight: 800">1</span>
+<span style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 800">2</span>
+<span style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 800">4</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr); column-gap: 14px; padding: 14px 0; border-top: 1px solid #E0D3C0; border-bottom: 1px solid #E0D3C0">
+<span style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 22px; color: #974722; font-variation-settings: 'SOFT' 100">18 g</span>
+<span style="display: flex; flex-direction: column"><strong>Finely ground coffee</strong><span style="font-size: 15px; color: #6B5242">Roasted within the last 2 to 4 weeks.</span></span>
+</div>
+<span style="align-self: flex-start; height: 52px; padding: 0 24px; display: flex; align-items: center; background: #A9532A; color: #FCF7EE; border-radius: 999px; font-weight: 800; font-size: 17px">Start brew mode</span>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 32px">Coffee components</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start">
+<div style="background: #FCF7EE; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 14px; font-weight: 800; color: #6B5242">Buttons &amp; controls</span>
+<button type="button" style="height: 56px; border: 0; border-radius: 999px; background: #A9532A; color: #FCF7EE; font: 800 17px Nunito, system-ui, sans-serif; box-shadow: 0 6px 16px rgba(169,83,42,0.28)">Primary</button>
+<button type="button" style="height: 48px; border: 0; border-radius: 999px; background: #EFE4D3; color: #2B1D14; font: 800 16px Nunito, system-ui, sans-serif">Secondary</button>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="min-height: 44px; padding: 0 18px; display: flex; align-items: center; border-radius: 999px; background: #2B1D14; color: #FCF7EE; font-weight: 800; font-size: 15px">Selected</span>
+<span style="min-height: 44px; padding: 0 18px; display: flex; align-items: center; border-radius: 999px; border: 1.5px solid #E0D3C0; font-weight: 800; font-size: 15px">Chip</span>
+<span style="padding: 6px 14px; border-radius: 999px; background: #E3E8DB; color: #4E5C45; font-size: 14px; font-weight: 700">Tag</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; background: #EFE4D3; border-radius: 999px">
+<span style="min-height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #6B5242">Machine</span>
+<span style="min-height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 999px; background: #FCF7EE; box-shadow: 0 2px 6px rgba(43,29,20,0.14); font-weight: 800; font-size: 14px">Moka pot</span>
+<span style="min-height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; color: #6B5242">AeroPress</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: #3A2A20; color: #F5EDE0; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 22px; font-variation-settings: 'SOFT' 100">Dial-in card</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<div style="padding: 10px 12px; background: #4A382C; border-radius: 12px"><div style="font-size: 12px; font-weight: 700; color: #E8C9A4">Dose</div><div style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 22px">18 g</div></div>
+<div style="padding: 10px 12px; background: #4A382C; border-radius: 12px"><div style="font-size: 12px; font-weight: 700; color: #E8C9A4">Yield</div><div style="font-family: Fraunces, Georgia, serif; font-weight: 700; font-size: 22px">38 g</div></div>
+</div>
+</div>
+<div style="background: #FCF7EE; border-radius: 20px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 800; color: #6B5242">Tip callout</span>
+<p style="margin: 0; padding: 12px 14px; background: #EFE4D3; border-radius: 14px; font-size: 16px"><strong style="color: #974722">Tip · </strong>Level matters more than force.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: #FCF7EE; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 14px; font-weight: 800; color: #6B5242">Flavor dots</span>
+<div style="display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: center; gap: 10px">
+<strong>Bitter</strong>
+<span style="display: flex; gap: 8px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #A9532A"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #A9532A"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #A9532A"></span><span style="width: 18px; height: 18px; border-radius: 50%; background: #A9532A"></span><span style="width: 18px; height: 18px; border-radius: 50%; box-sizing: border-box; border: 2px solid #C9A98A"></span></span>
+</div>
+</div>
+<div style="background: #FCF7EE; border-radius: 24px; padding: 20px; display: flex; align-items: center; gap: 20px">
+<span style="font-size: 14px; font-weight: 800; color: #6B5242">Ornaments</span>
+<svg width="40" height="28" viewBox="0 0 40 28" fill="none" stroke="#A9532A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 26c-4-4 4-7 0-11s4-7 0-11"></path><path d="M20 26c-4-4 4-7 0-11s4-7 0-11"></path><path d="M28 26c-4-4 4-7 0-11s4-7 0-11"></path></svg>
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A9532A" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="6.5" ry="9" transform="rotate(35 12 12)"></ellipse><path d="M8.2 17.5c1.5-2.5 1.2-4.6 2.9-6.3 1.6-1.6 3.3-2.3 4.7-5"></path></svg>
+<span style="font-size: 14px; color: #6B5242">Steam and bean, used once per screen at most.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":2500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sw = (c) => c ? 'display: inline-block; flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; border: 1px solid rgba(43,29,20,0.15); background: ' + c + ';' : 'display: none;';
+    const rows = [
+      ['--color-bg', 'Page ground', '#F4F0E7', '#F5EDE0 oat + paper texture', '#F4F0E7', '#F5EDE0'],
+      ['--color-surface', 'Cards, raised blocks', '#F4F0E7 (flat)', '#FCF7EE cream', '#F4F0E7', '#FCF7EE'],
+      ['--color-surface-2', 'Tips, bands, tracks', '#EAE4D7', '#EFE4D3 latte', '#EAE4D7', '#EFE4D3'],
+      ['--color-ink', 'Primary text', '#16191B', '#2B1D14 espresso', '#16191B', '#2B1D14'],
+      ['--color-ink-muted', 'Secondary text', '#4D5357', '#6B5242', '#4D5357', '#6B5242'],
+      ['--color-rule', 'Hairlines', '#D3CBBB', '#E0D3C0', '#D3CBBB', '#E0D3C0'],
+      ['--color-accent', 'Primary fill, markers', '#C9A15B brass (on dark)', '#A9532A terracotta', '#C9A15B', '#A9532A'],
+      ['--color-accent-ink', 'Accent as text on light', '#7A5A1F', '#974722', '#7A5A1F', '#974722'],
+      ['--color-secondary', 'Tags, positive cues', 'n/a (ink)', '#4E5C45 sage', '', '#4E5C45'],
+      ['--color-secondary-soft', 'Tag fill', 'n/a', '#E3E8DB', '', '#E3E8DB'],
+      ['--color-inverse', 'Hero, footer, dial-in, timer', '#1F2326 slate', '#3A2A20 cocoa', '#1F2326', '#3A2A20'],
+      ['--color-on-inverse', 'Text on inverse', '#F4F0E7', '#F5EDE0', '#F4F0E7', '#F5EDE0'],
+      ['--font-display', 'Titles, amounts', 'Bodoni Moda 800–900', 'Fraunces 700, SOFT 100', '', ''],
+      ['--font-body', 'Everything you read', 'Instrument Sans', 'Nunito', '', ''],
+      ['--radius-card / control', 'Corner radius', '4px / 4px', '20–24px / 999px', '', ''],
+      ['--shadow-card', 'Elevation', 'none (rules instead)', 'soft 2-layer brown', '', ''],
+      ['--texture', 'Background image', 'none', 'paper grain tile, 256px', '', ''],
+      ['--hero-frame', 'Art frame style', 'Double border + corner dots', 'Cream card + inset rule', '', '']
+    ];
+    return { tokens: rows.map((r) => ({ name: r[0], role: r[1], a: r[2], b: r[3], aSwatch: sw(r[4]), bSwatch: sw(r[5]) })) };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Cocktail theme: classic vintage poster, engraved line art on slate.
+   Reference: design/reference/cocktails/*.dc.html */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..900;1,6..96,500..700&family=Instrument+Sans:wght@400..700&display=swap");
+
+[data-theme="cocktail"] {
+  --color-bg: #F4F0E7;
+  --color-surface: #F4F0E7;          /* flat: structure comes from rules, not cards */
+  --color-surface-2: #EAE4D7;        /* tips, banded sections */
+  --color-ink: #16191B;              /* 15.5:1 on bg */
+  --color-ink-muted: #4D5357;        /* 6.9:1 */
+  --color-rule: #D3CBBB;
+  --color-rule-strong: #16191B;
+  --color-accent: #C9A15B;           /* brass. Fill/markers on dark only (6.6:1 on inverse) */
+  --color-on-accent: #16191B;
+  --color-accent-ink: #7A5A1F;       /* brass as text on light, 5.6:1 */
+  --color-primary: #16191B;          /* primary button fill on light pages */
+  --color-on-primary: #F4F0E7;
+  --color-secondary: #16191B;        /* no secondary hue in this theme */
+  --color-secondary-soft: transparent;
+  --color-inverse: #1F2326;          /* hero, art ground: must match hero art bg */
+  --color-inverse-deep: #16191B;     /* footer, guided mode */
+  --color-inverse-raised: #2C3135;
+  --color-on-inverse: #F4F0E7;
+  --color-on-inverse-muted: #B7B2A8; /* 7.5:1 */
+  --color-focus: #C9A15B;
+
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --weight-display: 800;
+  --display-case: uppercase;         /* drink name + home title only; section h2s use none */
+  --display-tracking: 0.01em;
+  --leading-body: 1.55;
+  --label-case: uppercase;
+  --label-tracking: 0.14em;
+
+  --radius-card: 4px;
+  --radius-control: 4px;
+  --radius-pill: 4px;
+  --shadow-card: none;
+  --texture: none;
+
+  --hero-frame: coaster;             /* double border + 4 corner dots on inverse */
+  --hero-surface: var(--color-inverse);
+  --guided-surface: var(--color-inverse-deep);  /* cook mode is dark */
+}

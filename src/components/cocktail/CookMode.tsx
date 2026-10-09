@@ -129,14 +129,14 @@ export default function CookMode({
       <header className="cook__header">
         <a
           href={`/cocktails/${slug}`}
-          aria-label="Exit cook mode"
+          aria-label="Exit mix mode"
           className="cook__icon-btn"
         >
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
         </a>
         <div className="cook__title-block">
           <span className="cook__drink">{name}</span>
-          <span className="cook__mode-label">Cook mode</span>
+          <span className="cook__mode-label">Mix mode</span>
         </div>
         <button
           type="button"
@@ -202,7 +202,7 @@ export default function CookMode({
       {wakeSupported && (
         <div className="cook__wake">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
-          Screen stays awake while cook mode is open
+          Screen stays awake while mix mode is open
         </div>
       )}
 
