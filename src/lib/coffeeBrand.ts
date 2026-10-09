@@ -1,8 +1,8 @@
 /** Client-safe coffee copy — no astro:content imports. */
 
 export const coffeeBrand = {
-  name: "Elevated Solutions",
-  homeTitle: "The Coffee Bar",
+  name: "Cafe",
+  homeTitle: "The Cafe",
   homeIntro:
     "Twelve drinks, one coaster each. Tap yours, or pick something cozy below.",
   searchPlaceholder: "Latte, iced, milk…",

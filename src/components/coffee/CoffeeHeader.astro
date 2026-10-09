@@ -16,20 +16,37 @@ const { variant = "recipe" } = Astro.props;
   </a>
   {
     variant === "home" ? (
-      <a
-        class="coffee-header__shop"
-        href={site.shopUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
-        Shop
-      </a>
+      <nav class="coffee-header__actions" aria-label="Site">
+        <a class="coffee-header__cta" href="/">
+          Other Products
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </a>
+        <a
+          class="coffee-header__shop"
+          href={site.shopUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+          Shop
+        </a>
+      </nav>
     ) : (
-      <a class="coffee-header__link" href="/coffee">
-        All coffee
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
-      </a>
+      <nav class="coffee-header__actions" aria-label="Site">
+        <a class="coffee-header__link" href="/coffee">
+          All coffee
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+        </a>
+        <a
+          class="coffee-header__shop"
+          href={site.shopUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+          Shop
+        </a>
+      </nav>
     )
   }
 </header>
@@ -41,6 +58,7 @@ const { variant = "recipe" } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
   }
 
   .coffee-header__brand {
@@ -53,6 +71,14 @@ const { variant = "recipe" } = Astro.props;
     font-weight: 700;
     font-size: 1.25rem;
     font-variation-settings: "SOFT" 100;
+    min-width: 0;
+  }
+
+  .coffee-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
   }
 
   .coffee-header__link {
@@ -64,36 +90,77 @@ const { variant = "recipe" } = Astro.props;
     color: var(--color-ink);
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
 
   .coffee-header__link:hover {
     color: var(--color-ink);
   }
 
-  .coffee-header__shop {
+  .coffee-header__cta {
     min-height: 40px;
-    padding: 0 16px;
+    padding: 0 14px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     border-radius: 999px;
     background: var(--color-accent);
     color: var(--color-on-accent);
     text-decoration: none;
     font-weight: 800;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     box-shadow: var(--shadow-primary);
     transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+    white-space: nowrap;
   }
 
-  .coffee-header__shop:hover {
+  .coffee-header__cta:hover {
     color: var(--color-on-accent);
     filter: brightness(1.05);
     transform: translateY(-1px);
   }
 
+  .coffee-header__cta:active {
+    transform: translateY(1px);
+  }
+
+  .coffee-header__shop {
+    min-height: 40px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1.5px solid var(--color-ink);
+    background: transparent;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: transform 120ms ease, background 120ms ease;
+    white-space: nowrap;
+  }
+
+  .coffee-header__shop:hover {
+    color: var(--color-ink);
+    background: rgba(0, 0, 0, 0.04);
+    transform: translateY(-1px);
+  }
+
   .coffee-header__shop:active {
     transform: translateY(1px);
+  }
+
+  @media (max-width: 400px) {
+    .coffee-header__cta,
+    .coffee-header__shop {
+      padding: 0 10px;
+      font-size: 0.8125rem;
+    }
+
+    .coffee-header__cta svg,
+    .coffee-header__shop svg {
+      display: none;
+    }
   }
 </style>

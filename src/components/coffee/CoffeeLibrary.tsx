@@ -46,33 +46,42 @@ export default function CoffeeLibrary({ drinks }: Props) {
           gap: 12,
         }}
       >
-        <svg
-          width="40"
-          height="28"
-          viewBox="0 0 40 28"
-          fill="none"
-          stroke="var(--color-accent)"
-          strokeWidth="2"
-          strokeLinecap="round"
-          aria-hidden="true"
-        >
-          <path d="M12 26c-4-4 4-7 0-11s4-7 0-11" />
-          <path d="M20 26c-4-4 4-7 0-11s4-7 0-11" />
-          <path d="M28 26c-4-4 4-7 0-11s4-7 0-11" />
-        </svg>
-        <h1
-          id="home-h"
+        <div
           style={{
-            margin: 0,
-            fontFamily: "var(--font-display)",
-            fontWeight: 700,
-            fontSize: "2.75rem",
-            lineHeight: 1.05,
-            fontVariationSettings: '"SOFT" 100',
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
           }}
         >
-          {coffeeBrand.homeTitle}
-        </h1>
+          <svg
+            width="40"
+            height="28"
+            viewBox="0 0 40 28"
+            fill="none"
+            stroke="var(--color-accent)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            aria-hidden="true"
+            style={{ flexShrink: 0 }}
+          >
+            <path d="M12 26c-4-4 4-7 0-11s4-7 0-11" />
+            <path d="M20 26c-4-4 4-7 0-11s4-7 0-11" />
+            <path d="M28 26c-4-4 4-7 0-11s4-7 0-11" />
+          </svg>
+          <h1
+            id="home-h"
+            style={{
+              margin: 0,
+              fontFamily: "var(--font-display)",
+              fontWeight: 700,
+              fontSize: "2.75rem",
+              lineHeight: 1.05,
+              fontVariationSettings: '"SOFT" 100',
+            }}
+          >
+            {coffeeBrand.homeTitle}
+          </h1>
+        </div>
         <p style={{ margin: 0, fontSize: "1.125rem", color: "#4A382C" }}>
           {coffeeBrand.homeIntro}
         </p>
