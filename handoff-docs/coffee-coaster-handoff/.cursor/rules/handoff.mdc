@@ -1,8 +1,0 @@
----
-description: NFC coaster platform build spec and design rules
-alwaysApply: true
----
-
-Follow @AGENTS.md and the full spec in @docs/HANDOFF.md.
-Components use only the semantic tokens in design/themes/*.css. Never hard-code hex values in components.
-Match layouts to design/reference/**/*.dc.html at 390px width, ignoring that format's scaffolding tags.

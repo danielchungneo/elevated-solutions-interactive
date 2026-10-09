@@ -11,14 +11,22 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+*.log
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
 
-# macOS-specific files
+# OS / editor
 .DS_Store
-
-# jetbrains setting folder
+Thumbs.db
+Desktop.ini
 .idea/
+
+# Source art, design handoffs, and planning docs — not used by `astro build`.
+# Heroes live in public/; recipes live in content/. Keep these locally for
+# redesign / hero regeneration (scripts/make-*.mjs), but out of git.
+assets/
+handoff-docs/
+artifacts/
