@@ -48,7 +48,7 @@ Edit `src/lib/site.ts` for brand name, shop URL, and site description. Set `site
 ## Handoff sources
 
 - Build brief: `AGENTS.md`
-- Design references: `cocktail-site-handoff/design/reference/`
-- Coaster posters: `Cocktail Designs/`
+- Design references: `handoff-docs/cocktail-site-handoff/design/reference/`
+- Coaster posters: `assets/Cocktail Designs/`
 - Recipe source: `artifacts/cocktail-recipes.md`
 - Product plan: `artifacts/nfc-cocktail-coasters-project-plan.md`

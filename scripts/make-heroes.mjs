@@ -7,7 +7,7 @@ const CREAM = { r: 228, g: 222, b: 209 }; // #E4DED1
 const CANVAS_W = 525;
 const CANVAS_H = 590;
 
-/** Isolated drink illustrations in Cocktail Designs/Only Drink/ */
+/** Isolated drink illustrations in assets/Cocktail Designs/Only Drink/ */
 const SOURCES = {
   "espresso-martini": "espresso-martini.png",
   mojito: "mojito.png",
@@ -230,7 +230,7 @@ async function makeHero(srcPath, outPath) {
 }
 
 const outDir = "public/images";
-const srcDir = path.join("Cocktail Designs", "Only Drink");
+const srcDir = path.join("assets", "Cocktail Designs", "Only Drink");
 fs.mkdirSync(outDir, { recursive: true });
 
 for (const [slug, file] of Object.entries(SOURCES)) {
