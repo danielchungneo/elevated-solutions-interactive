@@ -6,7 +6,6 @@ import DrinkTile from "../../../components/coffee/DrinkTile.astro";
 import CoffeeIngredients from "../../../components/coffee/Ingredients";
 import MethodSwitcher from "../../../components/coffee/MethodSwitcher";
 import {
-  coffeeBrand,
   coffeeRecipeJsonLd,
   fToC,
   getAllCoffee,
@@ -66,16 +65,12 @@ function altLabel(item: string, alternative: string): string {
           <img
             src={data.heroImage}
             alt={data.heroAlt ?? data.name}
-            width="310"
-            height="276"
+            width="360"
+            height="321"
             fetchpriority="high"
           />
         )
       }
-      <figcaption>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 8.5a5 5 0 0 1 0 7"></path><path d="M11.5 6a8.5 8.5 0 0 1 0 12"></path><path d="M15 3.5a12 12 0 0 1 0 17"></path></svg>
-        {coffeeBrand.heroLabel}
-      </figcaption>
     </figure>
   </section>
 
@@ -373,14 +368,14 @@ function altLabel(item: string, alternative: string): string {
   .hero figure {
     margin: 0;
     position: relative;
-    background: var(--color-surface);
+    /* Match hero WebP cream (scripts/make-coffee-heroes.mjs) so the frame doesn't read as a second band. */
+    background: #fbf6ec;
     border-radius: 24px;
     box-shadow: var(--shadow-card);
-    padding: 20px 16px 16px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
   }
 
   .hero__inset {
@@ -393,20 +388,12 @@ function altLabel(item: string, alternative: string): string {
   .hero img {
     position: relative;
     display: block;
-    width: 280px;
-    max-width: 80%;
-    height: 250px;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 525 / 468;
     object-fit: contain;
-  }
-
-  .hero figcaption {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: var(--color-ink-muted);
+    border-radius: 14px;
   }
 
   .facts {

@@ -213,7 +213,8 @@ export default function CoffeeLibrary({ drinks }: Props) {
                   style={{
                     aspectRatio: "1 / 1",
                     borderRadius: 14,
-                    background: "var(--color-surface-2)",
+                    /* Match hero WebP cream so the tile doesn't frame the art. */
+                    background: "#fbf6ec",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -228,9 +229,10 @@ export default function CoffeeLibrary({ drinks }: Props) {
                       height={132}
                       loading="lazy"
                       style={{
-                        width: "78%",
+                        width: "90%",
                         height: "auto",
                         objectFit: "contain",
+                        borderRadius: 10,
                         mixBlendMode: "multiply",
                       }}
                     />

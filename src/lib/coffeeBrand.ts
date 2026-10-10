@@ -8,7 +8,6 @@ export const coffeeBrand = {
   searchPlaceholder: "Latte, iced, milk…",
   guidedModeName: "Brew mode",
   guidedModeDoneTitle: "Enjoy.",
-  heroLabel: "The same art as on your coaster",
   footer: {
     title: "Slow down and enjoy the cup.",
     note: "Most of these drinks contain caffeine. Go easy if you're sensitive.",
